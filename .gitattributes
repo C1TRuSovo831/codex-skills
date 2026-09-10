@@ -1,0 +1,2 @@
+# Preserve snapshot bytes, including upstream text line endings.
+* -text

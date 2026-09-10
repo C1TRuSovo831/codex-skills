@@ -1,0 +1,6 @@
+interface:
+  display_name: "Impedance Gain Tuning"
+  short_description: "Tune robot kp, kd, PD and impedance behavior"
+  default_prompt: "Use $impedance-gain-tuning for this kp/kd or impedance tuning problem."
+policy:
+  allow_implicit_invocation: true

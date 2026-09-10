@@ -1,0 +1,228 @@
+{
+  "bundled": [
+    {
+      "id": "brand",
+      "license": "MIT",
+      "license_path": "skills/brand/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "code-review",
+      "license": "MIT",
+      "license_path": "skills/code-review/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "codebase-design",
+      "license": "MIT",
+      "license_path": "skills/codebase-design/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "design-system",
+      "license": "MIT",
+      "license_path": "skills/design-system/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "dex-ik-design-debug",
+      "license": "MIT",
+      "license_path": "skills/dex-ik-design-debug/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "dex-retargeting-debug",
+      "license": "MIT",
+      "license_path": "skills/dex-retargeting-debug/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "dex-robotics-engineering",
+      "license": "MIT",
+      "license_path": "skills/dex-robotics-engineering/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "diagnosing-bugs",
+      "license": "MIT",
+      "license_path": "skills/diagnosing-bugs/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "domain-modeling",
+      "license": "MIT",
+      "license_path": "skills/domain-modeling/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "experimental-design",
+      "license": "MIT",
+      "license_path": "skills/experimental-design/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/9cf7d9aea7d84754db4c167ab04b299d33c444bc/LICENSE.md",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "find-skills",
+      "license": "MIT",
+      "license_path": "skills/find-skills/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/vercel-labs/skills/80feb48868972d518436f26711509bc78595b5cb/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "handoff",
+      "license": "MIT",
+      "license_path": "skills/handoff/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "herdr",
+      "license": "Apache-2.0",
+      "license_path": "skills/herdr/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/herdrdev/herdr/120c682008a85dc17d7a13cc619a2fd5d25f3924/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "herdr-requirements-grill",
+      "license": "MIT",
+      "license_path": "skills/herdr-requirements-grill/LICENSE",
+      "basis": "repository_maintainer_custom_skill_released_under_repository_license"
+    },
+    {
+      "id": "impedance-gain-tuning",
+      "license": "MIT",
+      "license_path": "skills/impedance-gain-tuning/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "receiving-code-review",
+      "license": "MIT",
+      "license_path": "skills/receiving-code-review/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/obra/superpowers/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "research",
+      "license": "MIT",
+      "license_path": "skills/research/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "scientific-visualization",
+      "license": "MIT",
+      "license_path": "skills/scientific-visualization/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/9cf7d9aea7d84754db4c167ab04b299d33c444bc/LICENSE.md",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "scientific-writing",
+      "license": "MIT",
+      "license_path": "skills/scientific-writing/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/9cf7d9aea7d84754db4c167ab04b299d33c444bc/LICENSE.md",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "setup-matt-pocock-skills",
+      "license": "MIT",
+      "license_path": "skills/setup-matt-pocock-skills/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "slides",
+      "license": "MIT",
+      "license_path": "skills/slides/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "statistical-power",
+      "license": "MIT",
+      "license_path": "skills/statistical-power/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/9cf7d9aea7d84754db4c167ab04b299d33c444bc/LICENSE.md",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "tdd",
+      "license": "MIT",
+      "license_path": "skills/tdd/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "teleop-hil-review",
+      "license": "MIT",
+      "license_path": "skills/teleop-hil-review/LICENSE",
+      "basis": "repository_maintainer_custom_skill_released_under_repository_license"
+    },
+    {
+      "id": "ui-styling",
+      "license": "Apache-2.0",
+      "license_path": "skills/ui-styling/LICENSE.txt",
+      "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
+      "basis": "public_upstream_license",
+      "additional_license_path": "skills/ui-styling/UPSTREAM-LICENSE-MIT.txt"
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "license": "MIT",
+      "license_path": "skills/ui-ux-pro-max/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "verification-before-completion",
+      "license": "MIT",
+      "license_path": "skills/verification-before-completion/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/obra/superpowers/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "writing-for-agents",
+      "license": "MIT",
+      "license_path": "skills/writing-for-agents/LICENSE",
+      "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+      "basis": "public_upstream_license"
+    },
+    {
+      "id": "system-imagegen",
+      "license": "Apache-2.0",
+      "license_path": "bundled/system/imagegen/LICENSE.txt",
+      "basis": "license_shipped_with_skill",
+      "upstream_source": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/imagegen/SKILL.md"
+    },
+    {
+      "id": "system-openai-docs",
+      "license": "Apache-2.0",
+      "license_path": "bundled/system/openai-docs/LICENSE.txt",
+      "basis": "license_shipped_with_skill",
+      "upstream_source": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/openai-docs/SKILL.md"
+    },
+    {
+      "id": "system-skill-creator",
+      "license": "Apache-2.0",
+      "license_path": "bundled/system/skill-creator/license.txt",
+      "basis": "license_shipped_with_skill",
+      "upstream_source": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-creator/SKILL.md"
+    },
+    {
+      "id": "system-skill-installer",
+      "license": "Apache-2.0",
+      "license_path": "bundled/system/skill-installer/LICENSE.txt",
+      "basis": "license_shipped_with_skill",
+      "upstream_source": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer/SKILL.md"
+    }
+  ],
+  "external_policy": "Plugin skill payloads and system copies without confirmed redistribution terms are not included; only names and official installation references are retained."
+}

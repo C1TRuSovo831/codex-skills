@@ -1,0 +1,58 @@
+[
+  {
+    "repo": "mattpocock/skills",
+    "commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+    "license_path": "LICENSE",
+    "source_url": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+    "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+    "path": "licenses/mattpocock--skills/LICENSE"
+  },
+  {
+    "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "commit": "4aad0584d92131626b16d4ff4d77f0455385013c",
+    "license_path": "LICENSE",
+    "source_url": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
+    "sha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014",
+    "path": "licenses/nextlevelbuilder--ui-ux-pro-max-skill/LICENSE"
+  },
+  {
+    "repo": "obra/superpowers",
+    "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+    "license_path": "LICENSE",
+    "source_url": "https://raw.githubusercontent.com/obra/superpowers/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/LICENSE",
+    "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+    "path": "licenses/obra--superpowers/LICENSE"
+  },
+  {
+    "repo": "C1TRuSovo831/dex-robotics-skills",
+    "commit": "c920463edeed8bd05fafc09a60fa081ba0c3695d",
+    "license_path": "LICENSE",
+    "source_url": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
+    "sha256": "cf1e82104a16bab8cea8007ab341ee4398805d1dbcb4e2e19c93d001341595ec",
+    "path": "licenses/C1TRuSovo831--dex-robotics-skills/LICENSE"
+  },
+  {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "commit": "9cf7d9aea7d84754db4c167ab04b299d33c444bc",
+    "license_path": "LICENSE.md",
+    "source_url": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/9cf7d9aea7d84754db4c167ab04b299d33c444bc/LICENSE.md",
+    "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "path": "licenses/K-Dense-AI--scientific-agent-skills/LICENSE.md"
+  },
+  {
+    "repo": "vercel-labs/skills",
+    "commit": "80feb48868972d518436f26711509bc78595b5cb",
+    "license_path": "LICENSE",
+    "source_url": "https://raw.githubusercontent.com/vercel-labs/skills/80feb48868972d518436f26711509bc78595b5cb/LICENSE",
+    "sha256": "661142e53c313d2bb5e1b055f5c0a39001450ff1b5e27b89dc4bc7de9a6352ca",
+    "path": "licenses/vercel-labs--skills/LICENSE"
+  },
+  {
+    "repo": "herdrdev/herdr",
+    "commit": "120c682008a85dc17d7a13cc619a2fd5d25f3924",
+    "license_path": "LICENSE",
+    "source_url": "https://raw.githubusercontent.com/herdrdev/herdr/120c682008a85dc17d7a13cc619a2fd5d25f3924/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "path": "licenses/herdrdev--herdr/LICENSE"
+  }
+]

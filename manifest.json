@@ -1,0 +1,3081 @@
+{
+  "schema_version": 1,
+  "description": "Redistributable Codex skill files with integrity-checked offline installation, plus official installation references for external skills.",
+  "default_selection": "kind=local and enabled=true",
+  "skills": [
+    {
+      "id": "brand",
+      "name": "brand",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/brand",
+      "install_name": "brand",
+      "description": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.",
+      "summary_zh": "品牌语气、视觉识别和品牌一致性",
+      "license": "MIT",
+      "upstream": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "upstream_skill_path": ".claude/skills/brand/SKILL.md",
+        "upstream_commit": "4aad0584d92131626b16d4ff4d77f0455385013c",
+        "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/4aad0584d92131626b16d4ff4d77f0455385013c/.claude/skills/brand/SKILL.md",
+        "upstream_name": "brand",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "6a450ee1a83a403d47cec2ede9030feb60a67a81fc425d2406e975339313bd44",
+        "upstream_skill_md_sha256": "53e7f858e18dea4d687db6e49e8a33786cbcdf720aa40e84bd6d6250f5e59aa8",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.98,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_general_install_command": "npm install -g ui-ux-pro-max-cli && uipro init --ai codex"
+      },
+      "recovery": {
+        "command": "npx skills add nextlevelbuilder/ui-ux-pro-max-skill --skill brand --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/4aad0584d92131626b16d4ff4d77f0455385013c/.claude/skills/brand/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "6a450ee1a83a403d47cec2ede9030feb60a67a81fc425d2406e975339313bd44",
+          "executable": false
+        },
+        "references/approval-checklist.md": {
+          "sha256": "4bf8549687f53a7b9684005b4b87de93c26f018e00609b4c506a5812abd13d20",
+          "executable": false
+        },
+        "references/asset-organization.md": {
+          "sha256": "de98123417e9c5a1cc71a78131bba979c4c8ed2e5289e6c7a7f166576e488101",
+          "executable": false
+        },
+        "references/brand-guideline-template.md": {
+          "sha256": "392db8cf10fef492221c15a86e68590074bf5716de1f2982f41c01fbe30567cc",
+          "executable": false
+        },
+        "references/color-palette-management.md": {
+          "sha256": "c429298ffe3955edb8b22c9f51426fef75e83d02848cd4300e89c0d3fc34b44a",
+          "executable": false
+        },
+        "references/consistency-checklist.md": {
+          "sha256": "56d8b2d4852cda11e600adec4b9dd68fc89a1b8265382359953bec5c5e5e2c36",
+          "executable": false
+        },
+        "references/logo-usage-rules.md": {
+          "sha256": "044c5ddf30cfe0eea047451cfce6ea654939198ffdd8968a19161c97066a5a26",
+          "executable": false
+        },
+        "references/messaging-framework.md": {
+          "sha256": "24b2500a72867b55dd10f4bf359178b0eb347fddd852659ce47b69d9f597d4e6",
+          "executable": false
+        },
+        "references/typography-specifications.md": {
+          "sha256": "921c3d9e6ddfde2677b9a3e32eee94c7922f54f22c1f380c5ed2eb25a7d5bfa9",
+          "executable": false
+        },
+        "references/update.md": {
+          "sha256": "537cb55ebe260e1de127bd6288b19d8d7b15b6c893545442a58b739cbd342b37",
+          "executable": false
+        },
+        "references/visual-identity.md": {
+          "sha256": "63f0cfc5d95403d8e12aca4d839cc28471515574d9a431334bfbb96c15407c31",
+          "executable": false
+        },
+        "references/voice-framework.md": {
+          "sha256": "08c15ac79f81cd964c5efbe593131b61a093c7e1b060d5dd28b17f3cc5b331fb",
+          "executable": false
+        },
+        "scripts/extract-colors.cjs": {
+          "sha256": "36d21f3905e5762cfc8054b3f3b7276f6bc656884fe57c6bfa539526044778ed",
+          "executable": false
+        },
+        "scripts/inject-brand-context.cjs": {
+          "sha256": "5b98abdeb5c636f247102cd235f1d3421db7a4de53fd853360feaa0c471b5c96",
+          "executable": false
+        },
+        "scripts/sync-brand-to-tokens.cjs": {
+          "sha256": "390a760570fdba6d6ecfdfd8907fc802b64659b6178f8920349b0c6a2c822106",
+          "executable": false
+        },
+        "scripts/tests/test_sync_brand_to_tokens.py": {
+          "sha256": "0ace0cf7c6a8c12c0b9154f317e847b1084eb00b065b6f22431e37b7c7e948d6",
+          "executable": false
+        },
+        "scripts/validate-asset.cjs": {
+          "sha256": "4546c9109fb0f4f767426508cb29e60d02b301f8897cf16d8e378b7ce9d997fc",
+          "executable": false
+        },
+        "templates/brand-guidelines-starter.md": {
+          "sha256": "d157a57b15f0b458c79636d11de42f3c89f03d8c0bbea1bdd3cf1c3542b2140d",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/brand/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "code-review",
+      "name": "code-review",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/code-review",
+      "install_name": "code-review",
+      "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\".",
+      "summary_zh": "按代码规范与需求分别审查变更",
+      "license": "MIT",
+      "upstream": {
+        "repo": "mattpocock/skills",
+        "upstream_skill_path": "skills/engineering/code-review/SKILL.md",
+        "upstream_commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/code-review/SKILL.md",
+        "upstream_name": "code-review",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "9cf46653dd9c710ea1e6c22423caf31a794c88773bc94bdaa23140277f470442",
+        "upstream_skill_md_sha256": "47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.69,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
+      },
+      "recovery": {
+        "command": "npx skills add mattpocock/skills --skill code-review --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/code-review/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "9cf46653dd9c710ea1e6c22423caf31a794c88773bc94bdaa23140277f470442",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "acad68bab4274ee19a564d2d2ab19f6f2818e5716fc24f536c7a4b2ae658111c",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/code-review/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "codebase-design",
+      "name": "codebase-design",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/codebase-design",
+      "install_name": "codebase-design",
+      "description": "Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.",
+      "summary_zh": "模块边界、接口与深模块设计",
+      "license": "MIT",
+      "upstream": {
+        "repo": "mattpocock/skills",
+        "upstream_skill_path": "skills/engineering/codebase-design/SKILL.md",
+        "upstream_commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/codebase-design/SKILL.md",
+        "upstream_name": "codebase-design",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "e8e5a6c059fbe3443383d5196f6a93ac51b1d45871b3950da6ebe5184513c84f",
+        "upstream_skill_md_sha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.871,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
+      },
+      "recovery": {
+        "command": "npx skills add mattpocock/skills --skill codebase-design --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/codebase-design/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "DEEPENING.md": {
+          "sha256": "125e6b77413ad2bc7cf7a772bc74336d580a50f9e797db2178ed133d62333d06",
+          "executable": false
+        },
+        "DESIGN-IT-TWICE.md": {
+          "sha256": "c8194ab5eba085400eaa696efb5f5409917763d560288882a3a5d5eecbe0708e",
+          "executable": false
+        },
+        "LICENSE": {
+          "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "e8e5a6c059fbe3443383d5196f6a93ac51b1d45871b3950da6ebe5184513c84f",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "7bf9ef6adff0baf30b1a27fedaf7ce6a395e129b6870a118e07d1f9604116b32",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/codebase-design/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "design-system",
+      "name": "design-system",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/design-system",
+      "install_name": "design-system",
+      "description": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.",
+      "summary_zh": "设计令牌、组件规范与一致的视觉系统",
+      "license": "MIT",
+      "upstream": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "upstream_skill_path": ".claude/skills/design-system/SKILL.md",
+        "upstream_commit": "4aad0584d92131626b16d4ff4d77f0455385013c",
+        "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/4aad0584d92131626b16d4ff4d77f0455385013c/.claude/skills/design-system/SKILL.md",
+        "upstream_name": "design-system",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "655468bb723a6bc9d17fcb09a6a005e10e313d63b879f4d74fb2abdc3041ae3f",
+        "upstream_skill_md_sha256": "8aa5ff93320559a6e5289d37b6b06b3307737dbfb4a6f3fc44135c705613c511",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.992,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_general_install_command": "npm install -g ui-ux-pro-max-cli && uipro init --ai codex"
+      },
+      "recovery": {
+        "command": "npx skills add nextlevelbuilder/ui-ux-pro-max-skill --skill design-system --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/4aad0584d92131626b16d4ff4d77f0455385013c/.claude/skills/design-system/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "655468bb723a6bc9d17fcb09a6a005e10e313d63b879f4d74fb2abdc3041ae3f",
+          "executable": false
+        },
+        "data/slide-backgrounds.csv": {
+          "sha256": "d1bb701b87bef493d72974d6fac1087c8ba4e2df14185fe3e0c36a13fe35f3d1",
+          "executable": false
+        },
+        "data/slide-charts.csv": {
+          "sha256": "12ef876cd76e67a6553444bfa2ebf1d5d4d6216289d34db052a6e87421135033",
+          "executable": false
+        },
+        "data/slide-color-logic.csv": {
+          "sha256": "ea68c737075f1615b2a7e461e2878c06bfe8f803dcabfbcc2977ffe5f9ec9ded",
+          "executable": false
+        },
+        "data/slide-copy.csv": {
+          "sha256": "43152937a0e598b3fbfdd418684311c105d44e3c5b333703ddb0b8cb28e40658",
+          "executable": false
+        },
+        "data/slide-layout-logic.csv": {
+          "sha256": "26b5b75782d5aba89836c0479acd3111cc69b67853db9c2259b30ac1e966bc62",
+          "executable": false
+        },
+        "data/slide-layouts.csv": {
+          "sha256": "95d558c1b7d2552d7a75402dc68facbd16125e574985851db5729d1145e14896",
+          "executable": false
+        },
+        "data/slide-strategies.csv": {
+          "sha256": "f656be0ab0b3a85fa7fc74202e9701a7236220412d67d5f63eb6dbb100bb2639",
+          "executable": false
+        },
+        "data/slide-typography.csv": {
+          "sha256": "b96cd11dd4ff1dea8a9454b0b9e898e7f82f9243182f8f237af1f2c9b8824ce5",
+          "executable": false
+        },
+        "references/component-specs.md": {
+          "sha256": "b265d979a741dd748d4e595e6898ae430faeef4f6d13d7a634fa6241b91d2da4",
+          "executable": false
+        },
+        "references/component-tokens.md": {
+          "sha256": "e27f8f5999badee425c98235eabbd2cb3ebe2a1a364766d5c7a6b3134ceaaec8",
+          "executable": false
+        },
+        "references/primitive-tokens.md": {
+          "sha256": "91e6caa12646c08c8aadf8e09399aed65760a25c8d80595936d81a9131118fc3",
+          "executable": false
+        },
+        "references/semantic-tokens.md": {
+          "sha256": "97e16d8061bbc22e82b51966a7015e3fc990932902e4647843506669a1cdebcc",
+          "executable": false
+        },
+        "references/states-and-variants.md": {
+          "sha256": "8dacb95d57d4bb37d8a99cc55515ff26da272056f837d29abc74aedcaa3ba104",
+          "executable": false
+        },
+        "references/tailwind-integration.md": {
+          "sha256": "6d01092db1479dbd2060567b4232bb2b4bc16e89730ab07e1f87a3e7f5c406b9",
+          "executable": false
+        },
+        "references/token-architecture.md": {
+          "sha256": "925f4049c4c4313d9fd5df98cdfd52004112aca49fba1664ad85e76bc9dce4d3",
+          "executable": false
+        },
+        "scripts/embed-tokens.cjs": {
+          "sha256": "23a9ce214e3c0d2fb4c5442b3bf1222c66721f7988a181ab29dcb549a5e5f511",
+          "executable": false
+        },
+        "scripts/fetch-background.py": {
+          "sha256": "cecedad0a9054e6e65f31ab7ba7d07eb6af2179e237c5632bc962dad69fd6d66",
+          "executable": false
+        },
+        "scripts/generate-slide.py": {
+          "sha256": "0463c98efea54870816925015fe5819e42a29aaba57408c2c38bacb33e2605b9",
+          "executable": false
+        },
+        "scripts/generate-tokens.cjs": {
+          "sha256": "aac8a0f4ec4dccf0d371f9ee5a9111e44977bb0cad7e40a3754aba5571aa1231",
+          "executable": false
+        },
+        "scripts/html-token-validator.py": {
+          "sha256": "9556a65e7aacda23388478294ee9a5cb84b315d964fbbf754aa0dcdbcfee58e6",
+          "executable": false
+        },
+        "scripts/search-slides.py": {
+          "sha256": "fded9548bc1bbe1303da67fabe34006c6a7c57934c9d171ea3dc3eb5f6eee010",
+          "executable": false
+        },
+        "scripts/slide-token-validator.py": {
+          "sha256": "66da5da5e8e659d405a89b342e13dd1e469e79726c46002d9d2368c3c7aaf945",
+          "executable": false
+        },
+        "scripts/slide_search_core.py": {
+          "sha256": "2464050ae338eb50728086046b644845fa7ae943f32efead3908fdbe1473edbe",
+          "executable": false
+        },
+        "scripts/tests/test_validate_tokens.py": {
+          "sha256": "a32f34a9e89542a341b6ff3ee4392494b48dea622b22b99652d3cf0c1a1ee966",
+          "executable": false
+        },
+        "scripts/validate-tokens.cjs": {
+          "sha256": "65f03a29290b9029d8cc27537701f226de7bcffc303b3bc361648fadfa09b77d",
+          "executable": false
+        },
+        "templates/design-tokens-starter.json": {
+          "sha256": "5444f477b06bab9c72e2cc289d4a9104efef653391c9639972bcb712d5f2d81e",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/design-system/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "dex-ik-design-debug",
+      "name": "dex-ik-design-debug",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/dex-ik-design-debug",
+      "install_name": "dex-ik-design-debug",
+      "description": "Design or debug dexterous-teleoperation IK when the request involves FK, Jacobians, DLS, damping, seeds, null-space posture, singularities, QP/CBF constraints, virtual walls, stale async IK, or trajectory continuity.",
+      "summary_zh": "遥操作 IK、雅可比、约束和轨迹连续性设计调试",
+      "license": "MIT",
+      "upstream": {
+        "repo": "C1TRuSovo831/dex-robotics-skills",
+        "upstream_skill_path": "dex-ik-design-debug/SKILL.md",
+        "upstream_commit": "c920463edeed8bd05fafc09a60fa081ba0c3695d",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-ik-design-debug/SKILL.md",
+        "upstream_name": "dex-ik-design-debug",
+        "upstream_fetched": true,
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "7371b0ad5cc5c066cfa9fb2c44522c538d7c09c969fe7e55cd828639607495cc",
+        "upstream_skill_md_sha256": "7371b0ad5cc5c066cfa9fb2c44522c538d7c09c969fe7e55cd828639607495cc",
+        "verification": "local_git_remote_and_live_upstream",
+        "locally_enabled": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "local_git_remote_and_identical_skill_md",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
+      },
+      "recovery": {
+        "command": "npx skills add C1TRuSovo831/dex-robotics-skills --skill dex-ik-design-debug --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-ik-design-debug/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "cf1e82104a16bab8cea8007ab341ee4398805d1dbcb4e2e19c93d001341595ec",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "7371b0ad5cc5c066cfa9fb2c44522c538d7c09c969fe7e55cd828639607495cc",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "75753bdd3ddee277f0dde9eb9b81e9c029ba5eb1be8ca6c43fd050ea03b7ac98",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/dex-ik-design-debug/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "dex-retargeting-debug",
+      "name": "dex-retargeting-debug",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/dex-retargeting-debug",
+      "install_name": "dex-retargeting-debug",
+      "description": "Debug or design dexterous-hand retargeting when the request involves MANUS, Wuji, Sharpa, 21x3 landmarks, 20 DOF actions, pinch, aperture, hand coordinates, calibration artifacts, or retargeting replay.",
+      "summary_zh": "MANUS/Wuji 等灵巧手重定向、标定和捏合调试",
+      "license": "MIT",
+      "upstream": {
+        "repo": "C1TRuSovo831/dex-robotics-skills",
+        "upstream_skill_path": "dex-retargeting-debug/SKILL.md",
+        "upstream_commit": "c920463edeed8bd05fafc09a60fa081ba0c3695d",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-retargeting-debug/SKILL.md",
+        "upstream_name": "dex-retargeting-debug",
+        "upstream_fetched": true,
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "fefda35316ed52a87c5edd44187eac596644ef138af92d0b4230421b882ff3e9",
+        "upstream_skill_md_sha256": "fefda35316ed52a87c5edd44187eac596644ef138af92d0b4230421b882ff3e9",
+        "verification": "local_git_remote_and_live_upstream",
+        "locally_enabled": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "local_git_remote_and_identical_skill_md",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
+      },
+      "recovery": {
+        "command": "npx skills add C1TRuSovo831/dex-robotics-skills --skill dex-retargeting-debug --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-retargeting-debug/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "cf1e82104a16bab8cea8007ab341ee4398805d1dbcb4e2e19c93d001341595ec",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "fefda35316ed52a87c5edd44187eac596644ef138af92d0b4230421b882ff3e9",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "1b6f349a504487372e9bd9a5ea45afac433be6133437c21becb33b0c8da38643",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/dex-retargeting-debug/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "dex-robotics-engineering",
+      "name": "dex-robotics-engineering",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/dex-robotics-engineering",
+      "install_name": "dex-robotics-engineering",
+      "description": "Route natural-language engineering requests about dexterous-hand retargeting, teleoperation IK, impedance kp/kd tuning, and HIL or safety evidence into the correct bounded workflow.",
+      "summary_zh": "为遥操作、重定向和阻抗问题选择工程工作流",
+      "license": "MIT",
+      "upstream": {
+        "repo": "C1TRuSovo831/dex-robotics-skills",
+        "upstream_skill_path": "dex-robotics-engineering/SKILL.md",
+        "upstream_commit": "c920463edeed8bd05fafc09a60fa081ba0c3695d",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-robotics-engineering/SKILL.md",
+        "upstream_name": "dex-robotics-engineering",
+        "upstream_fetched": true,
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "a68a83097e2cc2046ed60b8283de1a0be87a521a8d2e7610bca628ca91e7d57b",
+        "upstream_skill_md_sha256": "a68a83097e2cc2046ed60b8283de1a0be87a521a8d2e7610bca628ca91e7d57b",
+        "verification": "local_git_remote_and_live_upstream",
+        "locally_enabled": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "local_git_remote_and_identical_skill_md",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
+      },
+      "recovery": {
+        "command": "npx skills add C1TRuSovo831/dex-robotics-skills --skill dex-robotics-engineering --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-robotics-engineering/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "cf1e82104a16bab8cea8007ab341ee4398805d1dbcb4e2e19c93d001341595ec",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "a68a83097e2cc2046ed60b8283de1a0be87a521a8d2e7610bca628ca91e7d57b",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "7549875413bfaff600bb358462928d17f28fe21cab495f6d25c149e262875bf1",
+          "executable": false
+        },
+        "references/route-matrix.md": {
+          "sha256": "a52698f146506fea05d98a84e85eddb8169050ce350e42133f750d0d93a8c1cd",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/dex-robotics-engineering/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "diagnosing-bugs",
+      "name": "diagnosing-bugs",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/diagnosing-bugs",
+      "install_name": "diagnosing-bugs",
+      "description": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow.",
+      "summary_zh": "通过证据与假设迭代定位故障和性能回退",
+      "license": "MIT",
+      "upstream": {
+        "repo": "mattpocock/skills",
+        "upstream_skill_path": "skills/engineering/diagnosing-bugs/SKILL.md",
+        "upstream_commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/diagnosing-bugs/SKILL.md",
+        "upstream_name": "diagnosing-bugs",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "f720a80b520343b9769f7a97fae31e2131eb46cc3d8e73817aa8cb8a25fd3920",
+        "upstream_skill_md_sha256": "77f3cf31bc99b2f49af943222526531fcc9fc41d047626d3640e875e85af3e84",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.743,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
+      },
+      "recovery": {
+        "command": "npx skills add mattpocock/skills --skill diagnosing-bugs --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/diagnosing-bugs/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "f720a80b520343b9769f7a97fae31e2131eb46cc3d8e73817aa8cb8a25fd3920",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "5e95ccdb1e63a77ac8fdefd5a31d3bfb60b43c227a0cbefdc4b0763fc5da7cff",
+          "executable": false
+        },
+        "scripts/hitl-loop.template.sh": {
+          "sha256": "18ae07e1cc49b32c71767e241a6e8de4be74ef21d5e3b7e39034d9c7335f2d80",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/diagnosing-bugs/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "domain-modeling",
+      "name": "domain-modeling",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/domain-modeling",
+      "install_name": "domain-modeling",
+      "description": "Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a CONTEXT.md, or recording or editing an ADR.",
+      "summary_zh": "梳理项目术语、领域模型与架构决策",
+      "license": "MIT",
+      "upstream": {
+        "repo": "mattpocock/skills",
+        "upstream_skill_path": "skills/engineering/domain-modeling/SKILL.md",
+        "upstream_commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/domain-modeling/SKILL.md",
+        "upstream_name": "domain-modeling",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "9617041db9b0f6606ecf974e2061c83596b05059b5bb20ddb884c60f147c70e9",
+        "upstream_skill_md_sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.878,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
+      },
+      "recovery": {
+        "command": "npx skills add mattpocock/skills --skill domain-modeling --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/domain-modeling/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "ADR-FORMAT.md": {
+          "sha256": "f1f36cd3f8d3b6474ddd5855da4e233bfc4ae1a1c5024909ccf11871819a41b2",
+          "executable": false
+        },
+        "CONTEXT-FORMAT.md": {
+          "sha256": "b8cc318f2a4285b530e908b6bc43901c3c5cd11100362636bbc4216639bef597",
+          "executable": false
+        },
+        "LICENSE": {
+          "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "9617041db9b0f6606ecf974e2061c83596b05059b5bb20ddb884c60f147c70e9",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "ec56a47d72ccc959da8e2eb5c1ad3f0df8021d0180c281a2de936b5f47b2425b",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/domain-modeling/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "experimental-design",
+      "name": "experimental-design",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/experimental-design",
+      "install_name": "experimental-design",
+      "description": "Design experiments and studies BEFORE data is collected — choosing a design, randomizing, blocking, and laying out treatment combinations so results are interpretable. Use whenever someone is planning a study, asks how to assign subjects/samples to groups, mentions randomization, blocking, stratification, controls, factorial or fractional-factorial designs, design of experiments (DOE), screening many factors, response-surface optimization, crossover or repeated-measures or split-plot designs, cluster/group randomization, Latin squares, plate layouts, batch/run-order effects, replication vs. pseudoreplication, or sequential/adaptive/group-sequential designs. Trigger even for informal phrasings like \"how should I set up this experiment\", \"how do I avoid confounding\", \"what's the best way to test these 6 factors\", or \"assign these mice to conditions\". For computing the sample size or power once the design is chosen, use statistical-power; for analyzing data already collected, use statistical-analysis.",
+      "summary_zh": "实验对照、随机化、区组、重复测量和多因素设计",
+      "license": "MIT",
+      "upstream": {
+        "repo": "K-Dense-AI/scientific-agent-skills",
+        "upstream_skill_path": "skills/experimental-design/SKILL.md",
+        "upstream_commit": "9cf7d9aea7d84754db4c167ab04b299d33c444bc",
+        "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/9cf7d9aea7d84754db4c167ab04b299d33c444bc/skills/experimental-design/SKILL.md",
+        "upstream_name": "experimental-design",
+        "upstream_fetched": true,
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "8d1e072e96c40dea985deac2d67d2cb800bb8db1cb18b31db0e623ca66e66741",
+        "upstream_skill_md_sha256": "8d1e072e96c40dea985deac2d67d2cb800bb8db1cb18b31db0e623ca66e66741",
+        "verification": "installation_lock_and_live_upstream",
+        "installation_lock": {
+          "source": "K-Dense-AI/scientific-agent-skills",
+          "sourceType": "github",
+          "skillPath": "skills/experimental-design/SKILL.md",
+          "skillFolderHash": "0fe230c326a7ff17c0201c5fd4e99cc593623fe6"
+        },
+        "locally_enabled": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "explicit_local_installer_lock",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      "recovery": {
+        "command": "npx skills add K-Dense-AI/scientific-agent-skills --skill experimental-design --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/9cf7d9aea7d84754db4c167ab04b299d33c444bc/skills/experimental-design/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "8d1e072e96c40dea985deac2d67d2cb800bb8db1cb18b31db0e623ca66e66741",
+          "executable": false
+        },
+        "references/design_types.md": {
+          "sha256": "8c00ac63142f91db9e010082d491b0af25019aba0f161c72497a5df2c6ff8c55",
+          "executable": false
+        },
+        "references/factorial_and_doe.md": {
+          "sha256": "2db506065a0fd36b699ad70063ce6a099055b9e676efc36790e098ed43319e0e",
+          "executable": false
+        },
+        "references/randomization_and_blocking.md": {
+          "sha256": "b4298ef74a5c744fa986507e158fa48044f0c762c3b404c0a0b063a0dbac3dca",
+          "executable": false
+        },
+        "references/sequential_and_adaptive.md": {
+          "sha256": "bfffc806da8d84116535c4fd2f3b50f94e16e7addd38cca0b502c19df368b475",
+          "executable": false
+        },
+        "scripts/doe_designs.py": {
+          "sha256": "50d9078c06c3609713ec48546f39685716757ab30a84fefe35b20883f7bf49c6",
+          "executable": false
+        },
+        "scripts/randomization.py": {
+          "sha256": "f0cf8bf7ba27a3381366b9cf03e30506d34a70670537d046e851c340187060f8",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/experimental-design/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/9cf7d9aea7d84754db4c167ab04b299d33c444bc/LICENSE.md",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "find-skills",
+      "name": "find-skills",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/find-skills",
+      "install_name": "find-skills",
+      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "summary_zh": "搜索、评估和发现可安装的 skills",
+      "license": "MIT",
+      "upstream": {
+        "repo": "vercel-labs/skills",
+        "upstream_skill_path": "skills/find-skills/SKILL.md",
+        "upstream_commit": "80feb48868972d518436f26711509bc78595b5cb",
+        "source_url": "https://github.com/vercel-labs/skills/blob/80feb48868972d518436f26711509bc78595b5cb/skills/find-skills/SKILL.md",
+        "upstream_name": "find-skills",
+        "upstream_fetched": true,
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
+        "upstream_skill_md_sha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
+        "verification": "installation_lock_and_live_upstream",
+        "installation_lock": {
+          "source": "vercel-labs/skills",
+          "sourceType": "github",
+          "skillPath": "skills/find-skills/SKILL.md",
+          "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b"
+        },
+        "locally_enabled": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "explicit_local_installer_lock",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore"
+      },
+      "recovery": {
+        "command": "npx skills add vercel-labs/skills --skill find-skills --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/vercel-labs/skills/blob/80feb48868972d518436f26711509bc78595b5cb/skills/find-skills/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "661142e53c313d2bb5e1b055f5c0a39001450ff1b5e27b89dc4bc7de9a6352ca",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/find-skills/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/vercel-labs/skills/80feb48868972d518436f26711509bc78595b5cb/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "handoff",
+      "name": "handoff",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/handoff",
+      "install_name": "handoff",
+      "description": "Compact the current conversation into a handoff document for another agent to pick up.",
+      "summary_zh": "将当前任务整理成供下一位 agent 使用的交接文档",
+      "license": "MIT",
+      "upstream": {
+        "repo": "mattpocock/skills",
+        "upstream_skill_path": "skills/productivity/handoff/SKILL.md",
+        "upstream_commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/productivity/handoff/SKILL.md",
+        "upstream_name": "handoff",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "57c9f1f392d7352cdc85b1e39ca49eddc70ce1dc278bd9653fb4f23dfc2560fc",
+        "upstream_skill_md_sha256": "7c62de979fdc7ac32fb5ddb2146156c917f80ee070d30fadc9d40343c4b6ed25",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.938,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
+      },
+      "recovery": {
+        "command": "npx skills add mattpocock/skills --skill handoff --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/productivity/handoff/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "57c9f1f392d7352cdc85b1e39ca49eddc70ce1dc278bd9653fb4f23dfc2560fc",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "5c479fd562c691851690e8b18c8501045bef0943c10743d636b2fae26add1d28",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/handoff/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "herdr",
+      "name": "herdr",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/herdr",
+      "install_name": "herdr",
+      "description": "Control Herdr, a terminal multiplexer for coding agents. Use only when the user explicitly mentions Herdr or asks to use Herdr to inspect or control panes, tabs, workspaces, commands, or another agent. Do not use merely because a task could benefit from a background terminal, delegation, or parallel work. Requires HERDR_ENV=1.",
+      "summary_zh": "控制 Herdr 的终端、工作区和 agents；需要 Herdr 环境",
+      "license": "Apache-2.0",
+      "upstream": {
+        "repo": "herdrdev/herdr",
+        "upstream_skill_path": "skills/herdr/SKILL.md",
+        "upstream_commit": "120c682008a85dc17d7a13cc619a2fd5d25f3924",
+        "source_url": "https://github.com/herdrdev/herdr/blob/120c682008a85dc17d7a13cc619a2fd5d25f3924/skills/herdr/SKILL.md",
+        "upstream_name": "herdr",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "237ad2ab2d8123e2bb37956d3a41eed141f2d22a7c36e415b7876c0397679099",
+        "upstream_skill_md_sha256": "25a68bc36d9309048db89e7d168f2e04d1689d734c5d72cc3688bf4ff9db1e9f",
+        "verification": "installation_lock_and_live_upstream",
+        "installation_lock": {
+          "source": "herdrdev/herdr",
+          "sourceType": "github",
+          "skillPath": "skills/herdr/SKILL.md",
+          "skillFolderHash": "f8bb649bb92ddc99e6af463ab9a635da98c7b129"
+        },
+        "skill_md_line_similarity": 0.952,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "explicit_local_installer_lock",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore"
+      },
+      "recovery": {
+        "command": "npx skills add herdrdev/herdr --skill herdr --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/herdrdev/herdr/blob/120c682008a85dc17d7a13cc619a2fd5d25f3924/skills/herdr/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "237ad2ab2d8123e2bb37956d3a41eed141f2d22a7c36e415b7876c0397679099",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/herdr/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/herdrdev/herdr/120c682008a85dc17d7a13cc619a2fd5d25f3924/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "herdr-requirements-grill",
+      "name": "herdr-requirements-grill",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/herdr-requirements-grill",
+      "install_name": "herdr-requirements-grill",
+      "description": "Close high-impact requirement gaps through evidence-first questioning when the active role is unambiguously a Herdr Planner. Use for unresolved scope, safety, authority, interface, or acceptance choices that would otherwise force an implementer to guess; skip ordinary complete tasks and non-Planner roles.",
+      "summary_zh": "在 Herdr Planner 角色下澄清高影响需求缺口",
+      "license": "MIT",
+      "upstream": {
+        "repo": null,
+        "upstream_skill_path": null,
+        "verification": "local_only_no_verified_public_upstream",
+        "locally_enabled": true,
+        "local_modification_status": "not_comparable_no_verified_upstream",
+        "source_confidence": "local_custom_no_verified_public_upstream",
+        "install_command_kind": null
+      },
+      "recovery": {
+        "command": null,
+        "kind": "local-only",
+        "source_url": null,
+        "note": "维护者自定义技能，未核实到公开官方安装命令；请使用本仓库的单项恢复命令。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "283938b71e030c68585cd1199bd334ff437e28d2c68940d529c8564eca361201",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "77f10f391d60a1707e25a865b067fcea1ea6db01f943a6c9d7f2a8bf6a403705",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "591f8010ab3742a635e217566661e199bb00437e552cba176b79ad770ad7ef9b",
+          "executable": false
+        },
+        "tests/fixtures/scenarios.json": {
+          "sha256": "6d0ea4966b5ba6cf59095bc3a5c2092122f28897afb9ffce2f740fe72d70b7d4",
+          "executable": false
+        },
+        "tests/test_fixture_contract.py": {
+          "sha256": "71bc050c94ea760e242107bb99303e4a7ed846eebcd6b41ac9df24e95fd6f261",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/herdr-requirements-grill/LICENSE",
+        "basis": "repository_maintainer_custom_skill_released_under_repository_license"
+      }
+    },
+    {
+      "id": "impedance-gain-tuning",
+      "name": "impedance-gain-tuning",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/impedance-gain-tuning",
+      "install_name": "impedance-gain-tuning",
+      "description": "Tune or debug robot hand and arm kp/kd, PD/PID, or impedance behavior when the request involves overshoot, settling, stiffness, damping, step response, oscillation, saturation, or control-loop gains.",
+      "summary_zh": "机器人 kp/kd、阻抗、振荡和阶跃响应调参",
+      "license": "MIT",
+      "upstream": {
+        "repo": "C1TRuSovo831/dex-robotics-skills",
+        "upstream_skill_path": "impedance-gain-tuning/SKILL.md",
+        "upstream_commit": "c920463edeed8bd05fafc09a60fa081ba0c3695d",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/impedance-gain-tuning/SKILL.md",
+        "upstream_name": "impedance-gain-tuning",
+        "upstream_fetched": true,
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "2291c09cae0b09418fea725c426e0b8e7373bae71f9453f9b4bf1d8c427cc8f6",
+        "upstream_skill_md_sha256": "2291c09cae0b09418fea725c426e0b8e7373bae71f9453f9b4bf1d8c427cc8f6",
+        "verification": "local_git_remote_and_live_upstream",
+        "locally_enabled": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "local_git_remote_and_identical_skill_md",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
+      },
+      "recovery": {
+        "command": "npx skills add C1TRuSovo831/dex-robotics-skills --skill impedance-gain-tuning --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/impedance-gain-tuning/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "cf1e82104a16bab8cea8007ab341ee4398805d1dbcb4e2e19c93d001341595ec",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "2291c09cae0b09418fea725c426e0b8e7373bae71f9453f9b4bf1d8c427cc8f6",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "2e86738934962fcc9cea1864bfd9d10e0d58d5fe2864b4697852769d5f37e582",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/impedance-gain-tuning/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "receiving-code-review",
+      "name": "receiving-code-review",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/receiving-code-review",
+      "install_name": "receiving-code-review",
+      "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
+      "summary_zh": "核实代码审查意见后再采取修改",
+      "license": "MIT",
+      "upstream": {
+        "repo": "obra/superpowers",
+        "upstream_skill_path": "skills/receiving-code-review/SKILL.md",
+        "upstream_commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+        "source_url": "https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/receiving-code-review/SKILL.md",
+        "upstream_name": "receiving-code-review",
+        "upstream_fetched": true,
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+        "upstream_skill_md_sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+        "verification": "matching_name_and_live_upstream_content",
+        "locally_enabled": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "identical_skill_md_to_public_upstream_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore"
+      },
+      "recovery": {
+        "command": "npx skills add obra/superpowers --skill receiving-code-review --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/receiving-code-review/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "48c09b9756cabde19c4c06d1fd474cbdd042c47b68710ccb856fa2ba9bc642e9",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/receiving-code-review/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/obra/superpowers/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "research",
+      "name": "research",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/research",
+      "install_name": "research",
+      "description": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.",
+      "summary_zh": "依据可信一手来源调查问题并记录证据",
+      "license": "MIT",
+      "upstream": {
+        "repo": "mattpocock/skills",
+        "upstream_skill_path": "skills/engineering/research/SKILL.md",
+        "upstream_commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/research/SKILL.md",
+        "upstream_name": "research",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "af378829f015775a3bcd65ff466826722e99359017ae6bae227ca4c9bd14049c",
+        "upstream_skill_md_sha256": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.917,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
+      },
+      "recovery": {
+        "command": "npx skills add mattpocock/skills --skill research --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/research/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "af378829f015775a3bcd65ff466826722e99359017ae6bae227ca4c9bd14049c",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "09ae6501d3e0d69dbe01c9fc9fd477f839b7b6b4de7d8be2464ea91bd5e259dd",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/research/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "scientific-visualization",
+      "name": "scientific-visualization",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/scientific-visualization",
+      "install_name": "scientific-visualization",
+      "description": "Create and audit truthful, accessible, publication-ready scientific figures with Matplotlib, Seaborn, or Plotly. Use for figure design, multi-panel layouts, uncertainty and missing-data displays, color/contrast review, image metadata validation, and journal export planning.",
+      "summary_zh": "科研数据绘图、误差表达、配色与导出检查",
+      "license": "MIT",
+      "upstream": {
+        "repo": "K-Dense-AI/scientific-agent-skills",
+        "upstream_skill_path": "skills/scientific-visualization/SKILL.md",
+        "upstream_commit": "9cf7d9aea7d84754db4c167ab04b299d33c444bc",
+        "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/9cf7d9aea7d84754db4c167ab04b299d33c444bc/skills/scientific-visualization/SKILL.md",
+        "upstream_name": "scientific-visualization",
+        "upstream_fetched": true,
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "f7c7f9a2350ea02db2db55cd28921a54c74b089f6762f1b0b63a13b8f6eeec33",
+        "upstream_skill_md_sha256": "f7c7f9a2350ea02db2db55cd28921a54c74b089f6762f1b0b63a13b8f6eeec33",
+        "verification": "installation_lock_and_live_upstream",
+        "installation_lock": {
+          "source": "K-Dense-AI/scientific-agent-skills",
+          "sourceType": "github",
+          "skillPath": "skills/scientific-visualization/SKILL.md",
+          "skillFolderHash": "5deaed71e225759277bb94cdaf846f945ea96234"
+        },
+        "locally_enabled": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "explicit_local_installer_lock",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      "recovery": {
+        "command": "npx skills add K-Dense-AI/scientific-agent-skills --skill scientific-visualization --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/9cf7d9aea7d84754db4c167ab04b299d33c444bc/skills/scientific-visualization/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "f7c7f9a2350ea02db2db55cd28921a54c74b089f6762f1b0b63a13b8f6eeec33",
+          "executable": false
+        },
+        "assets/color_palettes.py": {
+          "sha256": "173d95887be654867db3602430ade84f6362ae80477c5373de0b44ce40375f57",
+          "executable": false
+        },
+        "assets/nature.mplstyle": {
+          "sha256": "1c0c6bcb4d6add27247f43541d8e588aa562f21c4c88c7eaa673a2eac63dfb35",
+          "executable": false
+        },
+        "assets/presentation.mplstyle": {
+          "sha256": "db47ccdf7267a39407a959141b851d72295a66489f01c9a23ec8e963a02144c8",
+          "executable": false
+        },
+        "assets/publication.mplstyle": {
+          "sha256": "45973599d92b27e5b156b4a23aa794795b5d83173633acb47e55658af304f999",
+          "executable": false
+        },
+        "assets/publisher_profiles.json": {
+          "sha256": "12633ca62d1b7539b40fa31c01aa5b266546a25734961a41fc79250a5b328b9b",
+          "executable": false
+        },
+        "references/color_palettes.md": {
+          "sha256": "9b6e7d74922d64e333aff67fd41c0b53891736f5d37b01f11e96225d2dc1bfc1",
+          "executable": false
+        },
+        "references/journal_requirements.md": {
+          "sha256": "17d36a91d5afc4975682038f36a3b13470e886f64d53b23100b3ea5688e07daa",
+          "executable": false
+        },
+        "references/matplotlib_examples.md": {
+          "sha256": "0f603898a5ac91757fec3dccd62bb5ee2e24e254fdebfb97f8d2b3ecec167dd5",
+          "executable": false
+        },
+        "references/publication_guidelines.md": {
+          "sha256": "abfd60dbf157dcf87d396e5859d100b8d98a25bfe8b802bfcc149b049300dc20",
+          "executable": false
+        },
+        "references/sources.md": {
+          "sha256": "186544985dba77fe948393483cd2c7fd2c4b543c04c1fc1bcc652190d0fb9cd0",
+          "executable": false
+        },
+        "scripts/_common.py": {
+          "sha256": "1bbbfb48500af7dd6df98076584085b2b2a24aee3024a7d9ce91dcb27ebd4b15",
+          "executable": false
+        },
+        "scripts/export_plan.py": {
+          "sha256": "29e33fbb4a8a4f558e0a190afda50721f7bcb0fabf39a4f2b8f465152d9f20bf",
+          "executable": false
+        },
+        "scripts/figure_export.py": {
+          "sha256": "5fc7dd947621b861b12fad2c053f80f465f686b92258c9a7991db618d62b8627",
+          "executable": false
+        },
+        "scripts/image_metadata.py": {
+          "sha256": "bd8df685ae0a31f92ab10ac5e5ac7472275d06a62e1543adb94a4de6bfe78693",
+          "executable": false
+        },
+        "scripts/palette_audit.py": {
+          "sha256": "3a90b3c9a4a39dde6a341dc3de7b99cd2bca4773c66564fc90cdc2706a5a8165",
+          "executable": false
+        },
+        "scripts/style_presets.py": {
+          "sha256": "3c811ecb16c012691b69e9f27993ef096977754c3a6e73d247e816a674efff21",
+          "executable": false
+        },
+        "scripts/style_preview.py": {
+          "sha256": "f96f2ec01b86423418446eebdd2ed887da83f0a1b54f499d920191d56a3542c0",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/scientific-visualization/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/9cf7d9aea7d84754db4c167ab04b299d33c444bc/LICENSE.md",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "scientific-writing",
+      "name": "scientific-writing",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/scientific-writing",
+      "install_name": "scientific-writing",
+      "description": "Draft, revise, and audit scientific manuscripts or reports with explicit evidence provenance, reporting-guideline coverage, authorship accountability, confidentiality controls, and local consistency checks. Use for manuscript sections, references, declarations, tables, figures, or submission preparation when scientific accuracy and traceability matter.",
+      "summary_zh": "科研结果、论文段落、图注与证据一致性检查",
+      "license": "MIT",
+      "upstream": {
+        "repo": "K-Dense-AI/scientific-agent-skills",
+        "upstream_skill_path": "skills/scientific-writing/SKILL.md",
+        "upstream_commit": "9cf7d9aea7d84754db4c167ab04b299d33c444bc",
+        "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/9cf7d9aea7d84754db4c167ab04b299d33c444bc/skills/scientific-writing/SKILL.md",
+        "upstream_name": "scientific-writing",
+        "upstream_fetched": true,
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "f6026e7d79cd3133e9343a7d6e6c5e06f4ad061888efb6a73fcb95e073eebf67",
+        "upstream_skill_md_sha256": "f6026e7d79cd3133e9343a7d6e6c5e06f4ad061888efb6a73fcb95e073eebf67",
+        "verification": "installation_lock_and_live_upstream",
+        "installation_lock": {
+          "source": "K-Dense-AI/scientific-agent-skills",
+          "sourceType": "github",
+          "skillPath": "skills/scientific-writing/SKILL.md",
+          "skillFolderHash": "ae5fac6462c292e31e8f75337ad4735c127146b4"
+        },
+        "locally_enabled": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "explicit_local_installer_lock",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      "recovery": {
+        "command": "npx skills add K-Dense-AI/scientific-agent-skills --skill scientific-writing --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/9cf7d9aea7d84754db4c167ab04b299d33c444bc/skills/scientific-writing/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "f6026e7d79cd3133e9343a7d6e6c5e06f4ad061888efb6a73fcb95e073eebf67",
+          "executable": false
+        },
+        "assets/REPORT_FORMATTING_GUIDE.md": {
+          "sha256": "2bb69499426ed6727c1701bae752c2e902151cbf69963f8bcf25b9e54cc20724",
+          "executable": false
+        },
+        "assets/authorship_template.json": {
+          "sha256": "04a590ac47ed61dcc7cd88a26d51243cf178fe6ada99d4000ca225e1b5f6f20a",
+          "executable": false
+        },
+        "assets/claim_evidence_template.csv": {
+          "sha256": "cfb7a9f44cd1e5ef47ccdb3e32ac0a25b72d30e51343faace9bf07c00e3a0659",
+          "executable": false
+        },
+        "assets/consistency_manifest_template.json": {
+          "sha256": "2ea6f468ab6fab45c4db3616fbaddcc2ae706b3a26d6745b4cf74ddb53266872",
+          "executable": false
+        },
+        "assets/manuscript_manifest_template.json": {
+          "sha256": "914052ff25b44072a07dce2ae8171524b717894ad7d2103054356115b9dd6c22",
+          "executable": false
+        },
+        "assets/manuscript_scaffold.md": {
+          "sha256": "55305ba311ff4e2459a31a99b3f1b9da44d79499332399a9216b5f92cb412ab2",
+          "executable": false
+        },
+        "assets/reporting_coverage_template.json": {
+          "sha256": "886ca599622c1dfaedde7649ec47e973b4fbe6081cac6a6afaf24ace899d46a9",
+          "executable": false
+        },
+        "assets/reporting_guidelines.json": {
+          "sha256": "9b3aacde9e4875bfb69a78688b0bf7988b5d22c464e21e5552f6e98d77af68d2",
+          "executable": false
+        },
+        "assets/source_manifest_template.json": {
+          "sha256": "fc6f65a8571b717691ac717f325825a608190f271e8b79650b711cc95f5b0a36",
+          "executable": false
+        },
+        "references/authorship_ai_confidentiality.md": {
+          "sha256": "b02b3aee6ab0d3e925f5c0333288d29f8ee4aac103c10c9aefff2e604d436c63",
+          "executable": false
+        },
+        "references/citation_styles.md": {
+          "sha256": "64401454dc70dc9603224495b62d241b18cb055134aeda55002b89e9e15e0c85",
+          "executable": false
+        },
+        "references/cli_reference.md": {
+          "sha256": "68390eea5952ee8b1c87142fc1be877fbbccde9efed4cb8c09aa77bba1eb616c",
+          "executable": false
+        },
+        "references/evidence_workflow.md": {
+          "sha256": "c7db56a223978307f9f43921eb393d87fef8c051a492c3d7e3c016c62b9e1409",
+          "executable": false
+        },
+        "references/figures_tables.md": {
+          "sha256": "212d10f3e7a01325d2518c4aab54a4fc04a67e4aa94e959cead199c425a0f4d6",
+          "executable": false
+        },
+        "references/imrad_structure.md": {
+          "sha256": "8a1201f8e58a045736a5bc65a47f239c894be6946716e969c0b77aa90a7e8e39",
+          "executable": false
+        },
+        "references/journal_policies.md": {
+          "sha256": "88461292ebde06f0db0e756b8e3c776cc2017eb313a8593636be264af2578ff1",
+          "executable": false
+        },
+        "references/professional_report_formatting.md": {
+          "sha256": "c269fd256bda6a9389bfd5ffefa8eff8876b96d92f8391e8a01fa80910bb35d3",
+          "executable": false
+        },
+        "references/reporting_guidelines.md": {
+          "sha256": "4a74d4613742bb26fe3d74596998b9e75ea8a2694a012222b6d9636e121a1f0d",
+          "executable": false
+        },
+        "references/research_integrity_open_science.md": {
+          "sha256": "f8f91010537acf4b78616d7410d23b85030f94d66e9d36db03d6e632ffb56100",
+          "executable": false
+        },
+        "references/source_ledger.md": {
+          "sha256": "cc2b3c801f4a350cab7e0b5261e4edda7e8d20274944e8b5590e62f0da42a0f6",
+          "executable": false
+        },
+        "references/writing_principles.md": {
+          "sha256": "58d4b32f63446c0b082f163314fdcf0d41a50568ad392d34ba992e24fadae764",
+          "executable": false
+        },
+        "scripts/_common.py": {
+          "sha256": "ef5f301a8bd71e8ca170299d44bf37f083ba4e1be88a8c193b75b30e74c3bc3d",
+          "executable": false
+        },
+        "scripts/audit_claims.py": {
+          "sha256": "6457413cfdc12317852f35cecaacb3e11e821d25d5925125f1a9af886eeb6d9a",
+          "executable": false
+        },
+        "scripts/check_consistency.py": {
+          "sha256": "5bd1f0dcbcccdac31e422b5a7b220d1ab1272a7eed906a62c0a5f2518e495d87",
+          "executable": false
+        },
+        "scripts/check_references.py": {
+          "sha256": "a262d6e935e69ec1c1f25a36b8a12b6905b3f3dee0a11d94557d3f69857c5f07",
+          "executable": false
+        },
+        "scripts/lint_manuscript.py": {
+          "sha256": "08ff45315c4dadd1c91104e3639b6bec7a6086c000830dc9d0b2b965895b3398",
+          "executable": false
+        },
+        "scripts/scaffold_manuscript.py": {
+          "sha256": "69e9a82c7d0608646872c0f4ad08b538f0c67175b48601d9d52ea527334ce4ae",
+          "executable": false
+        },
+        "scripts/select_reporting_guidelines.py": {
+          "sha256": "d130036ab1df6486cb54431a168207af03a52c626459ba7471041b0ee5aab567",
+          "executable": false
+        },
+        "scripts/validate_authorship.py": {
+          "sha256": "7e1f44ac8ad7c232cf1c34f4c51d54190ffb24230a6a0b9ceeddf6d58a2ff89d",
+          "executable": false
+        },
+        "scripts/validate_manifest.py": {
+          "sha256": "06c827653a095455cbf7d8a80a7a818018ed55076d3421863cff3dcb5e031750",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/scientific-writing/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/9cf7d9aea7d84754db4c167ab04b299d33c444bc/LICENSE.md",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "setup-matt-pocock-skills",
+      "name": "setup-matt-pocock-skills",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/setup-matt-pocock-skills",
+      "install_name": "setup-matt-pocock-skills",
+      "description": "Configure this repo for the engineering skills — set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.",
+      "summary_zh": "配置工程 skills 所用的议题和文档约定",
+      "license": "MIT",
+      "upstream": {
+        "repo": "mattpocock/skills",
+        "upstream_skill_path": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+        "upstream_commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/setup-matt-pocock-skills/SKILL.md",
+        "upstream_name": "setup-matt-pocock-skills",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "310fb1a73c0467e617e17d7c41d4a2278b5405c4a27f36d7cd22bb4599aee6bb",
+        "upstream_skill_md_sha256": "2bcd89e97777cdb705914424e39c97d5db524c8eb4eafac8120778a07774f0ec",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.741,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
+      },
+      "recovery": {
+        "command": "npx skills add mattpocock/skills --skill setup-matt-pocock-skills --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/setup-matt-pocock-skills/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "310fb1a73c0467e617e17d7c41d4a2278b5405c4a27f36d7cd22bb4599aee6bb",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "9527de0110541c45712319025155aeab8dc7d77c6ed6e5e83271bab1851ab939",
+          "executable": false
+        },
+        "domain.md": {
+          "sha256": "25be404b58798b3cb2d51c93dba2ab052fc3a425632185726ac3f5fcff193b99",
+          "executable": false
+        },
+        "issue-tracker-github.md": {
+          "sha256": "ec8332bb69e7e79e349989e940be481a0c79b552be3acc613e718278bcc5e03d",
+          "executable": false
+        },
+        "issue-tracker-gitlab.md": {
+          "sha256": "16ea4a727803876cbc763e1f6b00992b3b393ba5e0cd394382dccc0f8d83c564",
+          "executable": false
+        },
+        "issue-tracker-local.md": {
+          "sha256": "6f38f66f9ffce2fdc26c43608d06b527f60e45c6f43003d0ea77d4e2641c9de3",
+          "executable": false
+        },
+        "triage-labels.md": {
+          "sha256": "4f53c9b40ce2651e3611aa090eaedbd6dbc9b71ef8c5f7e65eac0d8263190d0d",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/setup-matt-pocock-skills/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "slides",
+      "name": "slides",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/slides",
+      "install_name": "slides",
+      "description": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
+      "summary_zh": "用 HTML 和 Chart.js 制作演示文稿",
+      "license": "MIT",
+      "upstream": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "upstream_skill_path": ".claude/skills/slides/SKILL.md",
+        "upstream_commit": "4aad0584d92131626b16d4ff4d77f0455385013c",
+        "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/4aad0584d92131626b16d4ff4d77f0455385013c/.claude/skills/slides/SKILL.md",
+        "upstream_name": "slides",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "2b90bdaf63f231919a01f4962f374ecd84af101a7e7545f8d9c68e049025accb",
+        "upstream_skill_md_sha256": "86c07f19ec09f79441d3837e909cfcd51034b83bdcc88094c15e652be1e765cb",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.952,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_general_install_command": "npm install -g ui-ux-pro-max-cli && uipro init --ai codex"
+      },
+      "recovery": {
+        "command": "npx skills add nextlevelbuilder/ui-ux-pro-max-skill --skill slides --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/4aad0584d92131626b16d4ff4d77f0455385013c/.claude/skills/slides/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "2b90bdaf63f231919a01f4962f374ecd84af101a7e7545f8d9c68e049025accb",
+          "executable": false
+        },
+        "references/copywriting-formulas.md": {
+          "sha256": "03733d5916ab771834745550045b736deeb94a08226f2b200f7953009c35b219",
+          "executable": false
+        },
+        "references/create.md": {
+          "sha256": "792d647a5d4f87d765cf417f7ac54dd0b2fc4d229cc23ea9df56282d4c1ee086",
+          "executable": false
+        },
+        "references/html-template.md": {
+          "sha256": "fd5b051a37365fc6059c75bb388ec6f64daf1bd9ae938b287b6d762dc83c0c35",
+          "executable": false
+        },
+        "references/layout-patterns.md": {
+          "sha256": "0a967ca3bd829d3234e6f1802bade6c76447fabbaddbc8117c41adbae7dfb6df",
+          "executable": false
+        },
+        "references/slide-strategies.md": {
+          "sha256": "27ee3e53ffa0ea679ec83ebeacb0bcfbce498df57277e99f574b9c139dc44286",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/slides/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "statistical-power",
+      "name": "statistical-power",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/statistical-power",
+      "install_name": "statistical-power",
+      "description": "Sample-size and statistical power calculations for planning studies. Use whenever someone asks \"how many subjects/samples/replicates do I need\", wants an a priori power analysis, a minimum detectable effect (MDE), a power curve, or needs to justify a sample size for a grant, IRB protocol, or pre-registration. Covers closed-form power for t-tests, ANOVA, proportions, correlations, chi-square, and regression, plus simulation-based (Monte Carlo) power for designs with no formula — logistic/Poisson regression, mixed models, cluster-randomized trials, survival, and interactions. Use this skill even when the request only mentions an effect size, alpha, or \"80% power\" without saying \"power analysis\" explicitly. For laying out the study (randomization, blocking, factorial/DOE, crossover, sequential designs) use experimental-design; for analyzing data already collected and reporting it use statistical-analysis.",
+      "summary_zh": "样本量、可检测差异和统计功效规划",
+      "license": "MIT",
+      "upstream": {
+        "repo": "K-Dense-AI/scientific-agent-skills",
+        "upstream_skill_path": "skills/statistical-power/SKILL.md",
+        "upstream_commit": "9cf7d9aea7d84754db4c167ab04b299d33c444bc",
+        "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/9cf7d9aea7d84754db4c167ab04b299d33c444bc/skills/statistical-power/SKILL.md",
+        "upstream_name": "statistical-power",
+        "upstream_fetched": true,
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "51ca6017ecaf5a6ec427d80f511063f570a983785399eedbd24c6fc4b9fd12f5",
+        "upstream_skill_md_sha256": "51ca6017ecaf5a6ec427d80f511063f570a983785399eedbd24c6fc4b9fd12f5",
+        "verification": "installation_lock_and_live_upstream",
+        "installation_lock": {
+          "source": "K-Dense-AI/scientific-agent-skills",
+          "sourceType": "github",
+          "skillPath": "skills/statistical-power/SKILL.md",
+          "skillFolderHash": "54357b5c0a1ff8810bf483505210b96bf3cd1855"
+        },
+        "locally_enabled": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "explicit_local_installer_lock",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      "recovery": {
+        "command": "npx skills add K-Dense-AI/scientific-agent-skills --skill statistical-power --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/9cf7d9aea7d84754db4c167ab04b299d33c444bc/skills/statistical-power/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "51ca6017ecaf5a6ec427d80f511063f570a983785399eedbd24c6fc4b9fd12f5",
+          "executable": false
+        },
+        "references/closed_form_recipes.md": {
+          "sha256": "6194841e8477d027cae631c557a90826cd4d613d98e98749e6f40714a1da3b0b",
+          "executable": false
+        },
+        "references/effect_sizes.md": {
+          "sha256": "19f243ac6aeacfbbb7a83a1e621dc5a8248b98278499c4efd34db412d2c964db",
+          "executable": false
+        },
+        "references/simulation_based_power.md": {
+          "sha256": "5841de90e01a4e4617ce84c9ced9791f1ca3b3e0727c80f73f3ea5b9f339b469",
+          "executable": false
+        },
+        "scripts/power.py": {
+          "sha256": "4bb073160c59469eed4398eee0fa3c6686c1df1c2ebf7bdddfe7853d7c94914c",
+          "executable": false
+        },
+        "scripts/simulate_power.py": {
+          "sha256": "a3eb6fefe1af0aa9d67fe8762efab47df13a0ff57a35480a59c0fc4e18c404df",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/statistical-power/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/9cf7d9aea7d84754db4c167ab04b299d33c444bc/LICENSE.md",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "tdd",
+      "name": "tdd",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/tdd",
+      "install_name": "tdd",
+      "description": "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests.",
+      "summary_zh": "按测试先行的方式实现功能与修复问题",
+      "license": "MIT",
+      "upstream": {
+        "repo": "mattpocock/skills",
+        "upstream_skill_path": "skills/engineering/tdd/SKILL.md",
+        "upstream_commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/tdd/SKILL.md",
+        "upstream_name": "tdd",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "501e42b5cbced4ac0ce5996cba940bb4c6636edccb783b164da52db633c6bd07",
+        "upstream_skill_md_sha256": "cb01f66bebfaa25fa1f88e6b7e769cd9fd9f35b1120b8563749820738814c927",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.632,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
+      },
+      "recovery": {
+        "command": "npx skills add mattpocock/skills --skill tdd --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/engineering/tdd/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "501e42b5cbced4ac0ce5996cba940bb4c6636edccb783b164da52db633c6bd07",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "9c20f8ad8de3870365ac3d2de696a6f72f43e4ddb21db039956fb6d4d87fa5d8",
+          "executable": false
+        },
+        "mocking.md": {
+          "sha256": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
+          "executable": false
+        },
+        "tests.md": {
+          "sha256": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/tdd/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "teleop-hil-review",
+      "name": "teleop-hil-review",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/teleop-hil-review",
+      "install_name": "teleop-hil-review",
+      "description": "Audit a scoped teleoperation hardware-in-the-loop or physical-safety evidence claim when the active role is unambiguously Herdr Planner or Reviewer. Use for HIL, real-robot readiness, physical motion, calibration provenance, or safety acceptance reviews; skip implementation tasks and other roles.",
+      "summary_zh": "在指定审查角色下核查遥操作 HIL 与安全证据",
+      "license": "MIT",
+      "upstream": {
+        "repo": null,
+        "upstream_skill_path": null,
+        "verification": "local_only_no_verified_public_upstream",
+        "locally_enabled": true,
+        "local_modification_status": "not_comparable_no_verified_upstream",
+        "source_confidence": "local_custom_no_verified_public_upstream",
+        "install_command_kind": null
+      },
+      "recovery": {
+        "command": null,
+        "kind": "local-only",
+        "source_url": null,
+        "note": "维护者自定义技能，未核实到公开官方安装命令；请使用本仓库的单项恢复命令。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "283938b71e030c68585cd1199bd334ff437e28d2c68940d529c8564eca361201",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "fd24c8a02c3446e34176ebc9e97aeff4e68a4048e7cdfd2d69b15ae0687679df",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "2361527cfd1c7cdbacb08fbec26b8b7e7430b88dcc0a89679dae5f331302c3e8",
+          "executable": false
+        },
+        "tests/fixtures/scenarios.json": {
+          "sha256": "d785c849f1790ed09eb8fdfdc7737f849228ed8b85da48699143792f7ea4fda6",
+          "executable": false
+        },
+        "tests/test_fixture_contract.py": {
+          "sha256": "11074564be83c1a5439ce93c239e6a3c84fd2d4367b09fa691aeb8633039e575",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/teleop-hil-review/LICENSE",
+        "basis": "repository_maintainer_custom_skill_released_under_repository_license"
+      }
+    },
+    {
+      "id": "ui-styling",
+      "name": "ui-styling",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/ui-styling",
+      "install_name": "ui-styling",
+      "description": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications.",
+      "summary_zh": "用 Tailwind/shadcn 等实现界面样式",
+      "license": "Apache-2.0",
+      "upstream": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "upstream_skill_path": ".claude/skills/ui-styling/SKILL.md",
+        "upstream_commit": "4aad0584d92131626b16d4ff4d77f0455385013c",
+        "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/4aad0584d92131626b16d4ff4d77f0455385013c/.claude/skills/ui-styling/SKILL.md",
+        "upstream_name": "ui-styling",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "f8b6c3832d2af51f67b3932e3c4a79bcd8a8596cc61ce1547a686fc951e5c62d",
+        "upstream_skill_md_sha256": "41f6d6a41bf827544e7b47f2ad2fe0264db7820bc6b425adbc037fc5508ffef0",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.994,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_general_install_command": "npm install -g ui-ux-pro-max-cli && uipro init --ai codex"
+      },
+      "recovery": {
+        "command": "npx skills add nextlevelbuilder/ui-ux-pro-max-skill --skill ui-styling --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/4aad0584d92131626b16d4ff4d77f0455385013c/.claude/skills/ui-styling/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE.txt": {
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "f8b6c3832d2af51f67b3932e3c4a79bcd8a8596cc61ce1547a686fc951e5c62d",
+          "executable": false
+        },
+        "UPSTREAM-LICENSE-MIT.txt": {
+          "sha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014",
+          "executable": false
+        },
+        "references/canvas-design-system.md": {
+          "sha256": "f5de85ff39d9f3a8275c4164b921ba72d5e1d34b8d7a9243d9ee34b3870a4f5f",
+          "executable": false
+        },
+        "references/shadcn-accessibility.md": {
+          "sha256": "a22cd4ccf82b635b2b2c4f12416a0c4f7edcd825d219d6089450fa797a0d9511",
+          "executable": false
+        },
+        "references/shadcn-components.md": {
+          "sha256": "79c4f91cbf68993a43fa3a95889c35db73de45bdd3dfd83a6830863c01aa598a",
+          "executable": false
+        },
+        "references/shadcn-theming.md": {
+          "sha256": "d17d641474221123ff0e0288043ca2f2dab3ac96908a19eed28d82f9e58865ed",
+          "executable": false
+        },
+        "references/tailwind-customization.md": {
+          "sha256": "4c5adeed6263a274f74f6eb2c816ca420fd6ef4f35683582988bacd404799afe",
+          "executable": false
+        },
+        "references/tailwind-responsive.md": {
+          "sha256": "8d00ae620df26daea4623c7bf996d6e612e09d359305fcfa2b40cab757ed840c",
+          "executable": false
+        },
+        "references/tailwind-utilities.md": {
+          "sha256": "aba1c40ef84f43beea142ae310371e332541f39d973df90a71f1854823effda1",
+          "executable": false
+        },
+        "scripts/requirements.txt": {
+          "sha256": "09402d2d274248e18bb5fd0a0267fd7cbf99b7a2440e73e87f054aa8f259f9da",
+          "executable": false
+        },
+        "scripts/shadcn_add.py": {
+          "sha256": "0c11d28ce9f12217df2c3306f24ae1f73527d5116db63707ab55cbe1a8bcf28c",
+          "executable": false
+        },
+        "scripts/tailwind_config_gen.py": {
+          "sha256": "2e264ec871499681aecd6111f60743fba31b5ceb7e9ccb2b71b7346039285f89",
+          "executable": false
+        },
+        "scripts/tests/coverage-ui.json": {
+          "sha256": "33bdc1f5998db9a38cac8e6128a82711f8f8b65fbb3dcb0c1680ae260441cbce",
+          "executable": false
+        },
+        "scripts/tests/requirements.txt": {
+          "sha256": "80846c98ee02a7e9651ec4eee6709f840b785646b469aad5284ab7ab9b344f17",
+          "executable": false
+        },
+        "scripts/tests/test_shadcn_add.py": {
+          "sha256": "35f60ac5d74c4a7f950854a0337883c3e8dd812c58fcf6c5153876e43a6effa2",
+          "executable": false
+        },
+        "scripts/tests/test_tailwind_config_gen.py": {
+          "sha256": "4efa59fdbe318d55e6a452d85401db5d1aa4504f93739878bb40d8bb504af585",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/ui-styling/LICENSE.txt",
+        "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
+        "basis": "public_upstream_license",
+        "additional_license_path": "skills/ui-styling/UPSTREAM-LICENSE-MIT.txt"
+      }
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "name": "ui-ux-pro-max",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/ui-ux-pro-max",
+      "install_name": "ui-ux-pro-max",
+      "description": "UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces, including pages, components, design systems, accessibility, interaction, responsive layout, typography, color, charts, and stack-specific UI implementation. Searchable local data: 79 searchable styles (50 active), 192 product palettes and reasoning profiles, 74 font pairings, 119 UX guidelines, 105 icons, 17 GSAP presets, 25 chart types, and 22 stacks.",
+      "summary_zh": "检索 UI/UX 风格、配色、字体、图表与实现指南",
+      "license": "MIT",
+      "upstream": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "upstream_skill_path": ".claude/skills/ui-ux-pro-max/SKILL.md",
+        "upstream_commit": "4aad0584d92131626b16d4ff4d77f0455385013c",
+        "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/4aad0584d92131626b16d4ff4d77f0455385013c/.claude/skills/ui-ux-pro-max/SKILL.md",
+        "upstream_name": "ui-ux-pro-max",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "8b827fe03b349aeea99a7d6cf4ccd892e6065b672859fdb11e13a1919453eddc",
+        "upstream_skill_md_sha256": "ea087c341bfb5b23195c7302027268ede86da802554c18a5c4896a6017b439f9",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.222,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_general_install_command": "npm install -g ui-ux-pro-max-cli && uipro init --ai codex"
+      },
+      "recovery": {
+        "command": "npx skills add nextlevelbuilder/ui-ux-pro-max-skill --skill ui-ux-pro-max --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/4aad0584d92131626b16d4ff4d77f0455385013c/.claude/skills/ui-ux-pro-max/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "8b827fe03b349aeea99a7d6cf4ccd892e6065b672859fdb11e13a1919453eddc",
+          "executable": false
+        },
+        "data/app-interface.csv": {
+          "sha256": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08",
+          "executable": false
+        },
+        "data/catalog-summary.json": {
+          "sha256": "65fe0b64480a8a827738297d0a64ca55c627d4afcb774fe4555c59cea8dd6905",
+          "executable": false
+        },
+        "data/charts.csv": {
+          "sha256": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a",
+          "executable": false
+        },
+        "data/colors.csv": {
+          "sha256": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c",
+          "executable": false
+        },
+        "data/data-provenance.json": {
+          "sha256": "e82fb33ed49375a300e93d9c11ccd1c1493c999e84ee7ee295e527634786e2e0",
+          "executable": false
+        },
+        "data/google-font-licenses.json": {
+          "sha256": "35688523f2955795caa1a47c53b83099e60c1708461476f9cc3a050cf3b0148a",
+          "executable": false
+        },
+        "data/google-fonts.csv": {
+          "sha256": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03",
+          "executable": false
+        },
+        "data/icons.csv": {
+          "sha256": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc",
+          "executable": false
+        },
+        "data/landing.csv": {
+          "sha256": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0",
+          "executable": false
+        },
+        "data/motion.csv": {
+          "sha256": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb",
+          "executable": false
+        },
+        "data/phosphor-icons-upstream.json": {
+          "sha256": "2399325233b277b5c97a80e6a5e8941154f5d057beee4e7613db87c87d700236",
+          "executable": false
+        },
+        "data/products.csv": {
+          "sha256": "42473f75e8dde5987bdf89ce55d8c168091b80a356cae691dd60247d80720b70",
+          "executable": false
+        },
+        "data/react-performance.csv": {
+          "sha256": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734",
+          "executable": false
+        },
+        "data/stacks/angular.csv": {
+          "sha256": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553",
+          "executable": false
+        },
+        "data/stacks/astro.csv": {
+          "sha256": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6",
+          "executable": false
+        },
+        "data/stacks/avalonia.csv": {
+          "sha256": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258",
+          "executable": false
+        },
+        "data/stacks/flutter.csv": {
+          "sha256": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0",
+          "executable": false
+        },
+        "data/stacks/html-tailwind.csv": {
+          "sha256": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee",
+          "executable": false
+        },
+        "data/stacks/javafx.csv": {
+          "sha256": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869",
+          "executable": false
+        },
+        "data/stacks/jetpack-compose.csv": {
+          "sha256": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a",
+          "executable": false
+        },
+        "data/stacks/laravel.csv": {
+          "sha256": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9",
+          "executable": false
+        },
+        "data/stacks/nextjs.csv": {
+          "sha256": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4",
+          "executable": false
+        },
+        "data/stacks/nuxt-ui.csv": {
+          "sha256": "c36ee8470926b4a0748d241363c71664c9969c2edbc62f7f72de0db73880fac6",
+          "executable": false
+        },
+        "data/stacks/nuxtjs.csv": {
+          "sha256": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176",
+          "executable": false
+        },
+        "data/stacks/react-native.csv": {
+          "sha256": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5",
+          "executable": false
+        },
+        "data/stacks/react.csv": {
+          "sha256": "2d2b9c198e875106a30f7ee68341a9ee0033cad60a7e130cf23152783e08aeda",
+          "executable": false
+        },
+        "data/stacks/shadcn.csv": {
+          "sha256": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51",
+          "executable": false
+        },
+        "data/stacks/svelte.csv": {
+          "sha256": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db",
+          "executable": false
+        },
+        "data/stacks/swiftui.csv": {
+          "sha256": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623",
+          "executable": false
+        },
+        "data/stacks/threejs.csv": {
+          "sha256": "97542e0ba34915a0ff7578be20e1619495df47c95c8c1c39b83e3785e1de771f",
+          "executable": false
+        },
+        "data/stacks/uno.csv": {
+          "sha256": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48",
+          "executable": false
+        },
+        "data/stacks/uwp.csv": {
+          "sha256": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c",
+          "executable": false
+        },
+        "data/stacks/vue.csv": {
+          "sha256": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95",
+          "executable": false
+        },
+        "data/stacks/winui.csv": {
+          "sha256": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85",
+          "executable": false
+        },
+        "data/stacks/wpf.csv": {
+          "sha256": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7",
+          "executable": false
+        },
+        "data/styles.csv": {
+          "sha256": "a93a4d9d7025856575d7b7583bda020be9043013432c5af7c58af9dbdfb206b7",
+          "executable": false
+        },
+        "data/typography.csv": {
+          "sha256": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8",
+          "executable": false
+        },
+        "data/ui-reasoning.csv": {
+          "sha256": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a",
+          "executable": false
+        },
+        "data/ux-guidelines.csv": {
+          "sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
+          "executable": false
+        },
+        "scripts/core.py": {
+          "sha256": "e544826963efefce3c59b65e18d83d92a5baf571f05458025bf1fa9021eced42",
+          "executable": false
+        },
+        "scripts/design_system.py": {
+          "sha256": "6a94743c3362c9c7e6d1450b94f4014d9ea752e7b4e151f6f0bdb217e0544bf7",
+          "executable": false
+        },
+        "scripts/reasoning_contract.py": {
+          "sha256": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913",
+          "executable": false
+        },
+        "scripts/search.py": {
+          "sha256": "8373e2dd2d560d9853ec116140de0e0d5bee45a6abe5e041173c84e1c36a7f87",
+          "executable": false
+        },
+        "scripts/tests/fixtures/catalogs/google-api.json": {
+          "sha256": "22d8dc81a7d6827b7e8b64b53e7d184210fb9759e8e294e0d5133c81cc460176",
+          "executable": false
+        },
+        "scripts/tests/fixtures/catalogs/google-catalog.json": {
+          "sha256": "c608ad5c4084ebc50a4bbbfb69ea2456c01fd5519c457e18410fffd250ae948f",
+          "executable": false
+        },
+        "scripts/tests/fixtures/catalogs/google-existing.csv": {
+          "sha256": "4e0761b839dc6b2187a370e82eddc0aed8a7ff10c09e28dd814bb3656dac595b",
+          "executable": false
+        },
+        "scripts/tests/fixtures/catalogs/google-metadata.json": {
+          "sha256": "30bffc29ae348416a2de2f9c6c418e768e4578f136b0f4bac5d2f70124f2e9ba",
+          "executable": false
+        },
+        "scripts/tests/fixtures/catalogs/google-overrides.json": {
+          "sha256": "6243a48a4619986768c4628e2d0c98ff195beba71ba9be5df8f0c52fc6d90c0b",
+          "executable": false
+        },
+        "scripts/tests/fixtures/catalogs/icons-curated.csv": {
+          "sha256": "68362c9a700c13b96f000784a0198c1c7e117a7088a01c85744e44233038fe9d",
+          "executable": false
+        },
+        "scripts/tests/fixtures/catalogs/phosphor-core.json": {
+          "sha256": "ae4d0bb076240824e1b643c2270d1f8cc0952a69502ec1e622b7dedd85b930bb",
+          "executable": false
+        },
+        "scripts/tests/fixtures/catalogs/phosphor-package.json": {
+          "sha256": "500588c757d6de03e3d7e69b27a8b8b1f88ccf6bb0333e4c1e9b0d6a4f112475",
+          "executable": false
+        },
+        "scripts/tests/fixtures/catalogs/phosphor-react-exports.json": {
+          "sha256": "d79f2ee0afdbc2f87776733e145df3538a16a25d7c2fba0056bb48295dad0ded",
+          "executable": false
+        },
+        "scripts/tests/fixtures/catalogs/phosphor-react-package.json": {
+          "sha256": "1c57a1d76bcc0cdd3632d4c18b9c0e79576b4591df39831c9607e5d0eb4f2cec",
+          "executable": false
+        },
+        "scripts/tests/fixtures/relevance-baseline.json": {
+          "sha256": "38398452985116e74e31bd6bccca0f4decd1bbfe4eebc1ac99f7a1836baaf77f",
+          "executable": false
+        },
+        "scripts/tests/fixtures/relevance-cases.json": {
+          "sha256": "e77d36eebbf6ddc2860946a02cdb659351da6c09f2688f1ed30939a418099646",
+          "executable": false
+        },
+        "scripts/tests/fixtures/relevance-thresholds.json": {
+          "sha256": "9d738e11c6b82fecc8d0946e7b38515518ded5ed3294a7eb19a021c4edb5b57d",
+          "executable": false
+        },
+        "scripts/tests/test_catalog_refresh.py": {
+          "sha256": "3e2ca5d12702318f641ae62d0c14f22a3bcc84d84e79b863c0e947d475604adb",
+          "executable": false
+        },
+        "scripts/tests/test_core.py": {
+          "sha256": "3527fe2f4b852f69f07c17ddc0d615d9a6e025c924e45a33985579a94a8d2118",
+          "executable": false
+        },
+        "scripts/tests/test_core_data_quality.py": {
+          "sha256": "3ffc6b4905c9ea26d7ac4527ab154d153584231aee71b2ae4bd017977fa09cc5",
+          "executable": false
+        },
+        "scripts/tests/test_data_contracts.py": {
+          "sha256": "0360d6e10080c0bca214f2b0bbad582ba50702a542ce21013351aca54938df3a",
+          "executable": false
+        },
+        "scripts/tests/test_design_system_mode.py": {
+          "sha256": "517ba1ba6195c94811126d1162139c51aff77fc68c3e320c7bb6c1e89e76bc9b",
+          "executable": false
+        },
+        "scripts/tests/test_native_desktop_stack_freshness.py": {
+          "sha256": "904f90bc6d364763673fa6067d98a4227d535760fa8b6d26abe22208176997ca",
+          "executable": false
+        },
+        "scripts/tests/test_relevance_evaluator.py": {
+          "sha256": "2fe56a4d6fe5fff15ff592274b0eeaba925146cefea6c0fa29d8f1b77c9aca1f",
+          "executable": false
+        },
+        "scripts/tests/test_style_taxonomy.py": {
+          "sha256": "cd14d0092e8a454d213aa104b53e4e70ba698491fa00fde9fdec5ca8a3d70011",
+          "executable": false
+        },
+        "scripts/tests/test_text_layout_resilience.py": {
+          "sha256": "b51d32ee8a15505b87cb81957fb2d1b385e041e8beb4463c311d236bfd29ebd4",
+          "executable": false
+        },
+        "scripts/tests/test_web_stack_freshness.py": {
+          "sha256": "becc5fa40e7516613d4e9930f226aa483e3796090c17cb16542c93d1927e680d",
+          "executable": false
+        },
+        "scripts/validate_data.py": {
+          "sha256": "718ad4cbb227436015c9c2bc80fc583d6ed738b01c1a940ef85e350780d99f58",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/ui-ux-pro-max/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "verification-before-completion",
+      "name": "verification-before-completion",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/verification-before-completion",
+      "install_name": "verification-before-completion",
+      "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
+      "summary_zh": "在宣布完成前运行相关验证并检查结果",
+      "license": "MIT",
+      "upstream": {
+        "repo": "obra/superpowers",
+        "upstream_skill_path": "skills/verification-before-completion/SKILL.md",
+        "upstream_commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+        "source_url": "https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/verification-before-completion/SKILL.md",
+        "upstream_name": "verification-before-completion",
+        "upstream_fetched": true,
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+        "upstream_skill_md_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+        "verification": "matching_name_and_live_upstream_content",
+        "locally_enabled": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "identical_skill_md_to_public_upstream_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore"
+      },
+      "recovery": {
+        "command": "npx skills add obra/superpowers --skill verification-before-completion --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/verification-before-completion/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "cc4e33477c3610a13bad5a8ab0bef2576e6aa21afb84b407d4087cb1908985c9",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/verification-before-completion/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/obra/superpowers/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "writing-for-agents",
+      "name": "writing-for-agents",
+      "kind": "local",
+      "enabled": true,
+      "path": "skills/writing-for-agents",
+      "install_name": "writing-for-agents",
+      "description": "Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.",
+      "summary_zh": "编写 agent 可执行的技能、规则与项目说明",
+      "license": "MIT",
+      "upstream": {
+        "repo": "mattpocock/skills",
+        "upstream_skill_path": "skills/productivity/writing-for-agents/SKILL.md",
+        "upstream_commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/productivity/writing-for-agents/SKILL.md",
+        "upstream_name": "writing-for-agents",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "be6a2a4cd84e4d98450068e1022ba8ad55552175e89993ed6a09b2cdafc745c0",
+        "upstream_skill_md_sha256": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a",
+        "verification": "matching_name_and_live_upstream_content",
+        "skill_md_line_similarity": 0.651,
+        "locally_enabled": true,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
+      },
+      "recovery": {
+        "command": "npx skills add mattpocock/skills --skill writing-for-agents --agent codex --global",
+        "kind": "upstream",
+        "source_url": "https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/productivity/writing-for-agents/SKILL.md",
+        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+      },
+      "files": {
+        "LICENSE": {
+          "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+          "executable": false
+        },
+        "SKILL-MECHANICS.md": {
+          "sha256": "b4c54a0aaad3f6eddefde6d06770a0e401fbb8fc6a8f49ce18af816bd144d14d",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "be6a2a4cd84e4d98450068e1022ba8ad55552175e89993ed6a09b2cdafc745c0",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "d7cb18c6e6441a080320f28a6ba5358b9174460c8dd90d160314b39b43b9ad61",
+          "executable": false
+        }
+      },
+      "license_evidence": {
+        "license_path": "skills/writing-for-agents/LICENSE",
+        "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
+        "basis": "public_upstream_license"
+      }
+    },
+    {
+      "id": "system-imagegen",
+      "name": "imagegen",
+      "kind": "system",
+      "enabled": true,
+      "path": "bundled/system/imagegen",
+      "install_name": "imagegen",
+      "description": "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas.",
+      "summary_zh": "生成、编辑与变换栅格图像",
+      "license": "Apache-2.0",
+      "recovery": {
+        "command": "npx skills add https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.system/imagegen --skill imagegen --agent codex --global",
+        "kind": "bundled",
+        "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/imagegen/SKILL.md",
+        "note": "Codex 随附系统技能；优先使用目标电脑随 Codex 提供的版本。此版本可单项恢复，但不会安装宿主工具。 所列命令恢复已核实的 OpenAI 公开上游版本，与仓库版本不同；请勿将其视为原样恢复。"
+      },
+      "files": {
+        "LICENSE.txt": {
+          "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "681ddb4ad6d06a2acc78a3535b583f8d0c1ea800ecda3d56370d3310fd2cd4ba",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "9ca574af14580dc7a2a3dc37a1796d17f93cb8850be66501f0799ef8603e9dc0",
+          "executable": false
+        },
+        "assets/imagegen-small.svg": {
+          "sha256": "cff5f34f57ff60b3ee92eaedd17b15e96dd4b9e776df3e78936c9e00d42be294",
+          "executable": false
+        },
+        "assets/imagegen.png": {
+          "sha256": "95952f644064eb9e890f98d8db07216347186526e4c41ad66d3420629eb86e20",
+          "executable": false
+        },
+        "references/cli.md": {
+          "sha256": "ecfc2e09261a0feb3482517a5fa0ff410cb7d1958e3cbd2ac6b61586f5b81405",
+          "executable": false
+        },
+        "references/codex-network.md": {
+          "sha256": "c88298ca4481f6116a16fa7987434fc977f8b311c1bbc0c3d862ffd0c5981148",
+          "executable": false
+        },
+        "references/image-api.md": {
+          "sha256": "dc975d7af8a4888967251a0276014b4a71ea30455294944b762256373ce3e569",
+          "executable": false
+        },
+        "references/prompting.md": {
+          "sha256": "b210b051c775860267080941eba968212bf0ac7fce581d75c5dcc217d8293f8b",
+          "executable": false
+        },
+        "references/sample-prompts.md": {
+          "sha256": "70474177d151855b175c6133de2aae1d90b7f146b0dab50ec830972c47d72183",
+          "executable": false
+        },
+        "scripts/image_gen.py": {
+          "sha256": "b4345cf835e5b593b97df6bb2b70bda493b8a97eee4cabbc99b2fa57dba9b448",
+          "executable": false
+        },
+        "scripts/remove_chroma_key.py": {
+          "sha256": "a5893c4bd04b21abced33731ea89d2ac428e81d92a0368eb18ffbe4fda5253e2",
+          "executable": false
+        }
+      },
+      "upstream": {
+        "name": "imagegen",
+        "repo": "openai/skills",
+        "checked_commit": "49f948faa9258a0c61caceaf225e179651397431",
+        "public_path_verified": true,
+        "upstream_skill_path": "skills/.system/imagegen/SKILL.md",
+        "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/imagegen/SKILL.md",
+        "skill_md_identical": false,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "local_skill_md_sha256": "681ddb4ad6d06a2acc78a3535b583f8d0c1ea800ecda3d56370d3310fd2cd4ba",
+        "upstream_skill_md_sha256": "826d05b806d51fa81cd650f1c0854b0a1f7fbccd1b152c588ded1797a2e7218f",
+        "install_command": "npx skills add https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.system/imagegen --skill imagegen --agent codex --global",
+        "install_command_kind": "verified_official_public_source_via_skills_cli",
+        "official_helper_command": "python3 \"${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py\" --repo openai/skills --ref 49f948faa9258a0c61caceaf225e179651397431 --path skills/.system/imagegen",
+        "notes": [
+          "Installs one skill to user scope. The official helper aborts if destination already exists. Existing built-in copies may duplicate/shadow user-scope copies; default recovery should use the local snapshot or product-managed version."
+        ]
+      },
+      "license_evidence": {
+        "license_path": "bundled/system/imagegen/LICENSE.txt",
+        "basis": "license_shipped_with_skill",
+        "upstream_source": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/imagegen/SKILL.md"
+      }
+    },
+    {
+      "id": "system-openai-docs",
+      "name": "openai-docs",
+      "kind": "system",
+      "enabled": true,
+      "path": "bundled/system/openai-docs",
+      "install_name": "openai-docs",
+      "description": "Use for Codex models/pricing, scheduled tasks, skills, settings, setup, troubleshooting, customization, automations, and self-knowledge—including 'you,' 'your,' 'this app,' or 'this coding agent' when they refer to Codex—and for OpenAI APIs/products and ChatGPT Work. Also use for model choice/migration, prompting, SDKs, Responses, Realtime, agents, evals, and Chat/Work/Codex comparisons. Do not use for generic app/software tasks that merely mention Codex.",
+      "summary_zh": "核实 OpenAI、Codex 与 API 的官方资料",
+      "license": "Apache-2.0",
+      "recovery": {
+        "command": "npx skills add https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.system/openai-docs --skill openai-docs --agent codex --global",
+        "kind": "bundled",
+        "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/openai-docs/SKILL.md",
+        "note": "Codex 随附系统技能；优先使用目标电脑随 Codex 提供的版本。此版本可单项恢复，但不会安装宿主工具。 所列命令恢复已核实的 OpenAI 公开上游版本，与仓库版本不同；请勿将其视为原样恢复。"
+      },
+      "files": {
+        "LICENSE.txt": {
+          "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "7cb8fa1b2a0c635b5c61ffe1da7b8594a7ea0fce5b71e8d523e2025d88b2a05e",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "44b9efac6be1bae32d869aa2942fecbe4dcae82682ee03e4120f2f9b7d4658ec",
+          "executable": false
+        },
+        "assets/openai-small.svg": {
+          "sha256": "45be1f0757eb18889eefb1e7db79668ef46a275dc4e0e78e8df5ebd7f6cdeadc",
+          "executable": false
+        },
+        "assets/openai.png": {
+          "sha256": "156cc84d7332bfe95b310350bd470b690d22aa33d65340cc6c2e06022946194c",
+          "executable": false
+        },
+        "references/codex-self-knowledge.md": {
+          "sha256": "8c8fb00e6e5cb1977924f5164684a6095427fa828bbc765225f17d9aeb79a912",
+          "executable": false
+        },
+        "references/latest-model.md": {
+          "sha256": "f25e351e522dd6e30e82d482f31f44c992e794b11031cdcb6ac7c0e6b20c9d5d",
+          "executable": false
+        },
+        "references/mcp-diagnostics.md": {
+          "sha256": "49bbd2f73df7bbd7f86c80425dea4da2d301c22046080399a36bfc0ca49509e9",
+          "executable": false
+        },
+        "references/model-migration.md": {
+          "sha256": "5f20c38fbbb10319767b216d91ba74bae49c68fc1bfd6d1abd7c9b4cc9cb9ab0",
+          "executable": false
+        },
+        "references/model-selection.md": {
+          "sha256": "ba2d164abbca30435a460a0bc3a7d82398dce2bdf092705c98ba55b3f3af38a8",
+          "executable": false
+        },
+        "references/official-docs.md": {
+          "sha256": "7962f2dce55089b93bde4115bb89fd42f20993c1597a2b13edd4956f463875b9",
+          "executable": false
+        },
+        "references/prompting-guide.md": {
+          "sha256": "db913884cfe0fabf29bee1a139918f56e299decfa0a14d61c48596f23f76621d",
+          "executable": false
+        },
+        "references/upgrade-guide.md": {
+          "sha256": "ed1b75a89b8ec4d67787774ef6c4e8b98eace16c63348f42e969e6ffa67cb656",
+          "executable": false
+        },
+        "references/upgrading-to-gpt-5p6-sol.md": {
+          "sha256": "9a918a0c8dd051d574f2fd0309201afa8a9b9c08241c11ca1fb0ac2f4724e7ac",
+          "executable": false
+        },
+        "scripts/fetch-codex-manual.mjs": {
+          "sha256": "f53eb6d2f286e9efcc397e8bee93a938e37296c90953e4e06e94899ef1b6c363",
+          "executable": false
+        },
+        "scripts/resolve-latest-model-info": {
+          "sha256": "7354dbb030ca0736dd633a7ca1b930cf640abd40370725dea3a458cb51d49523",
+          "executable": false
+        },
+        "scripts/resolve-latest-model-info.cjs": {
+          "sha256": "eeb1bb486018e16b37edfc06b1a37179dbc672982d501040d4f7142f29dd2e64",
+          "executable": false
+        }
+      },
+      "upstream": {
+        "name": "openai-docs",
+        "repo": "openai/skills",
+        "checked_commit": "49f948faa9258a0c61caceaf225e179651397431",
+        "public_path_verified": true,
+        "upstream_skill_path": "skills/.system/openai-docs/SKILL.md",
+        "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/openai-docs/SKILL.md",
+        "skill_md_identical": false,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "local_skill_md_sha256": "7cb8fa1b2a0c635b5c61ffe1da7b8594a7ea0fce5b71e8d523e2025d88b2a05e",
+        "upstream_skill_md_sha256": "669a42ccf3323fe0ceda6e466730bcb05dddf1e0c220d6523ea504909fc49165",
+        "install_command": "npx skills add https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.system/openai-docs --skill openai-docs --agent codex --global",
+        "install_command_kind": "verified_official_public_source_via_skills_cli",
+        "official_helper_command": "python3 \"${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py\" --repo openai/skills --ref 49f948faa9258a0c61caceaf225e179651397431 --path skills/.system/openai-docs",
+        "notes": [
+          "Installs one skill to user scope. The official helper aborts if destination already exists. Existing built-in copies may duplicate/shadow user-scope copies; default recovery should use the local snapshot or product-managed version."
+        ]
+      },
+      "license_evidence": {
+        "license_path": "bundled/system/openai-docs/LICENSE.txt",
+        "basis": "license_shipped_with_skill",
+        "upstream_source": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/openai-docs/SKILL.md"
+      }
+    },
+    {
+      "id": "system-skill-creator",
+      "name": "skill-creator",
+      "kind": "system",
+      "enabled": true,
+      "path": "bundled/system/skill-creator",
+      "install_name": "skill-creator",
+      "description": "Create or update a Codex skill with appropriately scoped instructions and any needed supporting resources.",
+      "summary_zh": "创建或修改 Codex skill",
+      "license": "Apache-2.0",
+      "recovery": {
+        "command": "npx skills add https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-creator --skill skill-creator --agent codex --global",
+        "kind": "bundled",
+        "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-creator/SKILL.md",
+        "note": "Codex 随附系统技能；优先使用目标电脑随 Codex 提供的版本。此版本可单项恢复，但不会安装宿主工具。 所列命令恢复已核实的 OpenAI 公开上游版本，与仓库版本不同；请勿将其视为原样恢复。"
+      },
+      "files": {
+        "SKILL.md": {
+          "sha256": "6656e54755638e8efcf275a472b9672eaa8a9a1b9e59dc210e275b03b59e1e66",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "d07d21b93fcf3d4dc8d9a3399c05fc226a49a333a96d3e1c68b451b8dd9eade6",
+          "executable": false
+        },
+        "assets/skill-creator-small.svg": {
+          "sha256": "6591bf8ea9bb9435890dbdea299e0d2bd05f3aa893a335d26e4c535e93c8e7fb",
+          "executable": false
+        },
+        "assets/skill-creator.png": {
+          "sha256": "a4024b0306ddb05847e1012879d37aaf1e658205199da596f5145ed7a88d9162",
+          "executable": false
+        },
+        "license.txt": {
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "executable": false
+        },
+        "references/openai_yaml.md": {
+          "sha256": "ffac39318e408108141d40f820968e59f70434a891694f9bf1d25be8237b150c",
+          "executable": false
+        },
+        "scripts/generate_openai_yaml.py": {
+          "sha256": "816df12072d74faf924d802a6599a139997e1441e90bfe4869ec304f2e5e2851",
+          "executable": false
+        },
+        "scripts/init_skill.py": {
+          "sha256": "bf0656a5f9d8d8cdecf0245eaf27e1df8e0e9b6d40ccdda814eb8e3d5f6992c8",
+          "executable": false
+        },
+        "scripts/quick_validate.py": {
+          "sha256": "ee6dba90f44d37171c5a6edb8095979c54919ff6822c1a907afca2e78c48738c",
+          "executable": false
+        }
+      },
+      "upstream": {
+        "name": "skill-creator",
+        "repo": "openai/skills",
+        "checked_commit": "49f948faa9258a0c61caceaf225e179651397431",
+        "public_path_verified": true,
+        "upstream_skill_path": "skills/.system/skill-creator/SKILL.md",
+        "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-creator/SKILL.md",
+        "skill_md_identical": false,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "local_skill_md_sha256": "6656e54755638e8efcf275a472b9672eaa8a9a1b9e59dc210e275b03b59e1e66",
+        "upstream_skill_md_sha256": "a17383bfb1448637ac1f757ad891ddb9676fa30b0eff620200f0e1cbc0cc0d50",
+        "install_command": "npx skills add https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-creator --skill skill-creator --agent codex --global",
+        "install_command_kind": "verified_official_public_source_via_skills_cli",
+        "official_helper_command": "python3 \"${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py\" --repo openai/skills --ref 49f948faa9258a0c61caceaf225e179651397431 --path skills/.system/skill-creator",
+        "notes": [
+          "Installs one skill to user scope. The official helper aborts if destination already exists. Existing built-in copies may duplicate/shadow user-scope copies; default recovery should use the local snapshot or product-managed version."
+        ]
+      },
+      "license_evidence": {
+        "license_path": "bundled/system/skill-creator/license.txt",
+        "basis": "license_shipped_with_skill",
+        "upstream_source": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-creator/SKILL.md"
+      }
+    },
+    {
+      "id": "system-skill-installer",
+      "name": "skill-installer",
+      "kind": "system",
+      "enabled": true,
+      "path": "bundled/system/skill-installer",
+      "install_name": "skill-installer",
+      "description": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
+      "summary_zh": "从官方列表或 GitHub 安装 skills",
+      "license": "Apache-2.0",
+      "recovery": {
+        "command": "npx skills add https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer --skill skill-installer --agent codex --global",
+        "kind": "bundled",
+        "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer/SKILL.md",
+        "note": "Codex 随附系统技能；优先使用目标电脑随 Codex 提供的版本。此版本可单项恢复，但不会安装宿主工具。 所列命令恢复已核实的 OpenAI 公开上游版本，与仓库版本不同；请勿将其视为原样恢复。"
+      },
+      "files": {
+        "LICENSE.txt": {
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "d68b77e5bbb34dedab89d134da52855f140fc4b4299b80104f534e3b9e98f8ee",
+          "executable": false
+        },
+        "agents/openai.yaml": {
+          "sha256": "5ce223d8b1070b82c42298538f1b8d376f788eb9e7a42a987e8c094070d73f0e",
+          "executable": false
+        },
+        "assets/skill-installer-small.svg": {
+          "sha256": "3928703ff00dc1a681e7a22401843b7edcbd4b2051651ce4c43b75f7e140504e",
+          "executable": false
+        },
+        "assets/skill-installer.png": {
+          "sha256": "d0a230b1a79b71b858b7c215a0fbb0768d6459c14ea4ef80c61592629bf0e605",
+          "executable": false
+        },
+        "scripts/github_utils.py": {
+          "sha256": "61c1bbe2ae217433b4b6f9f09f21aca4df52c12598068343ade719f706e4859b",
+          "executable": false
+        },
+        "scripts/install-skill-from-github.py": {
+          "sha256": "38f311b75664bb063808f982c600271ebc4b560830f491705190f88a94e3e781",
+          "executable": false
+        },
+        "scripts/list-skills.py": {
+          "sha256": "9d6dfb2abf3afeee7f027a89fb1626b918a973da18f4eb6c25681286301beb41",
+          "executable": false
+        }
+      },
+      "upstream": {
+        "name": "skill-installer",
+        "repo": "openai/skills",
+        "checked_commit": "49f948faa9258a0c61caceaf225e179651397431",
+        "public_path_verified": true,
+        "upstream_skill_path": "skills/.system/skill-installer/SKILL.md",
+        "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer/SKILL.md",
+        "skill_md_identical": false,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "local_skill_md_sha256": "d68b77e5bbb34dedab89d134da52855f140fc4b4299b80104f534e3b9e98f8ee",
+        "upstream_skill_md_sha256": "83b31cffb2552a923f4152f0338bea548274accc5489d151a95bced8e7bcfb74",
+        "install_command": "npx skills add https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer --skill skill-installer --agent codex --global",
+        "install_command_kind": "verified_official_public_source_via_skills_cli",
+        "official_helper_command": "python3 \"${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py\" --repo openai/skills --ref 49f948faa9258a0c61caceaf225e179651397431 --path skills/.system/skill-installer",
+        "notes": [
+          "Installs one skill to user scope. The official helper aborts if destination already exists. Existing built-in copies may duplicate/shadow user-scope copies; default recovery should use the local snapshot or product-managed version."
+        ]
+      },
+      "license_evidence": {
+        "license_path": "bundled/system/skill-installer/LICENSE.txt",
+        "basis": "license_shipped_with_skill",
+        "upstream_source": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer/SKILL.md"
+      }
+    }
+  ],
+  "external_skills": [
+    {
+      "id": "system-plugin-creator",
+      "name": "plugin-creator",
+      "kind": "system",
+      "summary_zh": "创建和打包 Codex 插件",
+      "recovery": {
+        "command": "npx skills add https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.system/plugin-creator --skill plugin-creator --agent codex --global",
+        "source_url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/plugin-creator/SKILL.md",
+        "note": "优先使用 Codex 随附的 plugin-creator。此命令安装已核实的公开上游版本，不恢复本机差异版；本仓库不包含该系统技能源码。"
+      }
+    },
+    {
+      "id": "system-review-agent",
+      "name": "review-agent",
+      "kind": "system",
+      "summary_zh": "以缺陷为重点进行只读代码审查",
+      "recovery": {
+        "command": null,
+        "source_url": "https://developers.openai.com/codex/app/",
+        "note": "此系统能力由兼容的 Codex 应用提供；请通过官方入口安装或更新 Codex。未核实独立技能安装命令，也不能保证每个版本都提供同名技能。"
+      }
+    },
+    {
+      "id": "plugin-documents",
+      "name": "documents",
+      "kind": "plugin",
+      "summary_zh": "制作和编辑 Word 文档并检查渲染",
+      "plugin_id": "documents@openai-primary-runtime",
+      "recovery": {
+        "command": "codex plugin add documents@openai-primary-runtime",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-pdf",
+      "name": "pdf",
+      "kind": "plugin",
+      "summary_zh": "读取、生成和检查 PDF",
+      "plugin_id": "pdf@openai-primary-runtime",
+      "recovery": {
+        "command": "codex plugin add pdf@openai-primary-runtime",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-excel-live-control",
+      "name": "excel-live-control",
+      "kind": "plugin",
+      "summary_zh": "控制已连接的 Excel 实时会话",
+      "plugin_id": "spreadsheets@openai-primary-runtime",
+      "recovery": {
+        "command": "codex plugin add spreadsheets@openai-primary-runtime",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-spreadsheets",
+      "name": "Spreadsheets",
+      "kind": "plugin",
+      "summary_zh": "处理工作簿、公式、数据表和图表",
+      "plugin_id": "spreadsheets@openai-primary-runtime",
+      "recovery": {
+        "command": "codex plugin add spreadsheets@openai-primary-runtime",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-presentations",
+      "name": "Presentations",
+      "kind": "plugin",
+      "summary_zh": "制作、编辑和验证 PowerPoint/Google Slides 演示稿",
+      "plugin_id": "presentations@openai-primary-runtime",
+      "recovery": {
+        "command": "codex plugin add presentations@openai-primary-runtime",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-template-creator",
+      "name": "template-creator",
+      "kind": "plugin",
+      "summary_zh": "从参考成品建立可复用的个人模板",
+      "plugin_id": "template-creator@openai-primary-runtime",
+      "recovery": {
+        "command": "codex plugin add template-creator@openai-primary-runtime",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-sites-building",
+      "name": "sites-building",
+      "kind": "plugin",
+      "summary_zh": "使用 Sites 创建网站和内部工具",
+      "plugin_id": "sites@openai-bundled",
+      "recovery": {
+        "command": "codex plugin add sites@openai-bundled",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-sites-hosting",
+      "name": "sites-hosting",
+      "kind": "plugin",
+      "summary_zh": "使用 Sites 发布和管理网站托管",
+      "plugin_id": "sites@openai-bundled",
+      "recovery": {
+        "command": "codex plugin add sites@openai-bundled",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-computer-history",
+      "name": "computer-history",
+      "kind": "plugin",
+      "summary_zh": "检索本机活动历史；依赖 Computer History 工具",
+      "plugin_id": "computer-history@openai-bundled",
+      "recovery": {
+        "command": "codex plugin add computer-history@openai-bundled",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-visualize",
+      "name": "visualize",
+      "kind": "plugin",
+      "summary_zh": "在对话中制作交互可视化与解释工具",
+      "plugin_id": "visualize@openai-bundled",
+      "recovery": {
+        "command": "codex plugin add visualize@openai-bundled",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-exa-search",
+      "name": "Search",
+      "kind": "plugin",
+      "summary_zh": "使用 Exa 进行多轮网络检索与资料搜集",
+      "plugin_id": "app-69ea4ed2cf7c8191b742ef3622479ddd@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add app-69ea4ed2cf7c8191b742ef3622479ddd@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-plugin-management",
+      "name": "plugin-management",
+      "kind": "plugin",
+      "summary_zh": "发现插件并管理连接、依赖和权限",
+      "plugin_id": "plugin-management@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add plugin-management@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-analytics-dashboard",
+      "name": "artifact-template-analytics-dashboard",
+      "kind": "plugin",
+      "summary_zh": "获客、留存、营收等指标仪表盘表格模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-business-review",
+      "name": "artifact-template-business-review",
+      "kind": "plugin",
+      "summary_zh": "业务复盘与决策汇报 PPT 模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-design-report",
+      "name": "artifact-template-design-report",
+      "kind": "plugin",
+      "summary_zh": "设计报告 Word 模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-experiment-analysis",
+      "name": "artifact-template-experiment-analysis",
+      "kind": "plugin",
+      "summary_zh": "假设、方法、结果及局限性的实验分析报告模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-financial-budget",
+      "name": "artifact-template-financial-budget",
+      "kind": "plugin",
+      "summary_zh": "预算、情景预测和现金规划表格模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-investment-committee-memo",
+      "name": "artifact-template-investment-committee-memo",
+      "kind": "plugin",
+      "summary_zh": "投资委员会备忘录模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-legal-memorandum",
+      "name": "artifact-template-legal-memorandum",
+      "kind": "plugin",
+      "summary_zh": "法律问题分析备忘录模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-market-trends-report",
+      "name": "artifact-template-market-trends-report",
+      "kind": "plugin",
+      "summary_zh": "市场与行业趋势 PPT 模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-minimal-letterhead",
+      "name": "artifact-template-minimal-letterhead",
+      "kind": "plugin",
+      "summary_zh": "简洁信头与商务信函模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-operating-calendar",
+      "name": "artifact-template-operating-calendar",
+      "kind": "plugin",
+      "summary_zh": "年度与月度运营日历表格模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-operating-review",
+      "name": "artifact-template-operating-review",
+      "kind": "plugin",
+      "summary_zh": "周度运营复盘 PPT 模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-project-kickoff",
+      "name": "artifact-template-project-kickoff",
+      "kind": "plugin",
+      "summary_zh": "项目启动和职责对齐 PPT 模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-project-tracker",
+      "name": "artifact-template-project-tracker",
+      "kind": "plugin",
+      "summary_zh": "任务、负责人、日期与甘特图跟踪表格模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-sales-pipeline",
+      "name": "artifact-template-sales-pipeline",
+      "kind": "plugin",
+      "summary_zh": "销售机会与预测表格模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-simple-dark-mode",
+      "name": "artifact-template-simple-dark-mode",
+      "kind": "plugin",
+      "summary_zh": "简洁深色 PPT 模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-simple-light-mode",
+      "name": "artifact-template-simple-light-mode",
+      "kind": "plugin",
+      "summary_zh": "简洁浅色 PPT 模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-strategy-memorandum",
+      "name": "artifact-template-strategy-memorandum",
+      "kind": "plugin",
+      "summary_zh": "战略选择与建议备忘录模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-system-design",
+      "name": "artifact-template-system-design",
+      "kind": "plugin",
+      "summary_zh": "架构、组件、数据流与取舍的系统设计文档模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-team-alignment",
+      "name": "artifact-template-team-alignment",
+      "kind": "plugin",
+      "summary_zh": "团队目标、优先级与行动计划 PPT 模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-artifact-template-three-statement-forecast",
+      "name": "artifact-template-three-statement-forecast",
+      "kind": "plugin",
+      "summary_zh": "三大财务报表联动预测模板",
+      "plugin_id": "openai-templates@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add openai-templates@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    },
+    {
+      "id": "plugin-deep-research",
+      "name": "deep-research",
+      "kind": "plugin",
+      "summary_zh": "进行深入研究并交付有来源的研究成果",
+      "plugin_id": "deep-research-work@openai-curated-remote",
+      "recovery": {
+        "command": "codex plugin add deep-research-work@openai-curated-remote",
+        "source_url": "https://learn.chatgpt.com/zh-Hans/docs/plugins",
+        "note": "在 Codex 插件目录中安装所属插件；CLI 可输入 /plugins 浏览可用目录。命令要求对应 marketplace 和账号权限，若目录不可用请使用桌面应用提供的安装入口。安装或连接后开始新会话；本仓库不包含此技能的源码、模板或运行时。"
+      }
+    }
+  ],
+  "excluded_disabled_skills": [
+    {
+      "id": "banner-design"
+    },
+    {
+      "id": "design"
+    }
+  ]
+}

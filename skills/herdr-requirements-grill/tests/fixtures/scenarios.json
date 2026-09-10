@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "planner-vague-high-impact",
+      "role": "Planner",
+      "request": "Make the VUT-to-robot path production ready quickly.",
+      "evidence": ["repository contains fake-arm and real-hardware modes", "acceptance scenario and hardware authority are unspecified"],
+      "expected": ["inspect discoverable facts", "ask only blocking user decisions", "recommend an answer with consequences", "do not plan or implement"]
+    },
+    {
+      "id": "planner-discoverable-fact",
+      "role": "Planner",
+      "request": "Prepare the task, but ask me which test command exists.",
+      "evidence": ["repository documents the exact test command"],
+      "expected": ["inspect instead of asking", "record the command as observed fact"]
+    },
+    {
+      "id": "planner-complete-contract",
+      "role": "Planner",
+      "request": "A complete goal, scope, constraints, interfaces, and acceptance evidence are supplied.",
+      "evidence": ["no material unresolved decision"],
+      "expected": ["REQUIREMENTS_READY", "no artificial question", "stop before planning"]
+    },
+    {
+      "id": "wrong-role",
+      "role": "Coder",
+      "request": "Clarify this requirement and then implement it.",
+      "evidence": ["active role is Coder"],
+      "expected": ["ROLE_MISMATCH", "no inspection", "no write", "no delegation"]
+    }
+  ]
+}

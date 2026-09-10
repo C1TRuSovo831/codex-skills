@@ -1,0 +1,6 @@
+interface:
+  display_name: "Dex Robotics Engineering"
+  short_description: "Route retargeting, IK, gain and HIL engineering work"
+  default_prompt: "Use $dex-robotics-engineering to route this dexterous robotics engineering request."
+policy:
+  allow_implicit_invocation: true
