@@ -1,6 +1,6 @@
 interface:
   display_name: "Dex Retargeting Debug"
   short_description: "Debug MANUS and dexterous-hand retargeting"
-  default_prompt: "Use $dex-retargeting-debug for this MANUS/Wuji/Sharpa retargeting problem."
+  default_prompt: "Use $dex-retargeting-debug to resolve this hand-retargeting problem and verify the requested behavior with scoped source, replay, or other authorized evidence."
 policy:
   allow_implicit_invocation: true

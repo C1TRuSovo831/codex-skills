@@ -1,22 +1,32 @@
 # Skill mechanics
 
-The skill-specific branch of [`writing-for-agents`](SKILL.md): what changes when the document is a skill — frontmatter, the invocation choice, and router skills. Everything else about writing it is the universal reference in `SKILL.md`.
+The skill-specific branch of [writing-for-agents](SKILL.md): frontmatter, invocation policy, and routers. Use the target host's installed skill-creator guidance as the authority for supported fields.
 
-## Invocation
+## Codex packaging and invocation
 
-Two choices, trading the two loads:
+Every skill has `SKILL.md` with YAML `name` and `description`. The description is a concise capability and activation boundary; retain it for both automatic and explicit-only skills. Supporting references, scripts, and assets are optional and should serve a concrete workflow.
 
-- A **model-invoked** skill keeps a `description`, so the agent can fire it autonomously — and other skills can reach it. You can still type its name: model-invocation always _includes_ user reach; a description only ever adds agent discovery, never removes the human's. The description is the skill's top-level context pointer, forced to stay loaded at all times — permanent context load in exchange for discoverability. A model-invoked skill whose content is all reference is also one home for shared reference: another skill can invoke it, so reference needed by several skills lives in one place. Mechanics: omit `disable-model-invocation`, and write a model-facing description carrying the trigger branches (the pointer-writing rules in `SKILL.md` apply in full).
-- A **user-invoked** skill strips the description from the agent's reach: only the human typing its name can invoke it, and no other skill can. Zero context load, but it spends cognitive load — you are the index that must remember it exists. Mechanics: set `disable-model-invocation: true`; the `description` becomes human-facing — a one-line summary, trigger lists stripped.
+Codex invocation policy belongs in `agents/openai.yaml`:
 
-Pick model-invocation only when the agent must reach the skill on its own, or another skill must. If it only ever fires by hand, make it user-invoked and pay no context load.
+```yaml
+policy:
+  allow_implicit_invocation: false
+```
 
-Shared reference that two user-invoked skills both need can live in neither — with no descriptions, neither can fire the other. Push it to a plain file outside the skill system: external reference any skill can point at.
+`false` keeps the skill out of model context by default while allowing explicit `$skill-name` invocation. Automatic selection is allowed by default. Preserve an existing policy; set explicit-only for a new skill only when the user requests that behavior. Sensitivity or required approval for one operation does not by itself justify hiding the entire skill.
 
-## Splitting by invocation
+`interface` in that file contains optional UI metadata such as `display_name`, `short_description`, and `default_prompt`. A default prompt should mention `$skill-name`. Preserve existing policy, dependencies, and unrelated interface fields during an update: a metadata generator may replace the whole file.
 
-The invocation cut of splitting (the sequence cut lives in `SKILL.md`): split off a model-invoked skill when you have a distinct leading word that should trigger it on its own — a trigger word you actually use in your prompts — or another skill must reach it. You pay context load for the new always-loaded description, so that independent reach has to be worth it.
+For exact current fields and validation, use the installed `skill-creator` skill and its `references/openai_yaml.md`; resolve paths from its catalog location rather than assuming a fixed installation root.
 
-## Router skills
+## Cross-agent compatibility
 
-When user-invoked skills multiply past what you can remember, that piled-up cognitive load is cured by a **router skill**: one user-invoked skill that names the others and when to reach for each, so the human has one skill to remember instead of many. It can only hint, never fire them: user-invoked skills have no description, so nothing but the human can reach them.
+Some other hosts, including [Claude Code](https://code.claude.com/docs/en/skills#frontmatter-reference), use frontmatter such as `disable-model-invocation: true` and `argument-hint`. Those are host-specific conventions, not Codex's `agents/openai.yaml` invocation policy. Preserve intentional compatibility metadata in an existing cross-agent skill; verify the target host before adding or changing it. A Codex validator may reject those additional frontmatter keys without implying that the compatibility metadata should be deleted.
+
+Distinguish automatic discovery, explicit invocation, and reading a linked file. Invocation policy does not make Markdown inaccessible or prevent a skill from linking to shared reference material. Conversely, a router does not grant permission to bypass explicit-only invocation by automatically executing the hidden skill's workflow.
+
+## Splitting and routers
+
+Create a separate skill when it has a useful independent activation boundary. Otherwise, prefer a supporting reference loaded by the branch that needs it; references do not need their own skill metadata.
+
+A router names available workflows and explains when each applies. An explicit-only router can help the user choose among explicit-only skills, while an automatically discoverable router can guide ordinary selection. Preserve each target's invocation policy and the user's scope. Share common reference material by links and load only the selected branch.

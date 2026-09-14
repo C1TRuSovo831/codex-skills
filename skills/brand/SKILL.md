@@ -1,11 +1,12 @@
 ---
 name: brand
-description: Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.
+description: "Define or review brand voice, visual identity, messaging, and asset standards; update brand guidelines and synchronize their design tokens."
 argument-hint: "[update|review|create] [args]"
 metadata:
   author: claudekit
   version: "1.0.0"
 ---
+
 
 # Brand
 
@@ -92,6 +93,4 @@ node scripts/inject-brand-context.cjs --json | head -20
 
 ## Routing
 
-1. Parse subcommand from `$ARGUMENTS` (first word)
-2. Load corresponding `references/{subcommand}.md`
-3. Execute with remaining arguments
+For `update`, read [references/update.md](references/update.md). For natural-language create/review requests, select the topic references above; do not construct a nonexistent reference from an arbitrary first word. Run brand-to-token synchronization only when the task changes the brand source of truth.

@@ -1,6 +1,6 @@
 ---
 name: herdr-requirements-grill
-description: Close high-impact requirement gaps through evidence-first questioning when the active role is unambiguously a Herdr Planner. Use for unresolved scope, safety, authority, interface, or acceptance choices that would otherwise force an implementer to guess; skip ordinary complete tasks and non-Planner roles.
+description: Close blocking scope, authority, interface, or acceptance decisions for an identified Herdr Planner through read-only evidence and user dialogue.
 ---
 
 # Herdr Requirements Grill

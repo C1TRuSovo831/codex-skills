@@ -1,7 +1,7 @@
 interface:
   display_name: "Herdr Requirements Grill"
   short_description: "Close high-impact Herdr requirement gaps"
-  default_prompt: "Use $herdr-requirements-grill to close only the blocking requirement decisions before planning."
+  default_prompt: "Use $herdr-requirements-grill as the identified Herdr Planner to close blocking requirement decisions and return the requirements contract."
 
 policy:
   allow_implicit_invocation: true

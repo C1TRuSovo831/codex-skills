@@ -1,6 +1,6 @@
 ---
 name: dex-ik-design-debug
-description: Design or debug dexterous-teleoperation IK when the request involves FK, Jacobians, DLS, damping, seeds, null-space posture, singularities, QP/CBF constraints, virtual walls, stale async IK, or trajectory continuity.
+description: Design or debug teleoperation IK, including FK/Jacobians, solver continuity, asynchronous results, and QP/CBF or virtual-wall constraints.
 ---
 
 # Dexterous-teleoperation IK design and debug

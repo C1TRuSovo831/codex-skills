@@ -1,6 +1,6 @@
 ---
 name: impedance-gain-tuning
-description: Tune or debug robot hand and arm kp/kd, PD/PID, or impedance behavior when the request involves overshoot, settling, stiffness, damping, step response, oscillation, saturation, or control-loop gains.
+description: Tune or diagnose robot hand/arm kp/kd, PD/PID, and impedance responses once geometry and IK are trustworthy.
 ---
 
 # Impedance and gain tuning

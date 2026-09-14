@@ -1,0 +1,466 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-14",
+  "base_commit": "dc72ba0dbb9412ebe2017117776ae9599a6e45e9",
+  "summary": "Synchronize the local instruction audit: precise triggers, conditional references, and completion boundaries; runtime resources and installation selection unchanged.",
+  "scope": "27 existing local skills; disabled design/banner-design, system and external entries remain unchanged.",
+  "packaging_adjustments": [
+    "Apache-2.0 change notices for Herdr and ui-styling",
+    "UI search paths resolved from the actual installed skill directory",
+    "Normalize trailing blank lines in two split references"
+  ],
+  "skills": [
+    {
+      "id": "brand",
+      "before_skill_md_sha256": "6a450ee1a83a403d47cec2ede9030feb60a67a81fc425d2406e975339313bd44",
+      "after_skill_md_sha256": "9a09dc1b676bb2d2a184daca6c70368aec2f8f9a4faab3cca9696d393cd6130e",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "6a450ee1a83a403d47cec2ede9030feb60a67a81fc425d2406e975339313bd44",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.98,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "code-review",
+      "before_skill_md_sha256": "9cf46653dd9c710ea1e6c22423caf31a794c88773bc94bdaa23140277f470442",
+      "after_skill_md_sha256": "ccafb0877d54f32f7bb7595fe7e9111355a6c8a413651115b8887321e9d1ef00",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "9cf46653dd9c710ea1e6c22423caf31a794c88773bc94bdaa23140277f470442",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.69,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "references/standards-baseline.md"
+      ]
+    },
+    {
+      "id": "codebase-design",
+      "before_skill_md_sha256": "e8e5a6c059fbe3443383d5196f6a93ac51b1d45871b3950da6ebe5184513c84f",
+      "after_skill_md_sha256": "21b1a128214d3965f68b65bcaef9fc7f3656419703b51163cf6c033d6a5f5691",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "e8e5a6c059fbe3443383d5196f6a93ac51b1d45871b3950da6ebe5184513c84f",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.871,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "design-system",
+      "before_skill_md_sha256": "655468bb723a6bc9d17fcb09a6a005e10e313d63b879f4d74fb2abdc3041ae3f",
+      "after_skill_md_sha256": "78d11a4e38c52d66c790597a3e3938343d236254067a03dab05ff0bd424476ce",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "655468bb723a6bc9d17fcb09a6a005e10e313d63b879f4d74fb2abdc3041ae3f",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.992,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "references/slide-system.md"
+      ]
+    },
+    {
+      "id": "dex-ik-design-debug",
+      "before_skill_md_sha256": "7371b0ad5cc5c066cfa9fb2c44522c538d7c09c969fe7e55cd828639607495cc",
+      "after_skill_md_sha256": "d0d4ea3a2c5b11ffadea60c04ab7de900b8266f7cc4cda57a849528096d969eb",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "7371b0ad5cc5c066cfa9fb2c44522c538d7c09c969fe7e55cd828639607495cc",
+        "skill_md_identical": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "verification": "local_git_remote_and_live_upstream",
+        "source_confidence": "local_git_remote_and_identical_skill_md"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "id": "dex-retargeting-debug",
+      "before_skill_md_sha256": "fefda35316ed52a87c5edd44187eac596644ef138af92d0b4230421b882ff3e9",
+      "after_skill_md_sha256": "b118c92d6e94cae7e1f2db9c08c2f28c1c2c6f19dc46f0bb18eec45a77ae56bc",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "fefda35316ed52a87c5edd44187eac596644ef138af92d0b4230421b882ff3e9",
+        "skill_md_identical": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "verification": "local_git_remote_and_live_upstream",
+        "source_confidence": "local_git_remote_and_identical_skill_md"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "id": "dex-robotics-engineering",
+      "before_skill_md_sha256": "a68a83097e2cc2046ed60b8283de1a0be87a521a8d2e7610bca628ca91e7d57b",
+      "after_skill_md_sha256": "7d7bae98d2db422e0cba2bf02ad538bb13b1b393ec40ddbfbbc9195569198d07",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "a68a83097e2cc2046ed60b8283de1a0be87a521a8d2e7610bca628ca91e7d57b",
+        "skill_md_identical": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "verification": "local_git_remote_and_live_upstream",
+        "source_confidence": "local_git_remote_and_identical_skill_md"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "id": "diagnosing-bugs",
+      "before_skill_md_sha256": "f720a80b520343b9769f7a97fae31e2131eb46cc3d8e73817aa8cb8a25fd3920",
+      "after_skill_md_sha256": "cc7576a1aabcedddd064a5cbde28d809d6eed9f7c4f89f17045790e40d5c88c1",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "f720a80b520343b9769f7a97fae31e2131eb46cc3d8e73817aa8cb8a25fd3920",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.743,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "references/feedback-loops.md"
+      ]
+    },
+    {
+      "id": "domain-modeling",
+      "before_skill_md_sha256": "9617041db9b0f6606ecf974e2061c83596b05059b5bb20ddb884c60f147c70e9",
+      "after_skill_md_sha256": "25fb292847abc8dc920841b3c8c2c1bf709ac09a078bd2064e22a94bd738e0f1",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "9617041db9b0f6606ecf974e2061c83596b05059b5bb20ddb884c60f147c70e9",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.878,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "experimental-design",
+      "before_skill_md_sha256": "8d1e072e96c40dea985deac2d67d2cb800bb8db1cb18b31db0e623ca66e66741",
+      "after_skill_md_sha256": "d0c1e950abb116d4cd0235fbc78488530353477ab3ed536de7cfccb764dff0c4",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "8d1e072e96c40dea985deac2d67d2cb800bb8db1cb18b31db0e623ca66e66741",
+        "skill_md_identical": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "verification": "installation_lock_and_live_upstream",
+        "source_confidence": "explicit_local_installer_lock"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "references/design_selection.md",
+        "references/generating_layouts.md",
+        "references/source_notes.md"
+      ]
+    },
+    {
+      "id": "find-skills",
+      "before_skill_md_sha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
+      "after_skill_md_sha256": "b0b2a94c32086df172fa1d5da6882f0dfdf1471d5d4ea528d3988865021c4185",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
+        "skill_md_identical": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "verification": "installation_lock_and_live_upstream",
+        "source_confidence": "explicit_local_installer_lock"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "references/search-examples.md"
+      ]
+    },
+    {
+      "id": "herdr",
+      "before_skill_md_sha256": "237ad2ab2d8123e2bb37956d3a41eed141f2d22a7c36e415b7876c0397679099",
+      "after_skill_md_sha256": "d79b27fecb98e924bad73b489c23784ebd2480721397caeb4055b11c2f4cb40b",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "237ad2ab2d8123e2bb37956d3a41eed141f2d22a7c36e415b7876c0397679099",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.952,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "installation_lock_and_live_upstream",
+        "source_confidence": "explicit_local_installer_lock"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "references/operations.md"
+      ]
+    },
+    {
+      "id": "herdr-requirements-grill",
+      "before_skill_md_sha256": "77f10f391d60a1707e25a865b067fcea1ea6db01f943a6c9d7f2a8bf6a403705",
+      "after_skill_md_sha256": "99cdce745636916eed171d7aa683665d7651fbdbf0fc266ed4fa993eaee9ca3f",
+      "historical_upstream_comparison": {
+        "local_modification_status": "not_comparable_no_verified_upstream",
+        "verification": "local_only_no_verified_public_upstream",
+        "source_confidence": "local_custom_no_verified_public_upstream"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "id": "impedance-gain-tuning",
+      "before_skill_md_sha256": "2291c09cae0b09418fea725c426e0b8e7373bae71f9453f9b4bf1d8c427cc8f6",
+      "after_skill_md_sha256": "d0359af9e516e7c63f77da6da2029ab0a64642b2780b043eefeec957def678c9",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "2291c09cae0b09418fea725c426e0b8e7373bae71f9453f9b4bf1d8c427cc8f6",
+        "skill_md_identical": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "verification": "local_git_remote_and_live_upstream",
+        "source_confidence": "local_git_remote_and_identical_skill_md"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "id": "receiving-code-review",
+      "before_skill_md_sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+      "after_skill_md_sha256": "d69f0c56f9202c01cf7e8ea2e8083b7e6fa6d8d97202eb7aec6586a6e90bcba3",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+        "skill_md_identical": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "identical_skill_md_to_public_upstream_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "research",
+      "before_skill_md_sha256": "af378829f015775a3bcd65ff466826722e99359017ae6bae227ca4c9bd14049c",
+      "after_skill_md_sha256": "34aa581e50afbf8b07258384e960600b0c0e43af04434fbb7fcf29e0ff8f74fc",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "af378829f015775a3bcd65ff466826722e99359017ae6bae227ca4c9bd14049c",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.917,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "scientific-visualization",
+      "before_skill_md_sha256": "f7c7f9a2350ea02db2db55cd28921a54c74b089f6762f1b0b63a13b8f6eeec33",
+      "after_skill_md_sha256": "70e21627d906e5f61d2eafb9d6bc074029cbe31fea9eccd4b5dbd4ff4dbebb4c",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "f7c7f9a2350ea02db2db55cd28921a54c74b089f6762f1b0b63a13b8f6eeec33",
+        "skill_md_identical": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "verification": "installation_lock_and_live_upstream",
+        "source_confidence": "explicit_local_installer_lock"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "references/implementation_and_export.md",
+        "references/tooling.md"
+      ]
+    },
+    {
+      "id": "scientific-writing",
+      "before_skill_md_sha256": "f6026e7d79cd3133e9343a7d6e6c5e06f4ad061888efb6a73fcb95e073eebf67",
+      "after_skill_md_sha256": "9782e9e3657775afac88948b64e22bdf36c485b358395ae7dc7baf34b96493da",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "f6026e7d79cd3133e9343a7d6e6c5e06f4ad061888efb6a73fcb95e073eebf67",
+        "skill_md_identical": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "verification": "installation_lock_and_live_upstream",
+        "source_confidence": "explicit_local_installer_lock"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "references/manuscript_workflow.md",
+        "references/revision_submission.md"
+      ]
+    },
+    {
+      "id": "setup-matt-pocock-skills",
+      "before_skill_md_sha256": "310fb1a73c0467e617e17d7c41d4a2278b5405c4a27f36d7cd22bb4599aee6bb",
+      "after_skill_md_sha256": "430ab56ef984f499496f64713f5ab818dd662988b018747ceb7f82ea567baf25",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "310fb1a73c0467e617e17d7c41d4a2278b5405c4a27f36d7cd22bb4599aee6bb",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.741,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "domain.md"
+      ]
+    },
+    {
+      "id": "slides",
+      "before_skill_md_sha256": "2b90bdaf63f231919a01f4962f374ecd84af101a7e7545f8d9c68e049025accb",
+      "after_skill_md_sha256": "7b80529a04223573e0a0b5a76640e2489fed01979a91cb9f570482761288aedd",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "2b90bdaf63f231919a01f4962f374ecd84af101a7e7545f8d9c68e049025accb",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.952,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "references/create.md"
+      ]
+    },
+    {
+      "id": "statistical-power",
+      "before_skill_md_sha256": "51ca6017ecaf5a6ec427d80f511063f570a983785399eedbd24c6fc4b9fd12f5",
+      "after_skill_md_sha256": "ebbec51daf54b0ed8624c32f340079814f90a6f1ab55b9998f3ff18956a88ff2",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "51ca6017ecaf5a6ec427d80f511063f570a983785399eedbd24c6fc4b9fd12f5",
+        "skill_md_identical": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "verification": "installation_lock_and_live_upstream",
+        "source_confidence": "explicit_local_installer_lock"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "references/calculation_workflow.md",
+        "references/reporting.md"
+      ]
+    },
+    {
+      "id": "tdd",
+      "before_skill_md_sha256": "501e42b5cbced4ac0ce5996cba940bb4c6636edccb783b164da52db633c6bd07",
+      "after_skill_md_sha256": "64e3ed480c7be482b15bd44ff82462703c3a550738c9f89d77c4d711810c719f",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "501e42b5cbced4ac0ce5996cba940bb4c6636edccb783b164da52db633c6bd07",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.632,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "teleop-hil-review",
+      "before_skill_md_sha256": "fd24c8a02c3446e34176ebc9e97aeff4e68a4048e7cdfd2d69b15ae0687679df",
+      "after_skill_md_sha256": "2e7fafec590ce1771284e7473ac4b833ff99bb6acda689e2d64ac2af1aa3f6d5",
+      "historical_upstream_comparison": {
+        "local_modification_status": "not_comparable_no_verified_upstream",
+        "verification": "local_only_no_verified_public_upstream",
+        "source_confidence": "local_custom_no_verified_public_upstream"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "id": "ui-styling",
+      "before_skill_md_sha256": "f8b6c3832d2af51f67b3932e3c4a79bcd8a8596cc61ce1547a686fc951e5c62d",
+      "after_skill_md_sha256": "84304c651510738263e5ac333ea42c3850b11d086d865db728b5c29253e5cae5",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "f8b6c3832d2af51f67b3932e3c4a79bcd8a8596cc61ce1547a686fc951e5c62d",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.994,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "references/setup-and-examples.md"
+      ]
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "before_skill_md_sha256": "8b827fe03b349aeea99a7d6cf4ccd892e6065b672859fdb11e13a1919453eddc",
+      "after_skill_md_sha256": "7d4f8ddc73d89763a37265e69da6a78edd93854a37b9e5cb38f41e892d25b456",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "8b827fe03b349aeea99a7d6cf4ccd892e6065b672859fdb11e13a1919453eddc",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.222,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md",
+        "references/accessibility.md",
+        "references/animation.md",
+        "references/charts-data.md",
+        "references/design-system-options.md",
+        "references/forms-feedback.md",
+        "references/layout-responsive.md",
+        "references/native-app-review.md",
+        "references/navigation.md",
+        "references/performance.md",
+        "references/search-reference.md",
+        "references/style-selection.md",
+        "references/touch-interaction.md",
+        "references/typography-color.md"
+      ]
+    },
+    {
+      "id": "verification-before-completion",
+      "before_skill_md_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+      "after_skill_md_sha256": "6b3563dd6669f3affe133fca487a743ae3a5a31b209f138bbd9b2108c430114c",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+        "skill_md_identical": true,
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "identical_skill_md_to_public_upstream_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "writing-for-agents",
+      "before_skill_md_sha256": "be6a2a4cd84e4d98450068e1022ba8ad55552175e89993ed6a09b2cdafc745c0",
+      "after_skill_md_sha256": "4b5cd01f796348ebb8a2a623f565f9ffc06eb19efef048ee8f4c759f37b3d293",
+      "historical_upstream_comparison": {
+        "local_skill_md_sha256": "be6a2a4cd84e4d98450068e1022ba8ad55552175e89993ed6a09b2cdafc745c0",
+        "skill_md_identical": false,
+        "skill_md_line_similarity": 0.651,
+        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
+        "verification": "matching_name_and_live_upstream_content",
+        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded"
+      },
+      "changed_or_added_files": [
+        "SKILL-MECHANICS.md",
+        "SKILL.md"
+      ]
+    }
+  ]
+}

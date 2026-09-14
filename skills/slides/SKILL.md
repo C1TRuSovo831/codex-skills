@@ -1,11 +1,12 @@
 ---
 name: slides
-description: Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.
+description: "Create strategic HTML slide decks with Chart.js, design tokens, responsive layouts, and presentation copywriting. Use for HTML presentations and pitch decks."
 argument-hint: "[topic] [slide-count]"
 metadata:
   author: claudekit
   version: "1.0.0"
 ---
+
 
 # Slides
 
@@ -35,6 +36,4 @@ Strategic HTML presentation design with data visualization.
 
 ## Routing
 
-1. Parse subcommand from `$ARGUMENTS` (first word)
-2. Load corresponding `references/{subcommand}.md`
-3. Execute with remaining arguments
+For `create` or a natural-language request to build a deck, read [references/create.md](references/create.md). For a focused edit, load the relevant layout, template, copywriting, or strategy reference above. Preserve the user's requested output format; this skill's implementation workflow produces HTML.

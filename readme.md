@@ -168,6 +168,8 @@ THIRD_PARTY_NOTICES.md   许可归属与第三方声明
 install.sh               安装入口
 scripts/install.py       安装、校验、备份与逐项错误处理
 readme.md                本说明
+AGENTS.md                维护者的通用协作指令
+prompts/task-templates.md 可复用的精简任务提示词
 ```
 
 - 源码条目包含 `SKILL.md`、许可证，以及该技能使用的脚本、参考资料或 UI 元数据。外部条目仅包含名称、简述和官方入口。
@@ -176,6 +178,14 @@ readme.md                本说明
 - 技能中的项目路径、工具名称和运行条件，应按实际工作环境核对。
 
 添加或更新技能文件时，需同步更新 `manifest.json` 中的技能信息、文件校验值和可执行权限记录，否则安装器会报告内容不匹配。
+
+## 协作指令与任务提示词
+
+[AGENTS.md](AGENTS.md) 保存维护者的独立判断、任务完成、Git 身份、论文审读和临时文件处理约定；[任务模板](prompts/task-templates.md)覆盖开发、只读审查、机器人、Herdr Planner 和论文审读。可按需参考或合并到自己的协作指令中；其中 Git 身份属于本仓库维护者。
+
+安装器仍只安装技能文件，不会覆盖使用者的全局 AGENTS.md 或配置。技能示例中的脚本路径应以实际安装目录解析，适用于默认目录和自定义 `--dest`。
+
+2026-09-14 的指令优化更新了 27 项现有技能，保留 28 项默认安装、4 项可选系统技能及 35 项外部入口。详细指令改为按场景加载，原脚本、数据、许可与调用策略保持不变；逐项版本记录见 [provenance/instruction-updates.json](provenance/instruction-updates.json)。
 
 ## 来源与许可
 

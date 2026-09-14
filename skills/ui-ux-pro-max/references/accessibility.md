@@ -1,0 +1,27 @@
+# 1. Accessibility (CRITICAL)
+
+- `color-contrast` - Minimum 4.5:1 ratio for normal text (large text 3:1); Material Design
+- `focus-states` - Visible focus rings on interactive elements (2–4px; Apple HIG, MD)
+- `alt-text` - Descriptive alt text for meaningful images
+- `aria-labels` - aria-label for icon-only buttons; accessibilityLabel in native (Apple HIG)
+- `icon-context` - Semantics depend on use: decorative icons beside visible text are hidden from the accessibility tree; meaningful icons need a text alternative; icon controls need an accessible name and applicable state
+- `keyboard-nav` - Tab order matches visual order; full keyboard support (Apple HIG)
+- `form-labels` - Use label with for attribute
+- `skip-links` - Skip to main content for keyboard users
+- `heading-hierarchy` - Sequential h1→h6, no level skip
+- `color-not-only` - Don't convey info by color alone (add icon/text)
+- `dynamic-type` - Support system text scaling; avoid truncation as text grows (Apple Dynamic Type, MD)
+- `reduced-motion` - Respect prefers-reduced-motion; reduce/disable animations when requested (Apple Reduced Motion API, MD)
+- `voiceover-sr` - Meaningful accessibilityLabel/accessibilityHint; logical reading order for VoiceOver/screen readers (Apple HIG, MD)
+- `escape-routes` - Provide cancel/back in modals and multi-step flows (Apple HIG)
+- `keyboard-shortcuts` - Preserve system and a11y shortcuts; offer keyboard alternatives for drag-and-drop (Apple HIG)
+- `focus-not-obscured` - Sticky UI, overlays, and banners must not hide the keyboard-focused control (WCAG 2.2 AA)
+- `focus-not-obscured-enhanced` - Keep the entire focused component visible (WCAG 2.2 AAA)
+- `focus-appearance` - Verify focus indicator area and 3:1 state contrast; visible focus alone is not enough (WCAG 2.2 AAA)
+- `dragging-alternative` - Every author-controlled drag action needs a single-pointer and keyboard alternative (WCAG 2.2 AA)
+- `web-target-size` - Web pointer targets need 24×24 CSS px or a documented exception; do not substitute native units (WCAG 2.2 AA)
+- `consistent-help` - Repeated help mechanisms stay in the same relative order across a page set (WCAG 2.2 A)
+- `redundant-entry` - Reuse information already supplied in the same process unless re-entry is essential (WCAG 2.2 A)
+- `accessible-authentication` - Allow password managers and paste; provide a non-cognitive authentication path (WCAG 2.2 Minimum, AA). The Enhanced AAA criterion is not represented in the dataset
+- `auto-rotation-controls` - Carousels and moving content need pause/stop controls and must stop on focus or reduced motion (WAI)
+- `contextual-live-badge-updates` - Announce a changed count/status as a complete contextual phrase without moving focus; use one appropriate live/status region and atomic updates only when needed

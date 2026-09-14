@@ -1,6 +1,6 @@
 interface:
   display_name: "Teleop HIL Review"
   short_description: "Audit scoped teleoperation HIL evidence and safety"
-  default_prompt: "Use $teleop-hil-review to audit this teleoperation HIL claim and state the verified evidence boundary."
+  default_prompt: "Use $teleop-hil-review as the identified Herdr Planner or Reviewer to audit this HIL claim read-only and report its verdict and verified evidence boundary."
 policy:
   allow_implicit_invocation: true

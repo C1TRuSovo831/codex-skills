@@ -10,7 +10,7 @@
       "enabled": true,
       "path": "skills/brand",
       "install_name": "brand",
-      "description": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.",
+      "description": "Define or review brand voice, visual identity, messaging, and asset standards; update brand guidelines and synchronize their design tokens.",
       "summary_zh": "品牌语气、视觉识别和品牌一致性",
       "license": "MIT",
       "upstream": {
@@ -21,13 +21,12 @@
         "upstream_name": "brand",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "6a450ee1a83a403d47cec2ede9030feb60a67a81fc425d2406e975339313bd44",
+        "local_skill_md_sha256": "9a09dc1b676bb2d2a184daca6c70368aec2f8f9a4faab3cca9696d393cd6130e",
         "upstream_skill_md_sha256": "53e7f858e18dea4d687db6e49e8a33786cbcdf720aa40e84bd6d6250f5e59aa8",
-        "verification": "matching_name_and_live_upstream_content",
-        "skill_md_line_similarity": 0.98,
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_general_install_command": "npm install -g ui-ux-pro-max-cli && uipro init --ai codex"
       },
@@ -43,7 +42,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "6a450ee1a83a403d47cec2ede9030feb60a67a81fc425d2406e975339313bd44",
+          "sha256": "9a09dc1b676bb2d2a184daca6c70368aec2f8f9a4faab3cca9696d393cd6130e",
           "executable": false
         },
         "references/approval-checklist.md": {
@@ -119,7 +118,8 @@
         "license_path": "skills/brand/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "code-review",
@@ -128,7 +128,7 @@
       "enabled": true,
       "path": "skills/code-review",
       "install_name": "code-review",
-      "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\".",
+      "description": "Review a branch or PR diff against a fixed revision, reporting repository standards and originating requirements as separate axes.",
       "summary_zh": "按代码规范与需求分别审查变更",
       "license": "MIT",
       "upstream": {
@@ -139,13 +139,12 @@
         "upstream_name": "code-review",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "9cf46653dd9c710ea1e6c22423caf31a794c88773bc94bdaa23140277f470442",
+        "local_skill_md_sha256": "ccafb0877d54f32f7bb7595fe7e9111355a6c8a413651115b8887321e9d1ef00",
         "upstream_skill_md_sha256": "47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50",
-        "verification": "matching_name_and_live_upstream_content",
-        "skill_md_line_similarity": 0.69,
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
       },
@@ -161,11 +160,15 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "9cf46653dd9c710ea1e6c22423caf31a794c88773bc94bdaa23140277f470442",
+          "sha256": "ccafb0877d54f32f7bb7595fe7e9111355a6c8a413651115b8887321e9d1ef00",
           "executable": false
         },
         "agents/openai.yaml": {
           "sha256": "acad68bab4274ee19a564d2d2ab19f6f2818e5716fc24f536c7a4b2ae658111c",
+          "executable": false
+        },
+        "references/standards-baseline.md": {
+          "sha256": "b5edd47df57443a07c01385d441cca9347513782be07e221b69b698a7d39a1c1",
           "executable": false
         }
       },
@@ -173,7 +176,8 @@
         "license_path": "skills/code-review/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "codebase-design",
@@ -182,7 +186,7 @@
       "enabled": true,
       "path": "skills/codebase-design",
       "install_name": "codebase-design",
-      "description": "Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.",
+      "description": "Design deeper modules and testable interfaces. Use for module boundaries, seam placement, or comparing interface alternatives.",
       "summary_zh": "模块边界、接口与深模块设计",
       "license": "MIT",
       "upstream": {
@@ -193,13 +197,12 @@
         "upstream_name": "codebase-design",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "e8e5a6c059fbe3443383d5196f6a93ac51b1d45871b3950da6ebe5184513c84f",
+        "local_skill_md_sha256": "21b1a128214d3965f68b65bcaef9fc7f3656419703b51163cf6c033d6a5f5691",
         "upstream_skill_md_sha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
-        "verification": "matching_name_and_live_upstream_content",
-        "skill_md_line_similarity": 0.871,
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
       },
@@ -223,7 +226,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "e8e5a6c059fbe3443383d5196f6a93ac51b1d45871b3950da6ebe5184513c84f",
+          "sha256": "21b1a128214d3965f68b65bcaef9fc7f3656419703b51163cf6c033d6a5f5691",
           "executable": false
         },
         "agents/openai.yaml": {
@@ -235,7 +238,8 @@
         "license_path": "skills/codebase-design/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "design-system",
@@ -244,7 +248,7 @@
       "enabled": true,
       "path": "skills/design-system",
       "install_name": "design-system",
-      "description": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.",
+      "description": "Create or update design tokens, component specifications, and Tailwind theme mappings. Use also for HTML slides that integrate brand tokens and the contextual slide system.",
       "summary_zh": "设计令牌、组件规范与一致的视觉系统",
       "license": "MIT",
       "upstream": {
@@ -255,13 +259,12 @@
         "upstream_name": "design-system",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "655468bb723a6bc9d17fcb09a6a005e10e313d63b879f4d74fb2abdc3041ae3f",
+        "local_skill_md_sha256": "78d11a4e38c52d66c790597a3e3938343d236254067a03dab05ff0bd424476ce",
         "upstream_skill_md_sha256": "8aa5ff93320559a6e5289d37b6b06b3307737dbfb4a6f3fc44135c705613c511",
-        "verification": "matching_name_and_live_upstream_content",
-        "skill_md_line_similarity": 0.992,
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_general_install_command": "npm install -g ui-ux-pro-max-cli && uipro init --ai codex"
       },
@@ -277,7 +280,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "655468bb723a6bc9d17fcb09a6a005e10e313d63b879f4d74fb2abdc3041ae3f",
+          "sha256": "78d11a4e38c52d66c790597a3e3938343d236254067a03dab05ff0bd424476ce",
           "executable": false
         },
         "data/slide-backgrounds.csv": {
@@ -326,6 +329,10 @@
         },
         "references/semantic-tokens.md": {
           "sha256": "97e16d8061bbc22e82b51966a7015e3fc990932902e4647843506669a1cdebcc",
+          "executable": false
+        },
+        "references/slide-system.md": {
+          "sha256": "62eb1feb0202b0fb561d7b76cbe06d42490c9123055cf3ed569a0c15386e990b",
           "executable": false
         },
         "references/states-and-variants.md": {
@@ -389,7 +396,8 @@
         "license_path": "skills/design-system/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "dex-ik-design-debug",
@@ -398,7 +406,7 @@
       "enabled": true,
       "path": "skills/dex-ik-design-debug",
       "install_name": "dex-ik-design-debug",
-      "description": "Design or debug dexterous-teleoperation IK when the request involves FK, Jacobians, DLS, damping, seeds, null-space posture, singularities, QP/CBF constraints, virtual walls, stale async IK, or trajectory continuity.",
+      "description": "Design or debug teleoperation IK, including FK/Jacobians, solver continuity, asynchronous results, and QP/CBF or virtual-wall constraints.",
       "summary_zh": "遥操作 IK、雅可比、约束和轨迹连续性设计调试",
       "license": "MIT",
       "upstream": {
@@ -408,13 +416,13 @@
         "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-ik-design-debug/SKILL.md",
         "upstream_name": "dex-ik-design-debug",
         "upstream_fetched": true,
-        "skill_md_identical": true,
-        "local_skill_md_sha256": "7371b0ad5cc5c066cfa9fb2c44522c538d7c09c969fe7e55cd828639607495cc",
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "d0d4ea3a2c5b11ffadea60c04ab7de900b8266f7cc4cda57a849528096d969eb",
         "upstream_skill_md_sha256": "7371b0ad5cc5c066cfa9fb2c44522c538d7c09c969fe7e55cd828639607495cc",
-        "verification": "local_git_remote_and_live_upstream",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "same_skill_md_as_checked_upstream",
-        "source_confidence": "local_git_remote_and_identical_skill_md",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
       },
@@ -430,11 +438,11 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "7371b0ad5cc5c066cfa9fb2c44522c538d7c09c969fe7e55cd828639607495cc",
+          "sha256": "d0d4ea3a2c5b11ffadea60c04ab7de900b8266f7cc4cda57a849528096d969eb",
           "executable": false
         },
         "agents/openai.yaml": {
-          "sha256": "75753bdd3ddee277f0dde9eb9b81e9c029ba5eb1be8ca6c43fd050ea03b7ac98",
+          "sha256": "55ac36e2184d42290928b8fb744f3e8a8cdae5a51dfec9a8ef1115a9486d1bd9",
           "executable": false
         }
       },
@@ -442,7 +450,8 @@
         "license_path": "skills/dex-ik-design-debug/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "dex-retargeting-debug",
@@ -451,7 +460,7 @@
       "enabled": true,
       "path": "skills/dex-retargeting-debug",
       "install_name": "dex-retargeting-debug",
-      "description": "Debug or design dexterous-hand retargeting when the request involves MANUS, Wuji, Sharpa, 21x3 landmarks, 20 DOF actions, pinch, aperture, hand coordinates, calibration artifacts, or retargeting replay.",
+      "description": "Design or debug MANUS/Wuji/Sharpa hand retargeting, landmark frames, calibration, pinch, aperture, and replay.",
       "summary_zh": "MANUS/Wuji 等灵巧手重定向、标定和捏合调试",
       "license": "MIT",
       "upstream": {
@@ -461,13 +470,13 @@
         "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-retargeting-debug/SKILL.md",
         "upstream_name": "dex-retargeting-debug",
         "upstream_fetched": true,
-        "skill_md_identical": true,
-        "local_skill_md_sha256": "fefda35316ed52a87c5edd44187eac596644ef138af92d0b4230421b882ff3e9",
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "b118c92d6e94cae7e1f2db9c08c2f28c1c2c6f19dc46f0bb18eec45a77ae56bc",
         "upstream_skill_md_sha256": "fefda35316ed52a87c5edd44187eac596644ef138af92d0b4230421b882ff3e9",
-        "verification": "local_git_remote_and_live_upstream",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "same_skill_md_as_checked_upstream",
-        "source_confidence": "local_git_remote_and_identical_skill_md",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
       },
@@ -483,11 +492,11 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "fefda35316ed52a87c5edd44187eac596644ef138af92d0b4230421b882ff3e9",
+          "sha256": "b118c92d6e94cae7e1f2db9c08c2f28c1c2c6f19dc46f0bb18eec45a77ae56bc",
           "executable": false
         },
         "agents/openai.yaml": {
-          "sha256": "1b6f349a504487372e9bd9a5ea45afac433be6133437c21becb33b0c8da38643",
+          "sha256": "f73f80eee0277922be00fb0ef814f1f4498919cb159ae96df3b8c71abc926b5c",
           "executable": false
         }
       },
@@ -495,7 +504,8 @@
         "license_path": "skills/dex-retargeting-debug/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "dex-robotics-engineering",
@@ -504,7 +514,7 @@
       "enabled": true,
       "path": "skills/dex-robotics-engineering",
       "install_name": "dex-robotics-engineering",
-      "description": "Route natural-language engineering requests about dexterous-hand retargeting, teleoperation IK, impedance kp/kd tuning, and HIL or safety evidence into the correct bounded workflow.",
+      "description": "Route dexterous-robotics work among retargeting, IK, impedance tuning, and HIL evidence review when the primary domain needs selection.",
       "summary_zh": "为遥操作、重定向和阻抗问题选择工程工作流",
       "license": "MIT",
       "upstream": {
@@ -514,13 +524,13 @@
         "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-robotics-engineering/SKILL.md",
         "upstream_name": "dex-robotics-engineering",
         "upstream_fetched": true,
-        "skill_md_identical": true,
-        "local_skill_md_sha256": "a68a83097e2cc2046ed60b8283de1a0be87a521a8d2e7610bca628ca91e7d57b",
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "7d7bae98d2db422e0cba2bf02ad538bb13b1b393ec40ddbfbbc9195569198d07",
         "upstream_skill_md_sha256": "a68a83097e2cc2046ed60b8283de1a0be87a521a8d2e7610bca628ca91e7d57b",
-        "verification": "local_git_remote_and_live_upstream",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "same_skill_md_as_checked_upstream",
-        "source_confidence": "local_git_remote_and_identical_skill_md",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
       },
@@ -536,11 +546,11 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "a68a83097e2cc2046ed60b8283de1a0be87a521a8d2e7610bca628ca91e7d57b",
+          "sha256": "7d7bae98d2db422e0cba2bf02ad538bb13b1b393ec40ddbfbbc9195569198d07",
           "executable": false
         },
         "agents/openai.yaml": {
-          "sha256": "7549875413bfaff600bb358462928d17f28fe21cab495f6d25c149e262875bf1",
+          "sha256": "a6a74f5b0408de58ab29b6052954d4304486c8c288881c6a616476de93882446",
           "executable": false
         },
         "references/route-matrix.md": {
@@ -552,7 +562,8 @@
         "license_path": "skills/dex-robotics-engineering/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "diagnosing-bugs",
@@ -561,7 +572,7 @@
       "enabled": true,
       "path": "skills/diagnosing-bugs",
       "install_name": "diagnosing-bugs",
-      "description": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow.",
+      "description": "Diagnose persistent bugs or performance regressions with a symptom-specific reproduction and evidence-driven probes. Use when the cause needs investigation.",
       "summary_zh": "通过证据与假设迭代定位故障和性能回退",
       "license": "MIT",
       "upstream": {
@@ -572,13 +583,12 @@
         "upstream_name": "diagnosing-bugs",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "f720a80b520343b9769f7a97fae31e2131eb46cc3d8e73817aa8cb8a25fd3920",
+        "local_skill_md_sha256": "cc7576a1aabcedddd064a5cbde28d809d6eed9f7c4f89f17045790e40d5c88c1",
         "upstream_skill_md_sha256": "77f3cf31bc99b2f49af943222526531fcc9fc41d047626d3640e875e85af3e84",
-        "verification": "matching_name_and_live_upstream_content",
-        "skill_md_line_similarity": 0.743,
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
       },
@@ -594,11 +604,15 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "f720a80b520343b9769f7a97fae31e2131eb46cc3d8e73817aa8cb8a25fd3920",
+          "sha256": "cc7576a1aabcedddd064a5cbde28d809d6eed9f7c4f89f17045790e40d5c88c1",
           "executable": false
         },
         "agents/openai.yaml": {
           "sha256": "5e95ccdb1e63a77ac8fdefd5a31d3bfb60b43c227a0cbefdc4b0763fc5da7cff",
+          "executable": false
+        },
+        "references/feedback-loops.md": {
+          "sha256": "4a3395160a897865b0d1e433f1489947a43f21a43a6ddc703e17775054f930a8",
           "executable": false
         },
         "scripts/hitl-loop.template.sh": {
@@ -610,7 +624,8 @@
         "license_path": "skills/diagnosing-bugs/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "domain-modeling",
@@ -619,7 +634,7 @@
       "enabled": true,
       "path": "skills/domain-modeling",
       "install_name": "domain-modeling",
-      "description": "Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a CONTEXT.md, or recording or editing an ADR.",
+      "description": "Define or revise domain terminology, CONTEXT.md glossaries, and architectural decision records. Skip tasks that only consume existing vocabulary.",
       "summary_zh": "梳理项目术语、领域模型与架构决策",
       "license": "MIT",
       "upstream": {
@@ -630,13 +645,12 @@
         "upstream_name": "domain-modeling",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "9617041db9b0f6606ecf974e2061c83596b05059b5bb20ddb884c60f147c70e9",
+        "local_skill_md_sha256": "25fb292847abc8dc920841b3c8c2c1bf709ac09a078bd2064e22a94bd738e0f1",
         "upstream_skill_md_sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e",
-        "verification": "matching_name_and_live_upstream_content",
-        "skill_md_line_similarity": 0.878,
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
       },
@@ -660,7 +674,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "9617041db9b0f6606ecf974e2061c83596b05059b5bb20ddb884c60f147c70e9",
+          "sha256": "25fb292847abc8dc920841b3c8c2c1bf709ac09a078bd2064e22a94bd738e0f1",
           "executable": false
         },
         "agents/openai.yaml": {
@@ -672,7 +686,8 @@
         "license_path": "skills/domain-modeling/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "experimental-design",
@@ -681,7 +696,7 @@
       "enabled": true,
       "path": "skills/experimental-design",
       "install_name": "experimental-design",
-      "description": "Design experiments and studies BEFORE data is collected — choosing a design, randomizing, blocking, and laying out treatment combinations so results are interpretable. Use whenever someone is planning a study, asks how to assign subjects/samples to groups, mentions randomization, blocking, stratification, controls, factorial or fractional-factorial designs, design of experiments (DOE), screening many factors, response-surface optimization, crossover or repeated-measures or split-plot designs, cluster/group randomization, Latin squares, plate layouts, batch/run-order effects, replication vs. pseudoreplication, or sequential/adaptive/group-sequential designs. Trigger even for informal phrasings like \"how should I set up this experiment\", \"how do I avoid confounding\", \"what's the best way to test these 6 factors\", or \"assign these mice to conditions\". For computing the sample size or power once the design is chosen, use statistical-power; for analyzing data already collected, use statistical-analysis.",
+      "description": "Plan experiments before data collection, including study designs, randomization, blocking, replication, and DOE layouts. Use statistical-power for sample size or MDE; use an analysis workflow for collected data.",
       "summary_zh": "实验对照、随机化、区组、重复测量和多因素设计",
       "license": "MIT",
       "upstream": {
@@ -691,10 +706,10 @@
         "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/9cf7d9aea7d84754db4c167ab04b299d33c444bc/skills/experimental-design/SKILL.md",
         "upstream_name": "experimental-design",
         "upstream_fetched": true,
-        "skill_md_identical": true,
-        "local_skill_md_sha256": "8d1e072e96c40dea985deac2d67d2cb800bb8db1cb18b31db0e623ca66e66741",
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "d0c1e950abb116d4cd0235fbc78488530353477ab3ed536de7cfccb764dff0c4",
         "upstream_skill_md_sha256": "8d1e072e96c40dea985deac2d67d2cb800bb8db1cb18b31db0e623ca66e66741",
-        "verification": "installation_lock_and_live_upstream",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "installation_lock": {
           "source": "K-Dense-AI/scientific-agent-skills",
           "sourceType": "github",
@@ -702,8 +717,8 @@
           "skillFolderHash": "0fe230c326a7ff17c0201c5fd4e99cc593623fe6"
         },
         "locally_enabled": true,
-        "local_modification_status": "same_skill_md_as_checked_upstream",
-        "source_confidence": "explicit_local_installer_lock",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
       },
@@ -719,7 +734,11 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "8d1e072e96c40dea985deac2d67d2cb800bb8db1cb18b31db0e623ca66e66741",
+          "sha256": "d0c1e950abb116d4cd0235fbc78488530353477ab3ed536de7cfccb764dff0c4",
+          "executable": false
+        },
+        "references/design_selection.md": {
+          "sha256": "59249fc44fb1d6a8f089dd6f473d37bc070cf4d726a138bca5fdc277b1ecb190",
           "executable": false
         },
         "references/design_types.md": {
@@ -730,12 +749,20 @@
           "sha256": "2db506065a0fd36b699ad70063ce6a099055b9e676efc36790e098ed43319e0e",
           "executable": false
         },
+        "references/generating_layouts.md": {
+          "sha256": "c604d7ba3fb9e1dcbd9469f66d1a069e64e88c6cdc45f5b313737185fc9a3afb",
+          "executable": false
+        },
         "references/randomization_and_blocking.md": {
           "sha256": "b4298ef74a5c744fa986507e158fa48044f0c762c3b404c0a0b063a0dbac3dca",
           "executable": false
         },
         "references/sequential_and_adaptive.md": {
           "sha256": "bfffc806da8d84116535c4fd2f3b50f94e16e7addd38cca0b502c19df368b475",
+          "executable": false
+        },
+        "references/source_notes.md": {
+          "sha256": "7aea3158e63fe50b23670f81073a21e75712971b90b61be640a9a97e41e12e90",
           "executable": false
         },
         "scripts/doe_designs.py": {
@@ -751,7 +778,8 @@
         "license_path": "skills/experimental-design/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/9cf7d9aea7d84754db4c167ab04b299d33c444bc/LICENSE.md",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "find-skills",
@@ -760,7 +788,7 @@
       "enabled": true,
       "path": "skills/find-skills",
       "install_name": "find-skills",
-      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "description": "Discover, compare, and install agent skills when the user asks to find a skill or extend agent capabilities. Ordinary requests to perform a task do not require skill discovery.",
       "summary_zh": "搜索、评估和发现可安装的 skills",
       "license": "MIT",
       "upstream": {
@@ -770,10 +798,10 @@
         "source_url": "https://github.com/vercel-labs/skills/blob/80feb48868972d518436f26711509bc78595b5cb/skills/find-skills/SKILL.md",
         "upstream_name": "find-skills",
         "upstream_fetched": true,
-        "skill_md_identical": true,
-        "local_skill_md_sha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "b0b2a94c32086df172fa1d5da6882f0dfdf1471d5d4ea528d3988865021c4185",
         "upstream_skill_md_sha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
-        "verification": "installation_lock_and_live_upstream",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "installation_lock": {
           "source": "vercel-labs/skills",
           "sourceType": "github",
@@ -781,8 +809,8 @@
           "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b"
         },
         "locally_enabled": true,
-        "local_modification_status": "same_skill_md_as_checked_upstream",
-        "source_confidence": "explicit_local_installer_lock",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore"
       },
       "recovery": {
@@ -797,7 +825,11 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
+          "sha256": "b0b2a94c32086df172fa1d5da6882f0dfdf1471d5d4ea528d3988865021c4185",
+          "executable": false
+        },
+        "references/search-examples.md": {
+          "sha256": "997598e2ead96f664059ba2984850c9be6f70b4fb35a51aa3484851119f2fa7d",
           "executable": false
         }
       },
@@ -805,7 +837,8 @@
         "license_path": "skills/find-skills/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/vercel-labs/skills/80feb48868972d518436f26711509bc78595b5cb/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "handoff",
@@ -868,7 +901,7 @@
       "enabled": true,
       "path": "skills/herdr",
       "install_name": "herdr",
-      "description": "Control Herdr, a terminal multiplexer for coding agents. Use only when the user explicitly mentions Herdr or asks to use Herdr to inspect or control panes, tabs, workspaces, commands, or another agent. Do not use merely because a task could benefit from a background terminal, delegation, or parallel work. Requires HERDR_ENV=1.",
+      "description": "Control Herdr panes, terminals, and agents only when the user explicitly requests Herdr and HERDR_ENV=1; not a generic delegation skill.",
       "summary_zh": "控制 Herdr 的终端、工作区和 agents；需要 Herdr 环境",
       "license": "Apache-2.0",
       "upstream": {
@@ -879,19 +912,18 @@
         "upstream_name": "herdr",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "237ad2ab2d8123e2bb37956d3a41eed141f2d22a7c36e415b7876c0397679099",
+        "local_skill_md_sha256": "d79b27fecb98e924bad73b489c23784ebd2480721397caeb4055b11c2f4cb40b",
         "upstream_skill_md_sha256": "25a68bc36d9309048db89e7d168f2e04d1689d734c5d72cc3688bf4ff9db1e9f",
-        "verification": "installation_lock_and_live_upstream",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "installation_lock": {
           "source": "herdrdev/herdr",
           "sourceType": "github",
           "skillPath": "skills/herdr/SKILL.md",
           "skillFolderHash": "f8bb649bb92ddc99e6af463ab9a635da98c7b129"
         },
-        "skill_md_line_similarity": 0.952,
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "explicit_local_installer_lock",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore"
       },
       "recovery": {
@@ -906,7 +938,11 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "237ad2ab2d8123e2bb37956d3a41eed141f2d22a7c36e415b7876c0397679099",
+          "sha256": "d79b27fecb98e924bad73b489c23784ebd2480721397caeb4055b11c2f4cb40b",
+          "executable": false
+        },
+        "references/operations.md": {
+          "sha256": "f53cd01405540d5a81cefae1e7bbe334291eda24bc0c7ceb7e2927853d7f009f",
           "executable": false
         }
       },
@@ -914,7 +950,8 @@
         "license_path": "skills/herdr/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/herdrdev/herdr/120c682008a85dc17d7a13cc619a2fd5d25f3924/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "herdr-requirements-grill",
@@ -923,7 +960,7 @@
       "enabled": true,
       "path": "skills/herdr-requirements-grill",
       "install_name": "herdr-requirements-grill",
-      "description": "Close high-impact requirement gaps through evidence-first questioning when the active role is unambiguously a Herdr Planner. Use for unresolved scope, safety, authority, interface, or acceptance choices that would otherwise force an implementer to guess; skip ordinary complete tasks and non-Planner roles.",
+      "description": "Close blocking scope, authority, interface, or acceptance decisions for an identified Herdr Planner through read-only evidence and user dialogue.",
       "summary_zh": "在 Herdr Planner 角色下澄清高影响需求缺口",
       "license": "MIT",
       "upstream": {
@@ -931,9 +968,10 @@
         "upstream_skill_path": null,
         "verification": "local_only_no_verified_public_upstream",
         "locally_enabled": true,
-        "local_modification_status": "not_comparable_no_verified_upstream",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
         "source_confidence": "local_custom_no_verified_public_upstream",
-        "install_command_kind": null
+        "install_command_kind": null,
+        "local_skill_md_sha256": "99cdce745636916eed171d7aa683665d7651fbdbf0fc266ed4fa993eaee9ca3f"
       },
       "recovery": {
         "command": null,
@@ -947,11 +985,11 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "77f10f391d60a1707e25a865b067fcea1ea6db01f943a6c9d7f2a8bf6a403705",
+          "sha256": "99cdce745636916eed171d7aa683665d7651fbdbf0fc266ed4fa993eaee9ca3f",
           "executable": false
         },
         "agents/openai.yaml": {
-          "sha256": "591f8010ab3742a635e217566661e199bb00437e552cba176b79ad770ad7ef9b",
+          "sha256": "f07c1d2f1c59c37f7db52bcf0bfd3a131de26204514451144ee8e3f9367c8c5c",
           "executable": false
         },
         "tests/fixtures/scenarios.json": {
@@ -966,7 +1004,8 @@
       "license_evidence": {
         "license_path": "skills/herdr-requirements-grill/LICENSE",
         "basis": "repository_maintainer_custom_skill_released_under_repository_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "impedance-gain-tuning",
@@ -975,7 +1014,7 @@
       "enabled": true,
       "path": "skills/impedance-gain-tuning",
       "install_name": "impedance-gain-tuning",
-      "description": "Tune or debug robot hand and arm kp/kd, PD/PID, or impedance behavior when the request involves overshoot, settling, stiffness, damping, step response, oscillation, saturation, or control-loop gains.",
+      "description": "Tune or diagnose robot hand/arm kp/kd, PD/PID, and impedance responses once geometry and IK are trustworthy.",
       "summary_zh": "机器人 kp/kd、阻抗、振荡和阶跃响应调参",
       "license": "MIT",
       "upstream": {
@@ -985,13 +1024,13 @@
         "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/impedance-gain-tuning/SKILL.md",
         "upstream_name": "impedance-gain-tuning",
         "upstream_fetched": true,
-        "skill_md_identical": true,
-        "local_skill_md_sha256": "2291c09cae0b09418fea725c426e0b8e7373bae71f9453f9b4bf1d8c427cc8f6",
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "d0359af9e516e7c63f77da6da2029ab0a64642b2780b043eefeec957def678c9",
         "upstream_skill_md_sha256": "2291c09cae0b09418fea725c426e0b8e7373bae71f9453f9b4bf1d8c427cc8f6",
-        "verification": "local_git_remote_and_live_upstream",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "same_skill_md_as_checked_upstream",
-        "source_confidence": "local_git_remote_and_identical_skill_md",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
       },
@@ -1007,11 +1046,11 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "2291c09cae0b09418fea725c426e0b8e7373bae71f9453f9b4bf1d8c427cc8f6",
+          "sha256": "d0359af9e516e7c63f77da6da2029ab0a64642b2780b043eefeec957def678c9",
           "executable": false
         },
         "agents/openai.yaml": {
-          "sha256": "2e86738934962fcc9cea1864bfd9d10e0d58d5fe2864b4697852769d5f37e582",
+          "sha256": "8a09a20b87f235dd89a34b3de4319d6aca8bdc570b23b97d89c982202e11d8e6",
           "executable": false
         }
       },
@@ -1019,7 +1058,8 @@
         "license_path": "skills/impedance-gain-tuning/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "receiving-code-review",
@@ -1028,7 +1068,7 @@
       "enabled": true,
       "path": "skills/receiving-code-review",
       "install_name": "receiving-code-review",
-      "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
+      "description": "Evaluate code-review feedback against the codebase before applying it, especially disputed or unclear suggestions.",
       "summary_zh": "核实代码审查意见后再采取修改",
       "license": "MIT",
       "upstream": {
@@ -1038,13 +1078,13 @@
         "source_url": "https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/receiving-code-review/SKILL.md",
         "upstream_name": "receiving-code-review",
         "upstream_fetched": true,
-        "skill_md_identical": true,
-        "local_skill_md_sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "d69f0c56f9202c01cf7e8ea2e8083b7e6fa6d8d97202eb7aec6586a6e90bcba3",
         "upstream_skill_md_sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
-        "verification": "matching_name_and_live_upstream_content",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "same_skill_md_as_checked_upstream",
-        "source_confidence": "identical_skill_md_to_public_upstream_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore"
       },
       "recovery": {
@@ -1059,7 +1099,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+          "sha256": "d69f0c56f9202c01cf7e8ea2e8083b7e6fa6d8d97202eb7aec6586a6e90bcba3",
           "executable": false
         },
         "agents/openai.yaml": {
@@ -1071,7 +1111,8 @@
         "license_path": "skills/receiving-code-review/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/obra/superpowers/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "research",
@@ -1080,7 +1121,7 @@
       "enabled": true,
       "path": "skills/research",
       "install_name": "research",
-      "description": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.",
+      "description": "Research a question from primary sources and save cited findings as a Markdown note, with background delegation when allowed.",
       "summary_zh": "依据可信一手来源调查问题并记录证据",
       "license": "MIT",
       "upstream": {
@@ -1091,13 +1132,12 @@
         "upstream_name": "research",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "af378829f015775a3bcd65ff466826722e99359017ae6bae227ca4c9bd14049c",
+        "local_skill_md_sha256": "34aa581e50afbf8b07258384e960600b0c0e43af04434fbb7fcf29e0ff8f74fc",
         "upstream_skill_md_sha256": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4",
-        "verification": "matching_name_and_live_upstream_content",
-        "skill_md_line_similarity": 0.917,
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
       },
@@ -1113,7 +1153,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "af378829f015775a3bcd65ff466826722e99359017ae6bae227ca4c9bd14049c",
+          "sha256": "34aa581e50afbf8b07258384e960600b0c0e43af04434fbb7fcf29e0ff8f74fc",
           "executable": false
         },
         "agents/openai.yaml": {
@@ -1125,7 +1165,8 @@
         "license_path": "skills/research/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "scientific-visualization",
@@ -1134,7 +1175,7 @@
       "enabled": true,
       "path": "skills/scientific-visualization",
       "install_name": "scientific-visualization",
-      "description": "Create and audit truthful, accessible, publication-ready scientific figures with Matplotlib, Seaborn, or Plotly. Use for figure design, multi-panel layouts, uncertainty and missing-data displays, color/contrast review, image metadata validation, and journal export planning.",
+      "description": "Create or audit scientific figures, including uncertainty, missing data, accessibility, and publication exports. Use for scientific plots and figure review with Matplotlib, Seaborn, or Plotly.",
       "summary_zh": "科研数据绘图、误差表达、配色与导出检查",
       "license": "MIT",
       "upstream": {
@@ -1144,10 +1185,10 @@
         "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/9cf7d9aea7d84754db4c167ab04b299d33c444bc/skills/scientific-visualization/SKILL.md",
         "upstream_name": "scientific-visualization",
         "upstream_fetched": true,
-        "skill_md_identical": true,
-        "local_skill_md_sha256": "f7c7f9a2350ea02db2db55cd28921a54c74b089f6762f1b0b63a13b8f6eeec33",
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "70e21627d906e5f61d2eafb9d6bc074029cbe31fea9eccd4b5dbd4ff4dbebb4c",
         "upstream_skill_md_sha256": "f7c7f9a2350ea02db2db55cd28921a54c74b089f6762f1b0b63a13b8f6eeec33",
-        "verification": "installation_lock_and_live_upstream",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "installation_lock": {
           "source": "K-Dense-AI/scientific-agent-skills",
           "sourceType": "github",
@@ -1155,8 +1196,8 @@
           "skillFolderHash": "5deaed71e225759277bb94cdaf846f945ea96234"
         },
         "locally_enabled": true,
-        "local_modification_status": "same_skill_md_as_checked_upstream",
-        "source_confidence": "explicit_local_installer_lock",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
       },
@@ -1172,7 +1213,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "f7c7f9a2350ea02db2db55cd28921a54c74b089f6762f1b0b63a13b8f6eeec33",
+          "sha256": "70e21627d906e5f61d2eafb9d6bc074029cbe31fea9eccd4b5dbd4ff4dbebb4c",
           "executable": false
         },
         "assets/color_palettes.py": {
@@ -1199,6 +1240,10 @@
           "sha256": "9b6e7d74922d64e333aff67fd41c0b53891736f5d37b01f11e96225d2dc1bfc1",
           "executable": false
         },
+        "references/implementation_and_export.md": {
+          "sha256": "5780c4e19ebcb2f521fcf4ae59d7f994cd70040c0df683f21209b66fb6741d6b",
+          "executable": false
+        },
         "references/journal_requirements.md": {
           "sha256": "17d36a91d5afc4975682038f36a3b13470e886f64d53b23100b3ea5688e07daa",
           "executable": false
@@ -1213,6 +1258,10 @@
         },
         "references/sources.md": {
           "sha256": "186544985dba77fe948393483cd2c7fd2c4b543c04c1fc1bcc652190d0fb9cd0",
+          "executable": false
+        },
+        "references/tooling.md": {
+          "sha256": "8b61745a7d2d732799987b3d5b7e8e2f6827507c1a5cc4dbc1daa86f44bc8b4b",
           "executable": false
         },
         "scripts/_common.py": {
@@ -1248,7 +1297,8 @@
         "license_path": "skills/scientific-visualization/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/9cf7d9aea7d84754db4c167ab04b299d33c444bc/LICENSE.md",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "scientific-writing",
@@ -1257,7 +1307,7 @@
       "enabled": true,
       "path": "skills/scientific-writing",
       "install_name": "scientific-writing",
-      "description": "Draft, revise, and audit scientific manuscripts or reports with explicit evidence provenance, reporting-guideline coverage, authorship accountability, confidentiality controls, and local consistency checks. Use for manuscript sections, references, declarations, tables, figures, or submission preparation when scientific accuracy and traceability matter.",
+      "description": "Draft, revise, or audit scientific manuscripts and reports with traceable evidence. Use for manuscript prose, references, declarations, displays, reporting coverage, or submission preparation.",
       "summary_zh": "科研结果、论文段落、图注与证据一致性检查",
       "license": "MIT",
       "upstream": {
@@ -1267,10 +1317,10 @@
         "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/9cf7d9aea7d84754db4c167ab04b299d33c444bc/skills/scientific-writing/SKILL.md",
         "upstream_name": "scientific-writing",
         "upstream_fetched": true,
-        "skill_md_identical": true,
-        "local_skill_md_sha256": "f6026e7d79cd3133e9343a7d6e6c5e06f4ad061888efb6a73fcb95e073eebf67",
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "9782e9e3657775afac88948b64e22bdf36c485b358395ae7dc7baf34b96493da",
         "upstream_skill_md_sha256": "f6026e7d79cd3133e9343a7d6e6c5e06f4ad061888efb6a73fcb95e073eebf67",
-        "verification": "installation_lock_and_live_upstream",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "installation_lock": {
           "source": "K-Dense-AI/scientific-agent-skills",
           "sourceType": "github",
@@ -1278,8 +1328,8 @@
           "skillFolderHash": "ae5fac6462c292e31e8f75337ad4735c127146b4"
         },
         "locally_enabled": true,
-        "local_modification_status": "same_skill_md_as_checked_upstream",
-        "source_confidence": "explicit_local_installer_lock",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
       },
@@ -1295,7 +1345,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "f6026e7d79cd3133e9343a7d6e6c5e06f4ad061888efb6a73fcb95e073eebf67",
+          "sha256": "9782e9e3657775afac88948b64e22bdf36c485b358395ae7dc7baf34b96493da",
           "executable": false
         },
         "assets/REPORT_FORMATTING_GUIDE.md": {
@@ -1362,6 +1412,10 @@
           "sha256": "88461292ebde06f0db0e756b8e3c776cc2017eb313a8593636be264af2578ff1",
           "executable": false
         },
+        "references/manuscript_workflow.md": {
+          "sha256": "9c49ca4cc19a4d910544159e1512e50425c8f92af52f228ddf5c66068beb3e67",
+          "executable": false
+        },
         "references/professional_report_formatting.md": {
           "sha256": "c269fd256bda6a9389bfd5ffefa8eff8876b96d92f8391e8a01fa80910bb35d3",
           "executable": false
@@ -1372,6 +1426,10 @@
         },
         "references/research_integrity_open_science.md": {
           "sha256": "f8f91010537acf4b78616d7410d23b85030f94d66e9d36db03d6e632ffb56100",
+          "executable": false
+        },
+        "references/revision_submission.md": {
+          "sha256": "5e7c5973451d776d72bd859458a9e35f5eca9c1fcb63efe599e23c011ab7b175",
           "executable": false
         },
         "references/source_ledger.md": {
@@ -1423,7 +1481,8 @@
         "license_path": "skills/scientific-writing/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/9cf7d9aea7d84754db4c167ab04b299d33c444bc/LICENSE.md",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "setup-matt-pocock-skills",
@@ -1432,7 +1491,7 @@
       "enabled": true,
       "path": "skills/setup-matt-pocock-skills",
       "install_name": "setup-matt-pocock-skills",
-      "description": "Configure this repo for the engineering skills — set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.",
+      "description": "Configure repository issue-tracker conventions, triage labels, and domain-document layout for the engineering skills.",
       "summary_zh": "配置工程 skills 所用的议题和文档约定",
       "license": "MIT",
       "upstream": {
@@ -1443,13 +1502,12 @@
         "upstream_name": "setup-matt-pocock-skills",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "310fb1a73c0467e617e17d7c41d4a2278b5405c4a27f36d7cd22bb4599aee6bb",
+        "local_skill_md_sha256": "430ab56ef984f499496f64713f5ab818dd662988b018747ceb7f82ea567baf25",
         "upstream_skill_md_sha256": "2bcd89e97777cdb705914424e39c97d5db524c8eb4eafac8120778a07774f0ec",
-        "verification": "matching_name_and_live_upstream_content",
-        "skill_md_line_similarity": 0.741,
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
       },
@@ -1465,7 +1523,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "310fb1a73c0467e617e17d7c41d4a2278b5405c4a27f36d7cd22bb4599aee6bb",
+          "sha256": "430ab56ef984f499496f64713f5ab818dd662988b018747ceb7f82ea567baf25",
           "executable": false
         },
         "agents/openai.yaml": {
@@ -1473,7 +1531,7 @@
           "executable": false
         },
         "domain.md": {
-          "sha256": "25be404b58798b3cb2d51c93dba2ab052fc3a425632185726ac3f5fcff193b99",
+          "sha256": "60e2730dea630ff2f18a0eef7fd26acfbac8a9401c19f2e508a61a5ce521275c",
           "executable": false
         },
         "issue-tracker-github.md": {
@@ -1497,7 +1555,8 @@
         "license_path": "skills/setup-matt-pocock-skills/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "slides",
@@ -1506,7 +1565,7 @@
       "enabled": true,
       "path": "skills/slides",
       "install_name": "slides",
-      "description": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
+      "description": "Create strategic HTML slide decks with Chart.js, design tokens, responsive layouts, and presentation copywriting. Use for HTML presentations and pitch decks.",
       "summary_zh": "用 HTML 和 Chart.js 制作演示文稿",
       "license": "MIT",
       "upstream": {
@@ -1517,13 +1576,12 @@
         "upstream_name": "slides",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "2b90bdaf63f231919a01f4962f374ecd84af101a7e7545f8d9c68e049025accb",
+        "local_skill_md_sha256": "7b80529a04223573e0a0b5a76640e2489fed01979a91cb9f570482761288aedd",
         "upstream_skill_md_sha256": "86c07f19ec09f79441d3837e909cfcd51034b83bdcc88094c15e652be1e765cb",
-        "verification": "matching_name_and_live_upstream_content",
-        "skill_md_line_similarity": 0.952,
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_general_install_command": "npm install -g ui-ux-pro-max-cli && uipro init --ai codex"
       },
@@ -1539,7 +1597,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "2b90bdaf63f231919a01f4962f374ecd84af101a7e7545f8d9c68e049025accb",
+          "sha256": "7b80529a04223573e0a0b5a76640e2489fed01979a91cb9f570482761288aedd",
           "executable": false
         },
         "references/copywriting-formulas.md": {
@@ -1547,7 +1605,7 @@
           "executable": false
         },
         "references/create.md": {
-          "sha256": "792d647a5d4f87d765cf417f7ac54dd0b2fc4d229cc23ea9df56282d4c1ee086",
+          "sha256": "6e4ef20b172554cc9edbc614f43853c107661957b8f9ffa3d8ed5bc105619b14",
           "executable": false
         },
         "references/html-template.md": {
@@ -1567,7 +1625,8 @@
         "license_path": "skills/slides/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "statistical-power",
@@ -1576,7 +1635,7 @@
       "enabled": true,
       "path": "skills/statistical-power",
       "install_name": "statistical-power",
-      "description": "Sample-size and statistical power calculations for planning studies. Use whenever someone asks \"how many subjects/samples/replicates do I need\", wants an a priori power analysis, a minimum detectable effect (MDE), a power curve, or needs to justify a sample size for a grant, IRB protocol, or pre-registration. Covers closed-form power for t-tests, ANOVA, proportions, correlations, chi-square, and regression, plus simulation-based (Monte Carlo) power for designs with no formula — logistic/Poisson regression, mixed models, cluster-randomized trials, survival, and interactions. Use this skill even when the request only mentions an effect size, alpha, or \"80% power\" without saying \"power analysis\" explicitly. For laying out the study (randomization, blocking, factorial/DOE, crossover, sequential designs) use experimental-design; for analyzing data already collected and reporting it use statistical-analysis.",
+      "description": "Calculate study sample size, power, minimum detectable effects, and sensitivity curves for a planned analysis. Use experimental-design to choose or lay out the study; use an analysis workflow for collected data.",
       "summary_zh": "样本量、可检测差异和统计功效规划",
       "license": "MIT",
       "upstream": {
@@ -1586,10 +1645,10 @@
         "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/9cf7d9aea7d84754db4c167ab04b299d33c444bc/skills/statistical-power/SKILL.md",
         "upstream_name": "statistical-power",
         "upstream_fetched": true,
-        "skill_md_identical": true,
-        "local_skill_md_sha256": "51ca6017ecaf5a6ec427d80f511063f570a983785399eedbd24c6fc4b9fd12f5",
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "ebbec51daf54b0ed8624c32f340079814f90a6f1ab55b9998f3ff18956a88ff2",
         "upstream_skill_md_sha256": "51ca6017ecaf5a6ec427d80f511063f570a983785399eedbd24c6fc4b9fd12f5",
-        "verification": "installation_lock_and_live_upstream",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "installation_lock": {
           "source": "K-Dense-AI/scientific-agent-skills",
           "sourceType": "github",
@@ -1597,8 +1656,8 @@
           "skillFolderHash": "54357b5c0a1ff8810bf483505210b96bf3cd1855"
         },
         "locally_enabled": true,
-        "local_modification_status": "same_skill_md_as_checked_upstream",
-        "source_confidence": "explicit_local_installer_lock",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
       },
@@ -1614,7 +1673,11 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "51ca6017ecaf5a6ec427d80f511063f570a983785399eedbd24c6fc4b9fd12f5",
+          "sha256": "ebbec51daf54b0ed8624c32f340079814f90a6f1ab55b9998f3ff18956a88ff2",
+          "executable": false
+        },
+        "references/calculation_workflow.md": {
+          "sha256": "0b147c119406f2472cb83991d4026525bf058acd529a89c65dd70019134f38f0",
           "executable": false
         },
         "references/closed_form_recipes.md": {
@@ -1623,6 +1686,10 @@
         },
         "references/effect_sizes.md": {
           "sha256": "19f243ac6aeacfbbb7a83a1e621dc5a8248b98278499c4efd34db412d2c964db",
+          "executable": false
+        },
+        "references/reporting.md": {
+          "sha256": "87f30383d2b09e11bf7947e184913b3c5bab5f3f1b65d8e1746fb694a55b868e",
           "executable": false
         },
         "references/simulation_based_power.md": {
@@ -1642,7 +1709,8 @@
         "license_path": "skills/statistical-power/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/9cf7d9aea7d84754db4c167ab04b299d33c444bc/LICENSE.md",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "tdd",
@@ -1651,7 +1719,7 @@
       "enabled": true,
       "path": "skills/tdd",
       "install_name": "tdd",
-      "description": "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests.",
+      "description": "Build features or fix bugs test-first with vertical red-green slices through agreed public interfaces, including integration-test-driven work.",
       "summary_zh": "按测试先行的方式实现功能与修复问题",
       "license": "MIT",
       "upstream": {
@@ -1662,13 +1730,12 @@
         "upstream_name": "tdd",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "501e42b5cbced4ac0ce5996cba940bb4c6636edccb783b164da52db633c6bd07",
+        "local_skill_md_sha256": "64e3ed480c7be482b15bd44ff82462703c3a550738c9f89d77c4d711810c719f",
         "upstream_skill_md_sha256": "cb01f66bebfaa25fa1f88e6b7e769cd9fd9f35b1120b8563749820738814c927",
-        "verification": "matching_name_and_live_upstream_content",
-        "skill_md_line_similarity": 0.632,
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
       },
@@ -1684,7 +1751,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "501e42b5cbced4ac0ce5996cba940bb4c6636edccb783b164da52db633c6bd07",
+          "sha256": "64e3ed480c7be482b15bd44ff82462703c3a550738c9f89d77c4d711810c719f",
           "executable": false
         },
         "agents/openai.yaml": {
@@ -1704,7 +1771,8 @@
         "license_path": "skills/tdd/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "teleop-hil-review",
@@ -1713,7 +1781,7 @@
       "enabled": true,
       "path": "skills/teleop-hil-review",
       "install_name": "teleop-hil-review",
-      "description": "Audit a scoped teleoperation hardware-in-the-loop or physical-safety evidence claim when the active role is unambiguously Herdr Planner or Reviewer. Use for HIL, real-robot readiness, physical motion, calibration provenance, or safety acceptance reviews; skip implementation tasks and other roles.",
+      "description": "Audit teleoperation HIL or physical-safety evidence as an identified Herdr Planner or Reviewer; inspection only.",
       "summary_zh": "在指定审查角色下核查遥操作 HIL 与安全证据",
       "license": "MIT",
       "upstream": {
@@ -1721,9 +1789,10 @@
         "upstream_skill_path": null,
         "verification": "local_only_no_verified_public_upstream",
         "locally_enabled": true,
-        "local_modification_status": "not_comparable_no_verified_upstream",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
         "source_confidence": "local_custom_no_verified_public_upstream",
-        "install_command_kind": null
+        "install_command_kind": null,
+        "local_skill_md_sha256": "2e7fafec590ce1771284e7473ac4b833ff99bb6acda689e2d64ac2af1aa3f6d5"
       },
       "recovery": {
         "command": null,
@@ -1737,11 +1806,11 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "fd24c8a02c3446e34176ebc9e97aeff4e68a4048e7cdfd2d69b15ae0687679df",
+          "sha256": "2e7fafec590ce1771284e7473ac4b833ff99bb6acda689e2d64ac2af1aa3f6d5",
           "executable": false
         },
         "agents/openai.yaml": {
-          "sha256": "2361527cfd1c7cdbacb08fbec26b8b7e7430b88dcc0a89679dae5f331302c3e8",
+          "sha256": "f0f12ab4009255d5bb47e7c8f46ac2c4e07e76a2647de4cec7a4c7dd5b0a0deb",
           "executable": false
         },
         "tests/fixtures/scenarios.json": {
@@ -1756,7 +1825,8 @@
       "license_evidence": {
         "license_path": "skills/teleop-hil-review/LICENSE",
         "basis": "repository_maintainer_custom_skill_released_under_repository_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "ui-styling",
@@ -1765,7 +1835,7 @@
       "enabled": true,
       "path": "skills/ui-styling",
       "install_name": "ui-styling",
-      "description": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications.",
+      "description": "Implement accessible UI with shadcn/ui and Tailwind, including components, responsive layouts, themes, and dark mode. Also supports canvas-based posters and visual compositions.",
       "summary_zh": "用 Tailwind/shadcn 等实现界面样式",
       "license": "Apache-2.0",
       "upstream": {
@@ -1776,13 +1846,12 @@
         "upstream_name": "ui-styling",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "f8b6c3832d2af51f67b3932e3c4a79bcd8a8596cc61ce1547a686fc951e5c62d",
+        "local_skill_md_sha256": "84304c651510738263e5ac333ea42c3850b11d086d865db728b5c29253e5cae5",
         "upstream_skill_md_sha256": "41f6d6a41bf827544e7b47f2ad2fe0264db7820bc6b425adbc037fc5508ffef0",
-        "verification": "matching_name_and_live_upstream_content",
-        "skill_md_line_similarity": 0.994,
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_general_install_command": "npm install -g ui-ux-pro-max-cli && uipro init --ai codex"
       },
@@ -1798,7 +1867,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "f8b6c3832d2af51f67b3932e3c4a79bcd8a8596cc61ce1547a686fc951e5c62d",
+          "sha256": "84304c651510738263e5ac333ea42c3850b11d086d865db728b5c29253e5cae5",
           "executable": false
         },
         "UPSTREAM-LICENSE-MIT.txt": {
@@ -1807,6 +1876,10 @@
         },
         "references/canvas-design-system.md": {
           "sha256": "f5de85ff39d9f3a8275c4164b921ba72d5e1d34b8d7a9243d9ee34b3870a4f5f",
+          "executable": false
+        },
+        "references/setup-and-examples.md": {
+          "sha256": "4f375fcc75c5003a27f7efc6250d9d054c58034c1a373477a0f8dd2ce002806e",
           "executable": false
         },
         "references/shadcn-accessibility.md": {
@@ -1867,7 +1940,8 @@
         "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
         "basis": "public_upstream_license",
         "additional_license_path": "skills/ui-styling/UPSTREAM-LICENSE-MIT.txt"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "ui-ux-pro-max",
@@ -1876,7 +1950,7 @@
       "enabled": true,
       "path": "skills/ui-ux-pro-max",
       "install_name": "ui-ux-pro-max",
-      "description": "UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces, including pages, components, design systems, accessibility, interaction, responsive layout, typography, color, charts, and stack-specific UI implementation. Searchable local data: 79 searchable styles (50 active), 192 product palettes and reasoning profiles, 74 font pairings, 119 UX guidelines, 105 icons, 17 GSAP presets, 25 chart types, and 22 stacks.",
+      "description": "Design, implement, or review UI/UX for web, mobile, and desktop using searchable local design and stack guidance. Use for visual direction, components, interaction, accessibility, or interface quality.",
       "summary_zh": "检索 UI/UX 风格、配色、字体、图表与实现指南",
       "license": "MIT",
       "upstream": {
@@ -1887,13 +1961,12 @@
         "upstream_name": "ui-ux-pro-max",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "8b827fe03b349aeea99a7d6cf4ccd892e6065b672859fdb11e13a1919453eddc",
+        "local_skill_md_sha256": "7d4f8ddc73d89763a37265e69da6a78edd93854a37b9e5cb38f41e892d25b456",
         "upstream_skill_md_sha256": "ea087c341bfb5b23195c7302027268ede86da802554c18a5c4896a6017b439f9",
-        "verification": "matching_name_and_live_upstream_content",
-        "skill_md_line_similarity": 0.222,
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_general_install_command": "npm install -g ui-ux-pro-max-cli && uipro init --ai codex"
       },
@@ -1909,7 +1982,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "8b827fe03b349aeea99a7d6cf4ccd892e6065b672859fdb11e13a1919453eddc",
+          "sha256": "7d4f8ddc73d89763a37265e69da6a78edd93854a37b9e5cb38f41e892d25b456",
           "executable": false
         },
         "data/app-interface.csv": {
@@ -2068,6 +2141,58 @@
           "sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
           "executable": false
         },
+        "references/accessibility.md": {
+          "sha256": "86c58d34c3e515ef2470156b3a76010ac2a19bf60000dcacc6f20c74bafe01b0",
+          "executable": false
+        },
+        "references/animation.md": {
+          "sha256": "1d6b6d03f03e601b2d8dfd28c2d69686378a2c9c3625972cdd3fb214a141fde6",
+          "executable": false
+        },
+        "references/charts-data.md": {
+          "sha256": "d409094b18f2c84516735c98e45b8a346ad816bdcced566fff2635964effc294",
+          "executable": false
+        },
+        "references/design-system-options.md": {
+          "sha256": "709c7addd6e01c00e6a590058b027379d17567bde08068182efe6295e8f7181f",
+          "executable": false
+        },
+        "references/forms-feedback.md": {
+          "sha256": "7f0ff866be408604e5fce1733b550f5fce97ab8b9f5a4a94af12041347c352ae",
+          "executable": false
+        },
+        "references/layout-responsive.md": {
+          "sha256": "4f049b1494ba64959d0321c0fd179765f9b84b642b5edee066973b0111323215",
+          "executable": false
+        },
+        "references/native-app-review.md": {
+          "sha256": "89b6ec8c770041e4689de8b0d6538e7da7e042ee224ebb4b676ace786f5f2596",
+          "executable": false
+        },
+        "references/navigation.md": {
+          "sha256": "01e8b3b38edc86873f629b2a76ab1a099f6fb9a2d2c5234f8947dd0def58fdff",
+          "executable": false
+        },
+        "references/performance.md": {
+          "sha256": "974eb2544efd31486ba47b71db73fa5734a9a50d11e3716d1e4c7bb1e7ccf486",
+          "executable": false
+        },
+        "references/search-reference.md": {
+          "sha256": "faa12268dbd4dd83a5c5819103885a9bab725e16c352e66705ed57caa3a10501",
+          "executable": false
+        },
+        "references/style-selection.md": {
+          "sha256": "9ed6d861d1fba00289d348f7e99c0bed448403c8b241d32dfd0bd36231a31922",
+          "executable": false
+        },
+        "references/touch-interaction.md": {
+          "sha256": "6c3c2045d841f2e43a38643026cf2ab6d87f39775616277bbac33c470fdd0a04",
+          "executable": false
+        },
+        "references/typography-color.md": {
+          "sha256": "1cb3d329072adb4f4eebdb05dd86fd85a5a5e88a9eb64ee8ffafe49d0cac0227",
+          "executable": false
+        },
         "scripts/core.py": {
           "sha256": "e544826963efefce3c59b65e18d83d92a5baf571f05458025bf1fa9021eced42",
           "executable": false
@@ -2185,7 +2310,8 @@
         "license_path": "skills/ui-ux-pro-max/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/4aad0584d92131626b16d4ff4d77f0455385013c/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "verification-before-completion",
@@ -2194,7 +2320,7 @@
       "enabled": true,
       "path": "skills/verification-before-completion",
       "install_name": "verification-before-completion",
-      "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
+      "description": "Check completion, fix, test, or build claims against evidence from the final changed state.",
       "summary_zh": "在宣布完成前运行相关验证并检查结果",
       "license": "MIT",
       "upstream": {
@@ -2204,13 +2330,13 @@
         "source_url": "https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/verification-before-completion/SKILL.md",
         "upstream_name": "verification-before-completion",
         "upstream_fetched": true,
-        "skill_md_identical": true,
-        "local_skill_md_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "6b3563dd6669f3affe133fca487a743ae3a5a31b209f138bbd9b2108c430114c",
         "upstream_skill_md_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
-        "verification": "matching_name_and_live_upstream_content",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "same_skill_md_as_checked_upstream",
-        "source_confidence": "identical_skill_md_to_public_upstream_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore"
       },
       "recovery": {
@@ -2225,7 +2351,7 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+          "sha256": "6b3563dd6669f3affe133fca487a743ae3a5a31b209f138bbd9b2108c430114c",
           "executable": false
         },
         "agents/openai.yaml": {
@@ -2237,7 +2363,8 @@
         "license_path": "skills/verification-before-completion/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/obra/superpowers/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "writing-for-agents",
@@ -2246,7 +2373,7 @@
       "enabled": true,
       "path": "skills/writing-for-agents",
       "install_name": "writing-for-agents",
-      "description": "Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.",
+      "description": "Write or revise agent instructions, including skills, AGENTS.md, CLAUDE.md, and their supporting references.",
       "summary_zh": "编写 agent 可执行的技能、规则与项目说明",
       "license": "MIT",
       "upstream": {
@@ -2257,13 +2384,12 @@
         "upstream_name": "writing-for-agents",
         "upstream_fetched": true,
         "skill_md_identical": false,
-        "local_skill_md_sha256": "be6a2a4cd84e4d98450068e1022ba8ad55552175e89993ed6a09b2cdafc745c0",
+        "local_skill_md_sha256": "4b5cd01f796348ebb8a2a623f565f9ffc06eb19efef048ee8f4c759f37b3d293",
         "upstream_skill_md_sha256": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a",
-        "verification": "matching_name_and_live_upstream_content",
-        "skill_md_line_similarity": 0.651,
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
         "locally_enabled": true,
-        "local_modification_status": "differs_from_checked_upstream_modification_or_version_drift_unknown",
-        "source_confidence": "content_supported_inference_original_install_provenance_unrecorded",
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/mattpocock/skills#installation"
       },
@@ -2279,11 +2405,11 @@
           "executable": false
         },
         "SKILL-MECHANICS.md": {
-          "sha256": "b4c54a0aaad3f6eddefde6d06770a0e401fbb8fc6a8f49ce18af816bd144d14d",
+          "sha256": "efeb6ba152e6ea7551f3c3c4271db13cd3386e6a8d18c0091ecbdf1a623d378d",
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "be6a2a4cd84e4d98450068e1022ba8ad55552175e89993ed6a09b2cdafc745c0",
+          "sha256": "4b5cd01f796348ebb8a2a623f565f9ffc06eb19efef048ee8f4c759f37b3d293",
           "executable": false
         },
         "agents/openai.yaml": {
@@ -2295,7 +2421,8 @@
         "license_path": "skills/writing-for-agents/LICENSE",
         "upstream_license_source": "https://raw.githubusercontent.com/mattpocock/skills/3cca18b368ae95cdbdebbff572ccafa662551015/LICENSE",
         "basis": "public_upstream_license"
-      }
+      },
+      "instruction_update_record": "provenance/instruction-updates.json"
     },
     {
       "id": "system-imagegen",

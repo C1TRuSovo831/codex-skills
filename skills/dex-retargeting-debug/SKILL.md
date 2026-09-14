@@ -1,6 +1,6 @@
 ---
 name: dex-retargeting-debug
-description: Debug or design dexterous-hand retargeting when the request involves MANUS, Wuji, Sharpa, 21x3 landmarks, 20 DOF actions, pinch, aperture, hand coordinates, calibration artifacts, or retargeting replay.
+description: Design or debug MANUS/Wuji/Sharpa hand retargeting, landmark frames, calibration, pinch, aperture, and replay.
 ---
 
 # Dexterous-hand retargeting debug

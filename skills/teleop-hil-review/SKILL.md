@@ -1,6 +1,6 @@
 ---
 name: teleop-hil-review
-description: Audit a scoped teleoperation hardware-in-the-loop or physical-safety evidence claim when the active role is unambiguously Herdr Planner or Reviewer. Use for HIL, real-robot readiness, physical motion, calibration provenance, or safety acceptance reviews; skip implementation tasks and other roles.
+description: Audit teleoperation HIL or physical-safety evidence as an identified Herdr Planner or Reviewer; inspection only.
 metadata:
   short-description: Audit scoped teleoperation HIL evidence
 ---
