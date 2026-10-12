@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "base_commit": "920c1fef77059066e08b7d52e768aa38baea7288",
+  "summary": "Publish the four evaluated, model-independent robotics skills and their shared references; preserve invocation names, policies, licenses and unrelated skills.",
+  "previous_instruction_update_record": "provenance/instruction-updates.json",
+  "upstream_repo": "C1TRuSovo831/dex-robotics-skills",
+  "upstream_commit": "f0d234b76850b0d4a0e9ece33121ecd6e779f2ce",
+  "evaluation_history": "docs/approach-history.md",
+  "evaluation_scope": "Reuse one independent analytical pass of 8 fictional cases and 23 rubric criteria; no new behavioral run or physical validation.",
+  "packaging_adjustments": [
+    "Keep four skills as sibling directories for shared relative references.",
+    "Update only the four manifest entries and their upstream recovery instructions."
+  ],
+  "skills": [
+    {
+      "id": "dex-ik-design-debug",
+      "path": "skills/dex-ik-design-debug",
+      "previous_upstream": {
+        "repo": "C1TRuSovo831/dex-robotics-skills",
+        "upstream_skill_path": "dex-ik-design-debug/SKILL.md",
+        "upstream_commit": "c920463edeed8bd05fafc09a60fa081ba0c3695d",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-ik-design-debug/SKILL.md",
+        "upstream_name": "dex-ik-design-debug",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "d0d4ea3a2c5b11ffadea60c04ab7de900b8266f7cc4cda57a849528096d969eb",
+        "upstream_skill_md_sha256": "7371b0ad5cc5c066cfa9fb2c44522c538d7c09c969fe7e55cd828639607495cc",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
+        "locally_enabled": true,
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
+      },
+      "previous_instruction_update_record": "provenance/instruction-updates.json",
+      "added_files": [],
+      "changed_files": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ],
+      "preserved_license_sha256": "cf1e82104a16bab8cea8007ab341ee4398805d1dbcb4e2e19c93d001341595ec",
+      "published_skill_md_sha256": "a6cb1c32065e8f688ae1b2966059e92f78e9ecc42e11ba35f1f94277716a7feb"
+    },
+    {
+      "id": "dex-retargeting-debug",
+      "path": "skills/dex-retargeting-debug",
+      "previous_upstream": {
+        "repo": "C1TRuSovo831/dex-robotics-skills",
+        "upstream_skill_path": "dex-retargeting-debug/SKILL.md",
+        "upstream_commit": "c920463edeed8bd05fafc09a60fa081ba0c3695d",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-retargeting-debug/SKILL.md",
+        "upstream_name": "dex-retargeting-debug",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "b118c92d6e94cae7e1f2db9c08c2f28c1c2c6f19dc46f0bb18eec45a77ae56bc",
+        "upstream_skill_md_sha256": "fefda35316ed52a87c5edd44187eac596644ef138af92d0b4230421b882ff3e9",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
+        "locally_enabled": true,
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
+      },
+      "previous_instruction_update_record": "provenance/instruction-updates.json",
+      "added_files": [
+        "references/calibration-observability.md"
+      ],
+      "changed_files": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ],
+      "preserved_license_sha256": "cf1e82104a16bab8cea8007ab341ee4398805d1dbcb4e2e19c93d001341595ec",
+      "published_skill_md_sha256": "0533d2142ce05604d32996bcd9e4dfa5ae291e4896dfbcf3bf0fc48776e52a53"
+    },
+    {
+      "id": "dex-robotics-engineering",
+      "path": "skills/dex-robotics-engineering",
+      "previous_upstream": {
+        "repo": "C1TRuSovo831/dex-robotics-skills",
+        "upstream_skill_path": "dex-robotics-engineering/SKILL.md",
+        "upstream_commit": "c920463edeed8bd05fafc09a60fa081ba0c3695d",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-robotics-engineering/SKILL.md",
+        "upstream_name": "dex-robotics-engineering",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "7d7bae98d2db422e0cba2bf02ad538bb13b1b393ec40ddbfbbc9195569198d07",
+        "upstream_skill_md_sha256": "a68a83097e2cc2046ed60b8283de1a0be87a521a8d2e7610bca628ca91e7d57b",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
+        "locally_enabled": true,
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
+      },
+      "previous_instruction_update_record": "provenance/instruction-updates.json",
+      "added_files": [
+        "references/execution-contract.md",
+        "references/replay-validation.md",
+        "tests/behavior-rubric.json",
+        "tests/fixtures/behavior-cases.json",
+        "tests/forward-evaluation.md"
+      ],
+      "changed_files": [
+        "SKILL.md",
+        "agents/openai.yaml",
+        "references/route-matrix.md"
+      ],
+      "preserved_license_sha256": "cf1e82104a16bab8cea8007ab341ee4398805d1dbcb4e2e19c93d001341595ec",
+      "published_skill_md_sha256": "9e814f99346a837a3d99196e7b59f882770f1422473eb2b240ff4e7bff006669"
+    },
+    {
+      "id": "impedance-gain-tuning",
+      "path": "skills/impedance-gain-tuning",
+      "previous_upstream": {
+        "repo": "C1TRuSovo831/dex-robotics-skills",
+        "upstream_skill_path": "impedance-gain-tuning/SKILL.md",
+        "upstream_commit": "c920463edeed8bd05fafc09a60fa081ba0c3695d",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/impedance-gain-tuning/SKILL.md",
+        "upstream_name": "impedance-gain-tuning",
+        "upstream_fetched": true,
+        "skill_md_identical": false,
+        "local_skill_md_sha256": "d0359af9e516e7c63f77da6da2029ab0a64642b2780b043eefeec957def678c9",
+        "upstream_skill_md_sha256": "2291c09cae0b09418fea725c426e0b8e7373bae71f9453f9b4bf1d8c427cc8f6",
+        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
+        "locally_enabled": true,
+        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
+        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
+        "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
+        "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
+      },
+      "previous_instruction_update_record": "provenance/instruction-updates.json",
+      "added_files": [],
+      "changed_files": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ],
+      "preserved_license_sha256": "cf1e82104a16bab8cea8007ab341ee4398805d1dbcb4e2e19c93d001341595ec",
+      "published_skill_md_sha256": "e508576217038cbf91673a785e1c8b4a47ab19f5e3613014b3e22f5d434e2346"
+    }
+  ],
+  "packaging_validation": {
+    "installer_unittest_command": "python3 -B -m unittest discover -s tests -v",
+    "installer_unittest_result": {
+      "passed": 34,
+      "failed": 0
+    },
+    "four_skill_dry_run": {
+      "planned": 4,
+      "failed": 0
+    },
+    "isolated_four_skill_install": {
+      "installed": 4,
+      "failed": 0,
+      "files_hashes_and_modes_matched": 19,
+      "relative_links_resolved": 16
+    },
+    "limits": "Checks validate packaged files and installation; behavioral results are the separately preserved earlier analytical evaluation. No hardware operation or physical validation."
+  }
+}

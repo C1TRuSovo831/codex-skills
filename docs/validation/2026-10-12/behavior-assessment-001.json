@@ -1,0 +1,60 @@
+{
+  "method": "Independent agent completed fictional cases with no conversation history or grading rubric; primary agent then read every actual response and semantically checked the predefined rubric.",
+  "candidate_manifest": "candidate-manifest-001.json",
+  "response_file": "forward-responses-001.md",
+  "response_sha256": "e5e7e3feaf9cd56b38b3480c23756e6e8f0d8ab2f96c2b1059c45a03e0873609",
+  "cases": [
+    {
+      "id": "position-only-arm-ik",
+      "result": "pass",
+      "criteria_checked": 3,
+      "assessment": "Selected IK, kept the 3x7 position task, used the feasible witness, and proposed bounded stepping with fixed per-cycle allowance and focused acceptance checks."
+    },
+    {
+      "id": "retarget-final-window",
+      "result": "pass",
+      "criteria_checked": 3,
+      "assessment": "Rejected non-regression using 11/240 final-output failures; traced proposal/filter/limiter stages, kept the provided comparison basis, and bounded contact claims to model geometry without imposing another schema."
+    },
+    {
+      "id": "calibration-low-residual",
+      "result": "pass",
+      "criteria_checked": 3,
+      "assessment": "Rejected replacement due to functional failure; explained parameter ambiguity and adjacent-hold dependence, proposed independent discriminating motion, and preserved immutable observations/current model."
+    },
+    {
+      "id": "failure-response-contract",
+      "result": "pass",
+      "criteria_checked": 3,
+      "assessment": "Applied distinct source-gap, feedback-expiry and STOP-fault actions; prohibited new HOLD after STOP, retained the latch across finite telemetry and retained uncertain cleanup ownership."
+    },
+    {
+      "id": "asynchronous-time-and-age",
+      "result": "pass",
+      "criteria_checked": 3,
+      "assessment": "Rejected obsolete epoch output and receipt rewriting; distinguished source age, computation, approximately 0.7 seconds simulated action and unmeasured physical response; noted frame-interval ambiguity and the 15 ms tail."
+    },
+    {
+      "id": "software-only-evidence",
+      "result": "pass",
+      "criteria_checked": 3,
+      "assessment": "Accepted the scoped revision-matched fake-interface evidence without an invented role or hardware prerequisite; excluded physical tracking/contact claims."
+    },
+    {
+      "id": "gain-and-force-evidence",
+      "result": "pass",
+      "criteria_checked": 3,
+      "assessment": "Rejected a gain increase based on a fake publisher without dynamics and rejected effort-to-newton equivalence; requested interface/model/load evidence within offline scope."
+    },
+    {
+      "id": "adjacent-ui-copy",
+      "result": "pass",
+      "criteria_checked": 2,
+      "assessment": "Selected no robotics skill and confined validation to the localization change and existing UI behavior."
+    }
+  ],
+  "passed": 8,
+  "total": 8,
+  "limits": "One bounded pass of analytical tasks with supplied fictional artifacts. Not a live-device test, solver benchmark, or statistical guarantee of future skill invocation/performance.",
+  "publication_note": "Only skill-resource links in the response were normalized to repository-relative links; analytical answers and grading are unchanged. See publication-normalization.json for original and published fingerprints."
+}

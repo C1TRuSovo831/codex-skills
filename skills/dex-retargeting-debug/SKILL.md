@@ -1,34 +1,38 @@
 ---
 name: dex-retargeting-debug
-description: Design or debug MANUS/Wuji/Sharpa hand retargeting, landmark frames, calibration, pinch, aperture, and replay.
+description: Design or debug motion retargeting across articulated models, including input frames, calibration, morphology, task objectives, contact intent, and replay.
 ---
 
-# Dexterous-hand retargeting debug
+# Motion retargeting design and debug
 
-Use this skill for the hand-input and retargeting portion of a teleoperation stack. Keep the work bounded to the active checkout and artifact; do not infer runtime or hardware behavior from source alone.
+Use this skill for mapping observations or a source articulation into a target model's task or motion. It applies to hands and other articulated systems without assuming a sensor vendor, skeleton layout, joint count or optimizer.
 
-## Route and first checks
+## Locate the error
 
-If the request reports a failure, use the `diagnosing-bugs` discipline first: build a tight, red-capable replay or fixture, reproduce the exact symptom, minimize it, and rank falsifiable hypotheses. If a new module or seam is being designed, use `codebase-design` before implementation. Use `tdd` only after the public seam is confirmed.
+Identify the active checkout/runtime, source and target models, calibration provenance, adapter configuration and versioned contracts. Trace the stages actually present: raw observation, estimated articulation/keypoints, mapped task, kinematic proposal, final output and measured response. Compare corresponding samples to find the first incorrect stage.
 
-Before interpreting a frame, record:
+For a concrete failure, use `diagnosing-bugs` to reproduce and minimize it. Consult project approach history before a new algorithm or retry; use `codebase-design` only when an interface decision is needed. A numerical solving defect inside the mapping can use [IK](../dex-ik-design-debug/SKILL.md) as its primary workflow.
 
-- active source checkout, revision or content hash, dirty state, and the running/install path if relevant;
-- hand side, MANUS/Wuji/Sharpa model, SDK version, calibration artifact and model limits;
-- timestamp, sequence, units, sample rate, frame name and coordinate convention.
+## Representation and calibration
 
-The observed production shape to trace is:
+- Declare each boundary's representation: sensor poses, landmark arrays, articulated coordinates, task targets or actuator commands. Derive dimensions and ordering from the active contract. Verify finite values, identities, side/limb mapping and version compatibility; qualify whether a version names hardware, a model, an artifact schema or an algorithm.
+- Verify units, origin, handedness, quaternion ordering, transform direction and composition. Distinguish transforming a point, direction and orientation. Confirm whether observations are already body-relative before applying a root/wrist transform. Test the actual conversion with known configurations; never infer an axis swap from a vendor name or reuse a display transform for control.
+- Keep sensor mounting, body geometry and coordinate registration separate from mapping preferences, filtering and controller gains. For fitting, remounting, implausible geometry or low residual with wrong motion, read [calibration and observability](references/calibration-observability.md).
 
-`ManusGlove -> dex_manus_source -> CanonicalObservation.manus_hands -> MANUS raw to 21x3 -> RetargetSession.step() -> 20 DOF HandAction -> CanonicalAction -> hand_command -> manager -> hand worker -> StreamTracker`.
+## Mapping objectives and morphology
 
-Treat the exact current checkout and local artifact as authoritative; v1 and v2 require their own model specification, adapter, limits and calibration artifact.
+State the behavior the user wants to preserve: endpoint position, relative pose, shape, direction, task-space motion or contact intent. Source and target can differ in scale, link lengths, topology, available degrees of freedom and range; exact joint-angle or absolute-point matching may not preserve that behavior.
 
-## Required diagnostic coverage
+Inspect the active loss and constraints: residual units/scales, endpoint and direction terms, topology/shape terms, posture/coupling priors, temporal terms and limits. Check how morphology changes the tradeoff. Use normalized shape or a task hierarchy when justified by the requested behavior and evidence; do not add a universal coupling ratio or simply raise a global weight to repair one pose.
 
-1. **Representation and frames**: verify `(21, 3)` shape, finite values, landmark order, wrist-relative origin, MANUS `xyz` versus Wuji `xzy`, `input_transform`, scale and offsets. Do not call 3D landmarks joint angles.
-2. **Calibration versus motion control**: keep geometric calibration such as `uniform_scale` and wrist/thumb offsets separate from motion gains, smoothing and rate limits. Calibration scores are not controller gains.
-3. **Losses and pinch**: identify tip-position, direction, full-hand, coupling, temporal and joint-bound terms. Distinguish human pinch detection, robot FK thumb-finger aperture and physical contact. A pinch mode weight is not an aperture constraint; if aperture matters, define an explicit FK-based pair term and its priority.
-4. **Output and safeguards**: require a finite 20-element result, model-limit handling and clear behavior for NaN, infinity, wrong shape, expired input or SDK failure. Keep the last valid target rather than clamping arbitrary invalid data. Check downstream speed, acceleration and jerk limits.
-5. **Replay acceptance**: compare identical input and configuration across variants. Report aperture error, pinch success and false contact, threshold jitter, solver latency, limit violations, jerk and task success. Record whether evidence is source, static, replay/simulation, runtime or HIL.
+For contact-related tasks, separate source intent/detection, model-based target proximity and physical contact. Define the relevant pair/region, frame, desired separation and priority, including object geometry if available. A “pinch” mode weight does not establish an aperture constraint, and zero endpoint distance is not a universal contact target.
 
-Do not use a larger `kp` to compensate for wrong coordinates, scale, point order or an incorrect aperture objective. Do not claim real contact, physical safety or HIL from geometric replay.
+Where modes exist, inspect entry/release, target selection, dwell, reset and continuity. Check required branch/posture constraints through all downstream solves. For filtering, limiting, asynchronous output or failure handling, use [execution contracts](../dex-robotics-engineering/references/execution-contract.md) and evaluate the final output, not only the optimized proposal.
+
+## Acceptance
+
+Use [replay validation](../dex-robotics-engineering/references/replay-validation.md) for stateful or numerical changes. Compare matching original inputs, timing and initial state with the intended configuration difference; include the affected transitions and protected behaviors. Report task error/completion and relevant shape, continuity, latency and limit metrics with failures and denominators.
+
+Label root-cause corrections, task-specific compensation and diagnostic alternatives accurately. A compensation can be useful when explicitly chosen, but its activation, tradeoffs and non-regression scope must be visible. Do not close unresolved task criteria because a local test passed or a rendered posture looks better.
+
+Calibrated estimates, mirrored samples and geometric replay have bounded evidential scope. Larger gains cannot repair wrong geometry or mapping objectives; physical tracking/contact claims need corresponding measurements.

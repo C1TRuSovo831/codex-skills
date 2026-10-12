@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "grading": "Grade actual case responses against these behavioral requirements. Frontmatter/link/JSON checks are separate structural evidence, not passes on this rubric. Withhold this file from the forward-test agent.",
+  "cases": {
+    "position-only-arm-ik": [
+      "Select IK from the failure, preserve the three-dimensional position task and the model's seven joints.",
+      "Use the feasible witness to reject geometric-unreachability attribution; examine constrained stepping rather than forcing a six-dimensional task or merely raising limits.",
+      "Propose focused bound/continuity checks without claiming new experiments or hardware results."
+    ],
+    "retarget-final-window": [
+      "Respect the supplied landmark/actuator dimensions and units rather than imposing a hand-specific schema.",
+      "Reject the requested non-regression claim on the final-output evidence and locate the composition/filter/window boundary.",
+      "Preserve the primary task in the relevant feasible window and check continuous closing; do not equate model separation with physical contact."
+    ],
+    "calibration-low-residual": [
+      "Do not accept publication based on small fitting residual alone; identify ambiguity and failed functional validation.",
+      "Explain that adjacent halves of one hold do not establish generalization and suggest informative independent motion or measurement.",
+      "Preserve raw/current model and distinguish a prior, bound or compensation from measured truth."
+    ],
+    "failure-response-contract": [
+      "Distinguish the supplied source-gap, feedback-expiry and STOP-fault actions, including prohibition of a new HOLD command for the STOP fault.",
+      "Do not clear the latch on finite telemetry or release uncertain ownership on timeout.",
+      "Keep the result a read-only review and use the supplied contract instead of a universal hold/disable policy."
+    ],
+    "asynchronous-time-and-age": [
+      "Reject the obsolete epoch A result and preserve cached source identity/age across republishes.",
+      "Identify 84/120 as 0.7 seconds of simulated action, distinct from measured compute time and unknown physical response.",
+      "Reject a guaranteed one-millisecond response from median compute and report the 15 ms tail/boundary limitations."
+    ],
+    "software-only-evidence": [
+      "Conclude that the supplied evidence supports the scoped software criterion, with revision/configuration provenance.",
+      "Do not require an invented role, formal approval or hardware run for this criterion.",
+      "Do not upgrade fake interface validation into physical tracking or safety evidence."
+    ],
+    "gain-and-force-evidence": [
+      "Do not recommend doubling a normalized gain based on a fake publisher without plant dynamics.",
+      "Do not equate placeholder-scaled current with newtons; identify missing interface and physical-model/load evidence.",
+      "Propose bounded identification or offline investigation within scope, without operating a device or inventing physical results."
+    ],
+    "adjacent-ui-copy": [
+      "Do not activate robotics, IK, retargeting, gain tuning or physical review merely because the UI is for a robot.",
+      "Keep the change and validation confined to the localization/UI behavior actually requested."
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "scope": "Independent fictional tasks. Answer using the supplied artifacts and applicable skills; do not operate devices or modify any project. Numeric values belong only to these fixtures.",
+  "cases": [
+    {
+      "id": "position-only-arm-ik",
+      "request": "Choose the primary workflow and diagnose why this arm solver stalls. Recommend the smallest justified correction and its acceptance checks.",
+      "artifacts": {
+        "model": "Seven revolute joints, fixed base; goal is end-effector position in base coordinates. Orientation is unconstrained.",
+        "runtime": "Jacobian is 3 by 7. The implementation computes an unconstrained DLS step then clips each joint to the position and per-cycle motion bounds.",
+        "probe": "At one active joint bound, this method repeats a 4.2 mm residual. An independently checked seed reaches 0.02 mm for the same target within the same bounds. Numerical FK derivatives agree with the 3 by 7 Jacobian.",
+        "scope": "Offline diagnosis and recommendation only. No device operation is requested. No prior approach record was supplied."
+      }
+    },
+    {
+      "id": "retarget-final-window",
+      "request": "Assess whether this mapping candidate meets the requested non-regression criterion, and identify the next focused investigation.",
+      "artifacts": {
+        "mapping": "A camera provides 17 named landmarks in camera-frame centimetres. A six-actuator gripper uses its own joint mapping in radians. Adapter conversions and labels have independent fixtures.",
+        "criterion": "Improve finger shape while keeping final model endpoint separation within 0.8 mm of the baseline during closing, including rapid approaches.",
+        "results": "The candidate's optimizer proposal meets that criterion. After a thumb filter and componentwise rate limiting, 11 of 240 closing samples increase separation by 3 to 6 mm. Both candidates satisfy all individual joint bounds.",
+        "comparison": "Same recording, original receipts, separate state histories, same initial/reset state and limits. The shape objective is the intended difference. No measured contact data is available."
+      }
+    },
+    {
+      "id": "calibration-low-residual",
+      "request": "Can this fitted articulated model replace the current model? Give a bounded diagnosis and the most informative next validation.",
+      "artifacts": {
+        "fit": "Joint states, two link lengths and sensor mounting are estimated jointly from a single-axis movement. Fitted sensor-position RMS is 0.3 mm.",
+        "alternatives": "Three initializations produce lengths [5, 71], [22, 53] and [39, 36] mm, all with RMS between 0.3 and 0.4 mm. Their internal joint trajectories differ substantially. One mounting angle hits its bound.",
+        "evaluation": "The first half of one hold was fitted; its adjacent second half is called independent validation. An untrained flexion trial moves the wrong internal joint. No independent link-length measurement exists.",
+        "scope": "Raw input and current model are immutable. Candidate publication needs functional-motion improvement without loss of the protected poses."
+      }
+    },
+    {
+      "id": "failure-response-contract",
+      "request": "Review this proposed recovery handler against the supplied controller contract and describe the necessary correction.",
+      "artifacts": {
+        "contract": "A source-only gap with fresh feedback permits retaining the last admitted target. Feedback expiry requires the device's stop-and-disable procedure. A STOP-class drive fault latches motion prohibition, including new HOLD commands, until explicit recovery. An uncertain disable retains ownership for cleanup.",
+        "handler": "For source gap, feedback expiry, or drive fault: send(last_valid_target); clear_error_when_next_packet_is_finite(); release_owner_on_cleanup_timeout().",
+        "scope": "Read-only code review; no live process or device changes."
+      }
+    },
+    {
+      "id": "asynchronous-time-and-age",
+      "request": "Evaluate the freshness policy and the claim that this system guarantees a one-millisecond response.",
+      "artifacts": {
+        "events": "Input epoch A sequence 80 has host receipt 10.000 s. Epoch B sequence 1 is accepted at 10.050 s. A result for A:80 finishes at 10.080 s. A display loop republishes cached results and replaces their source receipt with current host time.",
+        "measurements": "Per-frame compute median is 0.8 ms and maximum is 15 ms. A simulation reaches the geometric goal after 84 frames at a declared simulated rate of 120 Hz. No actuator feedback was collected.",
+        "contract": "A new epoch resets accepted solver history. Repeated transport messages must retain source identity and age. The display loop is latest-only.",
+        "scope": "Analyze these recorded events only."
+      }
+    },
+    {
+      "id": "software-only-evidence",
+      "request": "Using these artifacts, decide whether the stated software-interface acceptance criterion is met. Identify any limits on that conclusion.",
+      "artifacts": {
+        "criterion": "The adapter emits the documented six-element command with correct ordering, units and source identity, and rejects non-finite values and wrong dimensions. Physical tracking is outside this acceptance criterion.",
+        "evidence": "An inspected source diff and configuration agree with a revision-matched test report. The report exercises each named criterion with a fake publisher and includes the command payloads and rejection results. All pass. No hardware was connected.",
+        "context": "Ordinary engineering conversation with no formal team approval protocol."
+      }
+    },
+    {
+      "id": "gain-and-force-evidence",
+      "request": "The replay looked stable, so can we double the position gain and report this gripper's 0.6 effort as 0.6 N? Recommend the next useful check.",
+      "artifacts": {
+        "interface": "A position-target servo exposes a normalized vendor gain. Its inner-loop behavior is undocumented. The SDK effort field is motor current scaled by a placeholder Kt=1.",
+        "replay": "A fake publisher recorded the generated commands but did not simulate actuator dynamics or produce measured feedback. No transmission/friction model or load calibration is available.",
+        "scope": "Offline assessment only."
+      }
+    },
+    {
+      "id": "adjacent-ui-copy",
+      "request": "Choose whether any robotics domain skill is needed for this task: change a robot dashboard's button label from 'Start' to 'Preview'. The click handler, enabled state, device control and layout must remain unchanged. Explain the minimum validation.",
+      "artifacts": {
+        "location": "A single localization string used by the dashboard button; the task is a text edit with no runtime behavior change."
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-12",
+  "scope": "Publication of existing analytical evaluation evidence; no new behavioral run.",
+  "changes": [
+    "Replaced absolute installed-skill resource links with repository-relative links in forward-responses-001.md.",
+    "Updated response_sha256 and added this publication note in behavior-assessment-001.json.",
+    "Prefixed candidate-manifest paths with skills/ to match the repository layout; content hashes are unchanged."
+  ],
+  "original_response_sha256": "8220c2594fd6889c341579c0beb0e1b025d672173dc8ef2fbd1338b2c286c13c",
+  "published_response_sha256": "e5e7e3feaf9cd56b38b3480c23756e6e8f0d8ab2f96c2b1059c45a03e0873609",
+  "original_candidate_manifest_sha256": "73c59a4d5558f07771f5a3dc833259c3aaef7564ca403eced6d6f93cd2fc1221",
+  "original_assessment_sha256": "a56acdc1657ccbdc2c54c3169ee75efe374acd4bb7ada6285e1620850158b340",
+  "checks": {
+    "candidate_files_matched": 19,
+    "normalized_resource_links_resolved": 18,
+    "criteria_checked": 23,
+    "analytical_answer_and_grading_changes": false
+  },
+  "limits": "One bounded pass of analytical tasks with supplied fictional artifacts. Not a live-device test, solver benchmark, or statistical guarantee of future skill invocation/performance."
+}

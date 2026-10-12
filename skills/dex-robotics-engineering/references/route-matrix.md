@@ -1,10 +1,14 @@
-# Route matrix
+# Routing examples
 
-| Priority | Route | Strong triggers | Primary work | Do not infer |
-| --- | --- | --- | --- | --- |
-| 1 | evidence | HIL, real robot, physical safety, readiness | provenance and independent safety review | source/replay is HIL |
-| 2 | retargeting | MANUS, Wuji, 21x3, 20 DOF, pinch, aperture, coordinate, calibration | representation, transforms, losses, limits, replay | geometric aperture is contact |
-| 3 | IK | FK, Jacobian, DLS, QP, CBF, singularity, virtual wall, stale IK | solver math, frames, constraints, continuity | penalty wall proves recovery |
-| 4 | gain | kp, kd, PD, PID, impedance, overshoot, settling | loop identification, bounded sweep, response metrics | high Kp repairs mapping |
+Use these examples when more than one domain appears relevant. Establish the failing stage from current data; the examples are not a fixed priority order.
 
-Generic failure words activate `diagnosing-bugs` as the outer feedback loop. A new interface activates `codebase-design` before the selected route. A regression at a confirmed public seam activates `tdd` after the red replay exists. `visualize` is optional and never upgrades evidence.
+| Observation | First investigation | What would change the route |
+| --- | --- | --- |
+| A hand or arm solver stalls at a joint bound despite a feasible witness | IK: task residual, active bounds and branch | Incorrect target coordinates move the investigation upstream |
+| Mapped posture looks wrong with low sensor residual | Retargeting/calibration: observability, morphology and objective | Correct estimate/target with a bad numerical solution points to IK |
+| Smooth proposal becomes a discontinuous final command | Execution and IK: state transitions, filtering and the final feasible window | Smooth commands with oscillating feedback point to control dynamics |
+| Device appears in discovery but does not follow | Execution: identity, admission, enable state, fresh commands, feedback and faults | Diagnose gains only after this chain works and targets are valid |
+| User asks to inspect existing run evidence | Read-only assessment of the specified claim | Running a missing experiment is a separate operation with its own scope |
+| User requests a specific device status operation | Matching device tool/runbook | Operation results alone do not prove mapping, actuation or safety |
+
+For “slow” or “jittery,” first locate the variation: source noise, target changes, solver branch, queue/age, command shaping or measured dynamics. Compare corresponding timestamps and stage outputs before adding smoothing or changing gains.

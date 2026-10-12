@@ -1,0 +1,21 @@
+{
+  "skills/dex-robotics-engineering/LICENSE": "cf1e82104a16bab8cea8007ab341ee4398805d1dbcb4e2e19c93d001341595ec",
+  "skills/dex-robotics-engineering/SKILL.md": "9e814f99346a837a3d99196e7b59f882770f1422473eb2b240ff4e7bff006669",
+  "skills/dex-robotics-engineering/agents/openai.yaml": "e76153a93fed9f10980bcb42ef109a92bbbb6e05879ab990f7d122b98b210f6a",
+  "skills/dex-robotics-engineering/references/execution-contract.md": "d13d98f5f6e727707e4ba60b2b79ef75fa093e99522570ffb1b5e06068cc4b31",
+  "skills/dex-robotics-engineering/references/replay-validation.md": "7d6bd97dfff82e1235d33c5386a22bdcb3a77c9643c4213e5accf65c05c85939",
+  "skills/dex-robotics-engineering/references/route-matrix.md": "e08631ac6fa96aa0ad66b0979f089a38928aae13b492cf9e0258533d94860896",
+  "skills/dex-robotics-engineering/tests/behavior-rubric.json": "a276f96271b688eaa66929f43c6e93005b073103527827cc3c8b39c1f3a5e3e7",
+  "skills/dex-robotics-engineering/tests/fixtures/behavior-cases.json": "f72940c63f28ededb389b242e294ddbc738e19d722e3745197f5382efd6f5b1f",
+  "skills/dex-robotics-engineering/tests/forward-evaluation.md": "86eae66f1ff477f62c35fe28a90c89a7450039b801159e773865dbb06382b5ca",
+  "skills/dex-ik-design-debug/LICENSE": "cf1e82104a16bab8cea8007ab341ee4398805d1dbcb4e2e19c93d001341595ec",
+  "skills/dex-ik-design-debug/SKILL.md": "a6cb1c32065e8f688ae1b2966059e92f78e9ecc42e11ba35f1f94277716a7feb",
+  "skills/dex-ik-design-debug/agents/openai.yaml": "eb66df04b5d979a8b053693c9dc4b9de8099b7333fc15b0ee1f3afc6d116f6b3",
+  "skills/dex-retargeting-debug/LICENSE": "cf1e82104a16bab8cea8007ab341ee4398805d1dbcb4e2e19c93d001341595ec",
+  "skills/dex-retargeting-debug/SKILL.md": "0533d2142ce05604d32996bcd9e4dfa5ae291e4896dfbcf3bf0fc48776e52a53",
+  "skills/dex-retargeting-debug/agents/openai.yaml": "8d0efdba078f654c7deaea8ab385fa16e979048638b976dea46545428209525f",
+  "skills/dex-retargeting-debug/references/calibration-observability.md": "8d3c57d4a4fe8fa86ea950072926e641033ad73b79758912870f9df1a63ebcc2",
+  "skills/impedance-gain-tuning/LICENSE": "cf1e82104a16bab8cea8007ab341ee4398805d1dbcb4e2e19c93d001341595ec",
+  "skills/impedance-gain-tuning/SKILL.md": "e508576217038cbf91673a785e1c8b4a47ab19f5e3613014b3e22f5d434e2346",
+  "skills/impedance-gain-tuning/agents/openai.yaml": "0950a21ec7824086c0b2addbe018e031f21a402719d05e9ca35c683dfca45541"
+}

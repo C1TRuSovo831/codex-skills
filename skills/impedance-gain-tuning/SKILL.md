@@ -1,29 +1,30 @@
 ---
 name: impedance-gain-tuning
-description: Tune or diagnose robot hand/arm kp/kd, PD/PID, and impedance responses once geometry and IK are trustworthy.
+description: Tune or diagnose robot PD/PID, impedance, and command-response dynamics once targets, feedback semantics, and the controlled loop are understood.
 ---
 
 # Impedance and gain tuning
 
-Use this skill after geometry and IK are stable enough that a control response is meaningful. It covers software outer loops, hand/arm command shaping and impedance behavior; it does not assume that the vendor SDK exposes the same loop or units.
+Use this skill after geometry and IK are trustworthy enough to interpret the control response. Identify the actual loop exposed by the system; position-command shaping, a vendor servo and torque impedance need different evidence and parameters.
 
 ## Identify the actual loop first
 
-Record the active checkout and configuration, control layer (position, velocity or torque), vendor inner-loop gains, command and feedback units, sample period `dt`, delay, filtering, saturation, rate limits and watchdog behavior. Check whether a derivative term uses measured velocity; differentiating a setpoint step can cause derivative kick. Do not tune an outer PID on top of an unknown inner PID.
+Record the active code/configuration, control layer, command and measured-feedback units, inner-loop behavior, sample periods, delays, filtering, saturation, limits and watchdogs. Establish the supported interfaces before changing gains. Check whether a derivative term uses measured velocity; differentiating a setpoint step can cause derivative kick. For an integral term, inspect windup and reset behavior under saturation or mode changes.
+
+Verify what telemetry fields mean. A field called `effort` may be current, estimated torque or a placeholder conversion. Force inference requires the applicable motor/transmission/friction model, contact geometry and load calibration; a numerical field name or a Jacobian transform is insufficient. Keep commanded achievement, measured tracking and physical contact/force distinct.
 
 For a torque impedance loop, use the model as a reference:
 
 `tau = Kp * (qd - q) + Kd * (qd_dot - q_dot) + tau_ff`.
 
-The usual units are `N m/rad` and `N m s/rad`, subject to the drive's actual interface. An estimate such as `Kd ≈ 2*zeta*sqrt(M*Kp)` is only an initial value; identify or bound the effective inertia `M` and then measure the response.
+For revolute coordinates and torque output, gains have units `N m/rad` and `N m s/rad`; translational or normalized interfaces use their own units. In a scalar second-order approximation, `Kd ≈ 2*zeta*sqrt(M*Kp)` is an initial estimate only. Identify or bound effective inertia and account for coupling, delay and the actual inner loop before interpreting it.
 
 ## Tuning procedure
 
-1. Establish a safe offline, replay, simulator or fake baseline with identical input, timing and limits.
-2. Tune an inner loop before an outer loop. Within one loop, change one variable at a time; do not use larger `Kp` to hide retargeting or IK errors.
-3. Sweep `Kp` over a bounded range, then `Kd` and derivative filtering. Keep position, velocity, acceleration, jerk, torque/current and workspace limits active.
-4. Evaluate step and representative trajectory responses using rise time, settling time, overshoot, steady-state error, RMS tracking error, oscillation spectrum, delay, saturation rate and jerk.
-5. Keep a reversible parameter record and rollback point. Stop on instability, repeated saturation, watchdog trips or limit violations.
-6. Only after the offline/fake result is stable should a separately authorized HIL review consider a physical run.
+1. Consult previous tuning results and retry conditions. Establish a baseline with known input, timing, load and limits. Replay can verify software shaping; evaluating changed feedback gains requires a suitable plant model or an authorized measured response. A fake interface without dynamics cannot demonstrate settling or stability.
+2. Characterize inner-loop behavior before tuning an outer loop. Tune accessible loops in the appropriate order; do not assume vendor gains can or should be changed. Choose a bounded sweep or controlled experiment that can distinguish the suspected cause.
+3. Keep the applicable motion, current/torque and workspace limits active. Record a reversible parameter set and stop/rollback criteria for instability, sustained saturation, faults or violated limits. For physical work follow the user's authorized scope and the actual project procedure.
+4. Evaluate representative trajectories and, where appropriate, step responses using tracking error, rise/settling time, overshoot, oscillation, delay, saturation and command/response derivatives. Account for sampling, load and noise; do not attribute limiter or stale-input effects to gains without checking them.
+5. For timing, fault response or output shaping, use [execution contracts](../dex-robotics-engineering/references/execution-contract.md). For paired dynamic comparisons and measurement definitions, use [replay validation](../dex-robotics-engineering/references/replay-validation.md). Preserve separate policies for source gaps, feedback loss and device faults.
 
-Report whether each result is source, static, replay/simulation, runtime, HIL or physical-safety evidence. Never present a gain sweep or a stable simulator response as proof that a real robot is safe.
+Report the supported behavior, parameter range, load/configuration and evidence boundary. A stable model or software replay does not establish physical stability or contact force. Return upstream when incorrect geometry, target objectives or IK branches explain the symptom.

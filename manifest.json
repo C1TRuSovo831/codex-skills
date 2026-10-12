@@ -406,31 +406,31 @@
       "enabled": true,
       "path": "skills/dex-ik-design-debug",
       "install_name": "dex-ik-design-debug",
-      "description": "Design or debug teleoperation IK, including FK/Jacobians, solver continuity, asynchronous results, and QP/CBF or virtual-wall constraints.",
-      "summary_zh": "遥操作 IK、雅可比、约束和轨迹连续性设计调试",
+      "description": "Design or debug inverse kinematics for articulated models, including FK/Jacobians, constrained solving, solution continuity, and virtual fixtures.",
+      "summary_zh": "关节模型的 FK/雅可比、约束求解、可达性与解连续性",
       "license": "MIT",
       "upstream": {
         "repo": "C1TRuSovo831/dex-robotics-skills",
         "upstream_skill_path": "dex-ik-design-debug/SKILL.md",
-        "upstream_commit": "c920463edeed8bd05fafc09a60fa081ba0c3695d",
-        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-ik-design-debug/SKILL.md",
+        "upstream_commit": "f0d234b76850b0d4a0e9ece33121ecd6e779f2ce",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/f0d234b76850b0d4a0e9ece33121ecd6e779f2ce/dex-ik-design-debug/SKILL.md",
         "upstream_name": "dex-ik-design-debug",
         "upstream_fetched": true,
-        "skill_md_identical": false,
-        "local_skill_md_sha256": "d0d4ea3a2c5b11ffadea60c04ab7de900b8266f7cc4cda57a849528096d969eb",
-        "upstream_skill_md_sha256": "7371b0ad5cc5c066cfa9fb2c44522c538d7c09c969fe7e55cd828639607495cc",
-        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "a6cb1c32065e8f688ae1b2966059e92f78e9ecc42e11ba35f1f94277716a7feb",
+        "upstream_skill_md_sha256": "a6cb1c32065e8f688ae1b2966059e92f78e9ecc42e11ba35f1f94277716a7feb",
+        "verification": "published_upstream_commit_and_exact_local_payload",
         "locally_enabled": true,
-        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
-        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "identical_skill_md_and_resources_to_published_upstream_commit",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
       },
       "recovery": {
-        "command": "npx skills add C1TRuSovo831/dex-robotics-skills --skill dex-ik-design-debug --agent codex --global",
+        "command": "npx skills add C1TRuSovo831/dex-robotics-skills --agent codex --global",
         "kind": "upstream",
-        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-ik-design-debug/SKILL.md",
-        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/f0d234b76850b0d4a0e9ece33121ecd6e779f2ce/dex-ik-design-debug/SKILL.md",
+        "note": "此命令安装公开上游的四项机器人技能及共享引用；要安装本仓库版本，请同时选择 dex-robotics-engineering、dex-ik-design-debug、dex-retargeting-debug 和 impedance-gain-tuning。"
       },
       "files": {
         "LICENSE": {
@@ -438,11 +438,11 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "d0d4ea3a2c5b11ffadea60c04ab7de900b8266f7cc4cda57a849528096d969eb",
+          "sha256": "a6cb1c32065e8f688ae1b2966059e92f78e9ecc42e11ba35f1f94277716a7feb",
           "executable": false
         },
         "agents/openai.yaml": {
-          "sha256": "55ac36e2184d42290928b8fb744f3e8a8cdae5a51dfec9a8ef1115a9486d1bd9",
+          "sha256": "eb66df04b5d979a8b053693c9dc4b9de8099b7333fc15b0ee1f3afc6d116f6b3",
           "executable": false
         }
       },
@@ -451,7 +451,7 @@
         "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
         "basis": "public_upstream_license"
       },
-      "instruction_update_record": "provenance/instruction-updates.json"
+      "instruction_update_record": "provenance/robotics-updates-2026-10-12.json"
     },
     {
       "id": "dex-retargeting-debug",
@@ -460,31 +460,31 @@
       "enabled": true,
       "path": "skills/dex-retargeting-debug",
       "install_name": "dex-retargeting-debug",
-      "description": "Design or debug MANUS/Wuji/Sharpa hand retargeting, landmark frames, calibration, pinch, aperture, and replay.",
-      "summary_zh": "MANUS/Wuji 等灵巧手重定向、标定和捏合调试",
+      "description": "Design or debug motion retargeting across articulated models, including input frames, calibration, morphology, task objectives, contact intent, and replay.",
+      "summary_zh": "跨关节模型的运动重定向、坐标契约、形态差异与标定",
       "license": "MIT",
       "upstream": {
         "repo": "C1TRuSovo831/dex-robotics-skills",
         "upstream_skill_path": "dex-retargeting-debug/SKILL.md",
-        "upstream_commit": "c920463edeed8bd05fafc09a60fa081ba0c3695d",
-        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-retargeting-debug/SKILL.md",
+        "upstream_commit": "f0d234b76850b0d4a0e9ece33121ecd6e779f2ce",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/f0d234b76850b0d4a0e9ece33121ecd6e779f2ce/dex-retargeting-debug/SKILL.md",
         "upstream_name": "dex-retargeting-debug",
         "upstream_fetched": true,
-        "skill_md_identical": false,
-        "local_skill_md_sha256": "b118c92d6e94cae7e1f2db9c08c2f28c1c2c6f19dc46f0bb18eec45a77ae56bc",
-        "upstream_skill_md_sha256": "fefda35316ed52a87c5edd44187eac596644ef138af92d0b4230421b882ff3e9",
-        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "0533d2142ce05604d32996bcd9e4dfa5ae291e4896dfbcf3bf0fc48776e52a53",
+        "upstream_skill_md_sha256": "0533d2142ce05604d32996bcd9e4dfa5ae291e4896dfbcf3bf0fc48776e52a53",
+        "verification": "published_upstream_commit_and_exact_local_payload",
         "locally_enabled": true,
-        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
-        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "identical_skill_md_and_resources_to_published_upstream_commit",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
       },
       "recovery": {
-        "command": "npx skills add C1TRuSovo831/dex-robotics-skills --skill dex-retargeting-debug --agent codex --global",
+        "command": "npx skills add C1TRuSovo831/dex-robotics-skills --agent codex --global",
         "kind": "upstream",
-        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-retargeting-debug/SKILL.md",
-        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/f0d234b76850b0d4a0e9ece33121ecd6e779f2ce/dex-retargeting-debug/SKILL.md",
+        "note": "此命令安装公开上游的四项机器人技能及共享引用；要安装本仓库版本，请同时选择 dex-robotics-engineering、dex-ik-design-debug、dex-retargeting-debug 和 impedance-gain-tuning。"
       },
       "files": {
         "LICENSE": {
@@ -492,11 +492,15 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "b118c92d6e94cae7e1f2db9c08c2f28c1c2c6f19dc46f0bb18eec45a77ae56bc",
+          "sha256": "0533d2142ce05604d32996bcd9e4dfa5ae291e4896dfbcf3bf0fc48776e52a53",
           "executable": false
         },
         "agents/openai.yaml": {
-          "sha256": "f73f80eee0277922be00fb0ef814f1f4498919cb159ae96df3b8c71abc926b5c",
+          "sha256": "8d0efdba078f654c7deaea8ab385fa16e979048638b976dea46545428209525f",
+          "executable": false
+        },
+        "references/calibration-observability.md": {
+          "sha256": "8d3c57d4a4fe8fa86ea950072926e641033ad73b79758912870f9df1a63ebcc2",
           "executable": false
         }
       },
@@ -505,7 +509,7 @@
         "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
         "basis": "public_upstream_license"
       },
-      "instruction_update_record": "provenance/instruction-updates.json"
+      "instruction_update_record": "provenance/robotics-updates-2026-10-12.json"
     },
     {
       "id": "dex-robotics-engineering",
@@ -514,31 +518,31 @@
       "enabled": true,
       "path": "skills/dex-robotics-engineering",
       "install_name": "dex-robotics-engineering",
-      "description": "Route dexterous-robotics work among retargeting, IK, impedance tuning, and HIL evidence review when the primary domain needs selection.",
-      "summary_zh": "为遥操作、重定向和阻抗问题选择工程工作流",
+      "description": "Diagnose and route robotics work across sensing and calibration, retargeting, IK, control response, and execution when the failing layer is unclear.",
+      "summary_zh": "沿感知、标定、重定向、IK、控制与执行定位故障层",
       "license": "MIT",
       "upstream": {
         "repo": "C1TRuSovo831/dex-robotics-skills",
         "upstream_skill_path": "dex-robotics-engineering/SKILL.md",
-        "upstream_commit": "c920463edeed8bd05fafc09a60fa081ba0c3695d",
-        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-robotics-engineering/SKILL.md",
+        "upstream_commit": "f0d234b76850b0d4a0e9ece33121ecd6e779f2ce",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/f0d234b76850b0d4a0e9ece33121ecd6e779f2ce/dex-robotics-engineering/SKILL.md",
         "upstream_name": "dex-robotics-engineering",
         "upstream_fetched": true,
-        "skill_md_identical": false,
-        "local_skill_md_sha256": "7d7bae98d2db422e0cba2bf02ad538bb13b1b393ec40ddbfbbc9195569198d07",
-        "upstream_skill_md_sha256": "a68a83097e2cc2046ed60b8283de1a0be87a521a8d2e7610bca628ca91e7d57b",
-        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "9e814f99346a837a3d99196e7b59f882770f1422473eb2b240ff4e7bff006669",
+        "upstream_skill_md_sha256": "9e814f99346a837a3d99196e7b59f882770f1422473eb2b240ff4e7bff006669",
+        "verification": "published_upstream_commit_and_exact_local_payload",
         "locally_enabled": true,
-        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
-        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "identical_skill_md_and_resources_to_published_upstream_commit",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
       },
       "recovery": {
-        "command": "npx skills add C1TRuSovo831/dex-robotics-skills --skill dex-robotics-engineering --agent codex --global",
+        "command": "npx skills add C1TRuSovo831/dex-robotics-skills --agent codex --global",
         "kind": "upstream",
-        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/dex-robotics-engineering/SKILL.md",
-        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/f0d234b76850b0d4a0e9ece33121ecd6e779f2ce/dex-robotics-engineering/SKILL.md",
+        "note": "此命令安装公开上游的四项机器人技能及共享引用；要安装本仓库版本，请同时选择 dex-robotics-engineering、dex-ik-design-debug、dex-retargeting-debug 和 impedance-gain-tuning。"
       },
       "files": {
         "LICENSE": {
@@ -546,15 +550,35 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "7d7bae98d2db422e0cba2bf02ad538bb13b1b393ec40ddbfbbc9195569198d07",
+          "sha256": "9e814f99346a837a3d99196e7b59f882770f1422473eb2b240ff4e7bff006669",
           "executable": false
         },
         "agents/openai.yaml": {
-          "sha256": "a6a74f5b0408de58ab29b6052954d4304486c8c288881c6a616476de93882446",
+          "sha256": "e76153a93fed9f10980bcb42ef109a92bbbb6e05879ab990f7d122b98b210f6a",
+          "executable": false
+        },
+        "references/execution-contract.md": {
+          "sha256": "d13d98f5f6e727707e4ba60b2b79ef75fa093e99522570ffb1b5e06068cc4b31",
+          "executable": false
+        },
+        "references/replay-validation.md": {
+          "sha256": "7d6bd97dfff82e1235d33c5386a22bdcb3a77c9643c4213e5accf65c05c85939",
           "executable": false
         },
         "references/route-matrix.md": {
-          "sha256": "a52698f146506fea05d98a84e85eddb8169050ce350e42133f750d0d93a8c1cd",
+          "sha256": "e08631ac6fa96aa0ad66b0979f089a38928aae13b492cf9e0258533d94860896",
+          "executable": false
+        },
+        "tests/behavior-rubric.json": {
+          "sha256": "a276f96271b688eaa66929f43c6e93005b073103527827cc3c8b39c1f3a5e3e7",
+          "executable": false
+        },
+        "tests/fixtures/behavior-cases.json": {
+          "sha256": "f72940c63f28ededb389b242e294ddbc738e19d722e3745197f5382efd6f5b1f",
+          "executable": false
+        },
+        "tests/forward-evaluation.md": {
+          "sha256": "86eae66f1ff477f62c35fe28a90c89a7450039b801159e773865dbb06382b5ca",
           "executable": false
         }
       },
@@ -563,7 +587,7 @@
         "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
         "basis": "public_upstream_license"
       },
-      "instruction_update_record": "provenance/instruction-updates.json"
+      "instruction_update_record": "provenance/robotics-updates-2026-10-12.json"
     },
     {
       "id": "diagnosing-bugs",
@@ -1014,31 +1038,31 @@
       "enabled": true,
       "path": "skills/impedance-gain-tuning",
       "install_name": "impedance-gain-tuning",
-      "description": "Tune or diagnose robot hand/arm kp/kd, PD/PID, and impedance responses once geometry and IK are trustworthy.",
-      "summary_zh": "机器人 kp/kd、阻抗、振荡和阶跃响应调参",
+      "description": "Tune or diagnose robot PD/PID, impedance, and command-response dynamics once targets, feedback semantics, and the controlled loop are understood.",
+      "summary_zh": "在控制环与反馈语义明确后诊断 PD/PID 和阻抗响应",
       "license": "MIT",
       "upstream": {
         "repo": "C1TRuSovo831/dex-robotics-skills",
         "upstream_skill_path": "impedance-gain-tuning/SKILL.md",
-        "upstream_commit": "c920463edeed8bd05fafc09a60fa081ba0c3695d",
-        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/impedance-gain-tuning/SKILL.md",
+        "upstream_commit": "f0d234b76850b0d4a0e9ece33121ecd6e779f2ce",
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/f0d234b76850b0d4a0e9ece33121ecd6e779f2ce/impedance-gain-tuning/SKILL.md",
         "upstream_name": "impedance-gain-tuning",
         "upstream_fetched": true,
-        "skill_md_identical": false,
-        "local_skill_md_sha256": "d0359af9e516e7c63f77da6da2029ab0a64642b2780b043eefeec957def678c9",
-        "upstream_skill_md_sha256": "2291c09cae0b09418fea725c426e0b8e7373bae71f9453f9b4bf1d8c427cc8f6",
-        "verification": "historical_upstream_provenance_with_recorded_local_instruction_changes",
+        "skill_md_identical": true,
+        "local_skill_md_sha256": "e508576217038cbf91673a785e1c8b4a47ab19f5e3613014b3e22f5d434e2346",
+        "upstream_skill_md_sha256": "e508576217038cbf91673a785e1c8b4a47ab19f5e3613014b3e22f5d434e2346",
+        "verification": "published_upstream_commit_and_exact_local_payload",
         "locally_enabled": true,
-        "local_modification_status": "maintainer_instruction_refactor_2026_09_14",
-        "source_confidence": "recorded_local_changes_on_previously_verified_snapshot",
+        "local_modification_status": "same_skill_md_as_checked_upstream",
+        "source_confidence": "identical_skill_md_and_resources_to_published_upstream_commit",
         "install_command_kind": "verified_public_upstream_via_documented_skills_cli_not_exact_snapshot_restore",
         "maintainer_installer_documentation_url": "https://github.com/C1TRuSovo831/dex-robotics-skills"
       },
       "recovery": {
-        "command": "npx skills add C1TRuSovo831/dex-robotics-skills --skill impedance-gain-tuning --agent codex --global",
+        "command": "npx skills add C1TRuSovo831/dex-robotics-skills --agent codex --global",
         "kind": "upstream",
-        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/c920463edeed8bd05fafc09a60fa081ba0c3695d/impedance-gain-tuning/SKILL.md",
-        "note": "此命令获取公开上游版本；要安装仓库收录的版本，请使用本仓库的 --skill 单项安装。"
+        "source_url": "https://github.com/C1TRuSovo831/dex-robotics-skills/blob/f0d234b76850b0d4a0e9ece33121ecd6e779f2ce/impedance-gain-tuning/SKILL.md",
+        "note": "此命令安装公开上游的四项机器人技能及共享引用；要安装本仓库版本，请同时选择 dex-robotics-engineering、dex-ik-design-debug、dex-retargeting-debug 和 impedance-gain-tuning。"
       },
       "files": {
         "LICENSE": {
@@ -1046,11 +1070,11 @@
           "executable": false
         },
         "SKILL.md": {
-          "sha256": "d0359af9e516e7c63f77da6da2029ab0a64642b2780b043eefeec957def678c9",
+          "sha256": "e508576217038cbf91673a785e1c8b4a47ab19f5e3613014b3e22f5d434e2346",
           "executable": false
         },
         "agents/openai.yaml": {
-          "sha256": "8a09a20b87f235dd89a34b3de4319d6aca8bdc570b23b97d89c982202e11d8e6",
+          "sha256": "0950a21ec7824086c0b2addbe018e031f21a402719d05e9ca35c683dfca45541",
           "executable": false
         }
       },
@@ -1059,7 +1083,7 @@
         "upstream_license_source": "https://raw.githubusercontent.com/C1TRuSovo831/dex-robotics-skills/c920463edeed8bd05fafc09a60fa081ba0c3695d/LICENSE",
         "basis": "public_upstream_license"
       },
-      "instruction_update_record": "provenance/instruction-updates.json"
+      "instruction_update_record": "provenance/robotics-updates-2026-10-12.json"
     },
     {
       "id": "receiving-code-review",

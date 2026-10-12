@@ -82,9 +82,9 @@ npx skills add K-Dense-AI/scientific-agent-skills --skill experimental-design --
 | [code-review](skills/code-review/SKILL.md) | 按代码规范与需求分别审查变更 | 是 |
 | [codebase-design](skills/codebase-design/SKILL.md) | 模块边界、接口与深模块设计 | 是 |
 | [design-system](skills/design-system/SKILL.md) | 设计令牌、组件规范与一致的视觉系统 | 是 |
-| [dex-ik-design-debug](skills/dex-ik-design-debug/SKILL.md) | 遥操作 IK、雅可比、约束和轨迹连续性设计调试 | 是 |
-| [dex-retargeting-debug](skills/dex-retargeting-debug/SKILL.md) | MANUS/Wuji 等灵巧手重定向、标定和捏合调试 | 是 |
-| [dex-robotics-engineering](skills/dex-robotics-engineering/SKILL.md) | 为遥操作、重定向和阻抗问题选择工程工作流 | 是 |
+| [dex-ik-design-debug](skills/dex-ik-design-debug/SKILL.md) | 关节模型的 FK/雅可比、约束求解、可达性与解连续性 | 是 |
+| [dex-retargeting-debug](skills/dex-retargeting-debug/SKILL.md) | 跨关节模型的运动重定向、坐标契约、形态差异与标定 | 是 |
+| [dex-robotics-engineering](skills/dex-robotics-engineering/SKILL.md) | 沿感知、标定、重定向、IK、控制与执行定位故障层 | 是 |
 | [diagnosing-bugs](skills/diagnosing-bugs/SKILL.md) | 通过证据与假设迭代定位故障和性能回退 | 是 |
 | [domain-modeling](skills/domain-modeling/SKILL.md) | 梳理项目术语、领域模型与架构决策 | 是 |
 | [experimental-design](skills/experimental-design/SKILL.md) | 实验对照、随机化、区组、重复测量和多因素设计 | 是 |
@@ -92,7 +92,7 @@ npx skills add K-Dense-AI/scientific-agent-skills --skill experimental-design --
 | [handoff](skills/handoff/SKILL.md) | 将当前任务整理成供下一位 agent 使用的交接文档 | 是 |
 | [herdr](skills/herdr/SKILL.md) | 控制 Herdr 的终端、工作区和 agents；需要 Herdr 环境 | 是 |
 | [herdr-requirements-grill](skills/herdr-requirements-grill/SKILL.md) | 在 Herdr Planner 角色下澄清高影响需求缺口 | 是 |
-| [impedance-gain-tuning](skills/impedance-gain-tuning/SKILL.md) | 机器人 kp/kd、阻抗、振荡和阶跃响应调参 | 是 |
+| [impedance-gain-tuning](skills/impedance-gain-tuning/SKILL.md) | 在控制环与反馈语义明确后诊断 PD/PID 和阻抗响应 | 是 |
 | [receiving-code-review](skills/receiving-code-review/SKILL.md) | 核实代码审查意见后再采取修改 | 是 |
 | [research](skills/research/SKILL.md) | 依据可信一手来源调查问题并记录证据 | 是 |
 | [scientific-visualization](skills/scientific-visualization/SKILL.md) | 科研数据绘图、误差表达、配色与导出检查 | 是 |
@@ -156,6 +156,22 @@ npx skills add K-Dense-AI/scientific-agent-skills --skill experimental-design --
 | [plugin-artifact-template-three-statement-forecast](external-skills.md#plugin-artifact-template-three-statement-forecast) | 三大财务报表联动预测模板 | openai-templates |
 | [plugin-deep-research](external-skills.md#plugin-deep-research) | 进行深入研究并交付有来源的研究成果 | deep-research-work |
 
+## Robotics、IK 与 retargeting
+
+四项机器人技能保留原调用名，按实际模型声明维度、单位、坐标、控制环和执行契约，适用于不同设备与关节模型。故障层不明确时使用 `dex-robotics-engineering`；已明确时直接使用对应领域技能。
+
+领域技能引用 `dex-robotics-engineering` 中的共享文档，选择安装时请将四项装到同一 skills 目录下：
+
+```bash
+bash install.sh \
+  --skill dex-robotics-engineering \
+  --skill dex-ik-design-debug \
+  --skill dex-retargeting-debug \
+  --skill impedance-gain-tuning
+```
+
+[行为评估流程](skills/dex-robotics-engineering/tests/forward-evaluation.md)提供虚构场景和独立评分规则。本轮维护的实际回答、评分与验证边界见[方案历史](docs/approach-history.md)；离线分析、回放、仿真和实物测量分别报告。
+
 ## 目录结构与依赖
 
 ```text
@@ -186,6 +202,8 @@ prompts/task-templates.md 可复用的精简任务提示词
 安装器仍只安装技能文件，不会覆盖使用者的全局 AGENTS.md 或配置。技能示例中的脚本路径应以实际安装目录解析，适用于默认目录和自定义 `--dest`。
 
 2026-09-14 的指令优化更新了 27 项现有技能，保留 28 项默认安装、4 项可选系统技能及 35 项外部入口。详细指令改为按场景加载，原脚本、数据、许可与调用策略保持不变；逐项版本记录见 [provenance/instruction-updates.json](provenance/instruction-updates.json)。
+
+2026-10-12 的更新仅涉及四项机器人技能及其打包说明，逐项来源和校验记录见 [provenance/robotics-updates-2026-10-12.json](provenance/robotics-updates-2026-10-12.json)。
 
 ## 来源与许可
 

@@ -1,41 +1,47 @@
 ---
 name: dex-ik-design-debug
-description: Design or debug teleoperation IK, including FK/Jacobians, solver continuity, asynchronous results, and QP/CBF or virtual-wall constraints.
+description: Design or debug inverse kinematics for articulated models, including FK/Jacobians, constrained solving, solution continuity, and virtual fixtures.
 ---
 
-# Dexterous-teleoperation IK design and debug
+# Inverse kinematics design and debug
 
-Use this skill for the robot-side kinematics and safety-constraint portion of a teleoperation stack. Keep upstream tracking, hand retargeting and hardware evidence as separate concerns.
+Use this skill for the numerical kinematics of an articulated model, including a solver embedded in retargeting. Establish the target's meaning separately from whether the solver reaches it; estimated skeletal coordinates and actuator coordinates may describe different models.
 
-## Route and first checks
+## Establish the problem
 
-For an observed failure, apply `diagnosing-bugs`: create a deterministic replay or fixture that asserts the wrong pose, residual, discontinuity, stale result or constraint violation. For a new solver interface, apply `codebase-design` first; use `tdd` at the agreed public seam.
+Record the active source/runtime revision, model, configuration and tangent dimensions, joint order, frames, units, limits, current state, target provenance and relevant clocks. Use the actual model format; a URDF, fixed base, six-dimensional task or particular joint count is not assumed.
 
-Record the active checkout, revision or hash, URDF/model, base and tool frames, units, limits, controller rate, current joint state, target provenance and whether the result is synchronous or asynchronous. Never infer the running path from a similarly named directory.
+For a failure, reproduce the affected residual, discontinuity or constraint violation with a focused fixture or replay. Use `diagnosing-bugs` when the cause needs investigation, and `codebase-design` when a new interface decision is required. Consult the project's approach history before changing the method or retrying a rejected approach.
 
-## Solver checks
+## Residuals and derivatives
 
-For the current URDF-driven numerical path, make the math explicit:
+- Define the task: position, orientation, relative pose, direction, multiple endpoints or a hierarchy. Derive residual dimension from that task; a three-dimensional position target does not require an orientation objective.
+- Name the frame and perturbation convention for each residual/Jacobian. A geometric velocity Jacobian is not automatically the derivative of an orientation-log residual; include the appropriate rotation differential when required. Use the model's tangent/update operation for non-Euclidean configurations.
+- Separate unit normalization from task preference. Document residual scales before comparing metres, radians or dimensionless shape terms; a weight alone does not define a hard constraint or strict priority.
+- Check FK and the actual residual Jacobian against finite differences in representative configurations, including near relevant limits or orientation branch cuts. Inspect scaled singular values or conditioning when diagnosing rank or sensitivity; do not infer rank from mixed-unit magnitudes alone.
 
-- compute FK and a 6-by-N geometric Jacobian in a named frame;
-- form position error and orientation error such as `rotvec(R_target @ R_current.T)`;
-- solve the damped least-squares step `dq = J.T @ solve(J @ J.T + damping**2 * I, error)`;
-- verify damping, task weights, step limits, iteration and residual tolerances against the active configuration;
-- compare current-q, URDF-midpoint and zero seeds; check reference-q continuity and null-space posture preferences;
-- use finite-difference FK/Jacobian checks and log condition number or singular values before changing the algorithm.
+## Solve within the actual constraints
 
-Treat joint position, velocity, acceleration and jerk limits as constraints, not as post-hoc clipping. Reject stale or failed asynchronous results and hold the last valid command when input quality, calibration, watchdog, feedback or IK validity is lost.
+Inspect the existing formulation before selecting DLS, bounded least squares, QP or nonlinear optimization. For an unconstrained, consistently scaled residual `r` with Jacobian `J = dr/dq`, a DLS example is `dq = -J.T @ solve(J @ J.T + damping**2 * I, r)`. This example is not a constrained solver or a required implementation.
 
-## Constraint and virtual-wall design
+Verify damping, step acceptance, evaluation budgets, task tolerances and termination status against the active configuration. Incorporate the required joint/task bounds into the solve where they affect feasibility. An unconstrained step followed by componentwise clipping can stall at a reachable boundary and can change task priorities; retain final validation even with a bounded solver.
 
-For a constrained velocity formulation, make the objective, frame and constraint source explicit, for example:
+Distinguish geometric reachability, reachability within the current motion window, insufficient action time, and local numerical failure. A failed local solve is not an infeasibility certificate. Use a known feasible witness, alternative admissible seeds or an independent bounded solve when that distinction matters; multiple failed starts alone still do not prove global infeasibility.
 
-`min_qdot ||J(q) qdot - vcmd||^2 + lambda ||qdot||^2`
+Check continuity and branch selection using the last accepted state, appropriate posture preferences and application constraints. Equal endpoint poses may have different intermediate geometry and future motion. Do not prescribe zero seeds, anatomical coupling or one preferred bend direction for every model. If a branch must recover, preserve the existing motion limits during recovery.
 
-with a safety condition such as:
+## Composition and runtime
 
-`grad_q h(q,t)^T qdot + partial h / partial t >= -alpha h(q,t)`.
+For postprocessing, asynchronous solving or fault handling, read [execution contracts](../dex-robotics-engineering/references/execution-contract.md). Validate task semantics on the final accepted output after filters, shaping and mode transitions. A later solver must inherit the constraints that remain applicable; an earlier proposal is not the executed command.
 
-A usable virtual fixture for this stack must preserve tangential motion, prevent deeper normal violation, use a hard boundary `h=0`, recover toward a positive margin `h=delta>0`, add hysteresis and bound recovery velocity, acceleration and jerk. A penalty wall or an ordinary boundary damper alone does not establish inward recovery.
+Reject obsolete or invalid results according to session/sequence and validity rules. Map recoverable source gaps, feedback loss, malformed data and device faults to the actual controller's distinct responses. HOLD, stop and disable are not interchangeable universal fallbacks.
 
-Separate evidence classes: source implementation, static checks, replay/simulation, runtime observation, hardware connection, HIL and physical-safety validation. A paper, static result or simulator run is not HIL proof.
+Use [replay validation](../dex-robotics-engineering/references/replay-validation.md) for dynamic or performance changes. Compare the affected continuous transitions and protected behaviors, and separate computation time from action duration and physical response.
+
+## Virtual fixtures, when requested
+
+State whether the requirement is boundary avoidance, inward recovery, tangential freedom or another behavior. For a velocity formulation, one example is minimizing `||J qdot - vcmd||^2 + lambda ||qdot||^2` subject to a condition such as `grad_q h(q,t)^T qdot + partial h / partial t >= -alpha h(q,t)`, with an explicitly defined safe set `h >= 0`.
+
+Explain feasibility, model assumptions, sampling and delay, actuator limits and the fallback when constraints conflict. A continuous-time condition alone does not establish sampled hardware safety. If positive-margin recovery is required, verify recovery speed and interaction with other tasks; a penalty or boundary damper alone does not establish that behavior. Add hysteresis only where switching behavior calls for it.
+
+Scope conclusions to the model, inputs and evidence tested. Software, replay and physical validation support different claims.
