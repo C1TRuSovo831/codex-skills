@@ -1,201 +1,136 @@
 # codex-skills
 
-面向 Codex 的技能合集，涵盖软件工程、机器人遥操作、科研实验、数据可视化、文档制作与界面设计。
+面向 Codex 的技能合集，涵盖软件工程、科研写作、机器人遥操作和界面设计。可以按任务选择技能，也可以批量安装。
 
-收录 32 项可复制安装的技能源码，并为 35 项外部技能保留官方安装入口；另提供 3 项科研技能的固定版本下载脚本。离线安装器支持批量或单项安装、文件完整性校验、冲突备份和失败恢复；来源、许可证与恢复方式记录在 `manifest.json` 中。
+[开始使用](#开始使用) · [技能目录](#技能目录) · [使用提示](#使用提示) · [维护与许可](#维护与许可)
 
-## 快速安装
+## 开始使用
 
-要求：Bash 和 Python 3.8+，适用于 macOS、Linux 和 Windows 的 WSL 环境。安装过程可离线运行；技能所需的科学计算库、Herdr、Codex 工具或插件连接需另行配置。
-
-克隆或下载本仓库，进入仓库目录后执行：
+需要 Bash 和 Python 3.8+，支持 macOS、Linux 和 Windows WSL。
 
 ```bash
 git clone https://github.com/C1TRuSovo831/codex-skills.git
 cd codex-skills
-bash install.sh
 ```
 
-默认安装 `skills/` 下的 28 项普通技能到 `${CODEX_HOME:-$HOME/.codex}/skills`。若设置了 `CODEX_HOME`，脚本自动使用它；也可用 `--dest` 指定 skills 目录。安装后开始新对话，让 Codex 发现新文件。
+根据下方技能目录选择安装入口：
+
+| 命令 | 安装范围 |
+|---|---|
+| `bash install.sh` | 安装仓库内的常用技能，可离线运行 |
+| `bash download-research-skills.sh` | 安装目录中标为「下载」的技能，需要联网 |
+
+不带参数时，各入口安装自己支持的全部常用技能。默认目录是 `~/.codex/skills`；设置了 `CODEX_HOME` 时使用 `$CODEX_HOME/skills`。安装后开启新的 Codex 对话，可用 `$技能名` 显式调用。
+
+两个入口都支持以下选项：
+
+| 选项 | 用途 |
+|---|---|
+| `--list` | 查看该入口支持的技能 |
+| `--skill 名称` | 只安装指定技能，可重复使用 |
+| `--dry-run` | 预览安装，不联网、不写入文件 |
+| `--dest 路径` | 指定安装目录 |
+| `--force` | 备份已有的不同版本后替换 |
+
+例如，选择安装或先预览：
 
 ```bash
-# 查看全部技能及默认安装状态
-bash install.sh --list
-
-# 先检查文件并预览，不写目标目录
-bash install.sh --dry-run
-
-# 只安装一项，或选择多项
-bash install.sh --skill experimental-design
-bash install.sh --skill scientific-visualization --skill scientific-writing
-
-# 指定目标 skills 目录
-bash install.sh --dest /path/to/skills
-
-# 冲突时先备份旧版本，再替换
-bash install.sh --skill scientific-writing --force
-
-# 可选：安装仓库内全部 32 项技能文件（含 4 项系统技能）
-bash install.sh --all --dest /path/to/isolated-skills
-```
-
-`--all` 仅安装仓库内的技能源码，包括 `bundled/system/` 中的 4 项系统技能。它们需要兼容的 Codex 工具；与应用已提供的同名技能同时安装时可能出现重复，建议先使用隔离目录。
-
-插件、模板及另外 2 项系统技能通过 Codex 官方入口安装，本仓库不复制其源码或资源。查看 [外部技能安装指引](external-skills.md)，或执行 `bash install.sh --recovery plugin-presentations`。对于外部条目，`--skill` 也只显示手动安装指引，不会联网或安装插件。
-
-## 下载三个科研 skills
-
-这三项以下载脚本提供，不包含在 `install.sh` 的默认安装、`--all` 或清单中，也不将其源码打包进本仓库。显式运行下面的入口才会联网：
-
-```bash
-# 查看固定来源，或离线预览当前目录状态
-bash download-research-skills.sh --list
-bash download-research-skills.sh --dry-run
-
-# 下载并安装全部三项；也可重复 --skill 只选择其中几项
-bash download-research-skills.sh
+bash install.sh --skill scientific-writing --skill scientific-visualization
 bash download-research-skills.sh --skill citation-management
-
-# 在隔离目录安装；不影响当前 Codex 已安装的技能
-bash download-research-skills.sh --dest /path/to/isolated-skills
+bash install.sh --dry-run
 ```
 
-| Skill | 源目录 | 固定 Git commit |
-|---|---|---|
-| [ai-research-writing-skill](https://github.com/jin-s13/ai-research-writing-skill) | 仓库根目录 | `e8b5de964737350757b5b17d8a658a22943c9595` |
-| [citation-management](https://github.com/K-Dense-AI/scientific-agent-skills/tree/5f2bc0341354fd5590aef76a533ada1e1e5b4e62/skills/citation-management) | `skills/citation-management` | `5f2bc0341354fd5590aef76a533ada1e1e5b4e62` |
-| [peer-review](https://github.com/K-Dense-AI/scientific-agent-skills/tree/5f2bc0341354fd5590aef76a533ada1e1e5b4e62/skills/peer-review) | `skills/peer-review` | `5f2bc0341354fd5590aef76a533ada1e1e5b4e62` |
+安装只复制技能文件，不运行技能附带的脚本，也不会安装运行依赖、配置密钥或上传资料。
 
-脚本优先调用 `${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer`，缺少时使用本仓库的同名系统技能快照。下载需要 HTTPS；K-Dense 优先使用 Git sparse-checkout。缺少 Git 或内置 Git 模式无法取得旧 commit 时，按同一 commit、同一锁定文件清单逐文件 HTTPS 下载并校验，不改用默认分支。默认安装到 `${CODEX_HOME:-$HOME/.codex}/skills`，支持 `--dest`。
+## 技能目录
 
-下载到暂存目录后，按 [下载锁定清单](provenance/research-skills-lock.json) 校验选定的 112 个文件及技能名称；整批校验通过才开始发布。写作技能只复制 `SKILL.md`、`LICENSE`、`references/`、`scripts/` 和 `templates/`；K-Dense 只复制指定的两个技能目录。每项安装附带 `.installation-provenance.json`，记录实际 commit、文件哈希和未运行验证的状态。
+以下四类技能按用途排列，点击名称查看使用说明。未标注的技能通过 `install.sh` 安装；标为「下载」的技能通过 `download-research-skills.sh` 安装。名称也可直接用作对应入口的 `--skill` 参数。
 
-已有内容和权限一致时显示 `[IDENTICAL]` 并跳过，包括此前由 Codex 安装且来源记录匹配的副本；遇到不同内容、额外文件或软链接会停止并保留原目录。明确使用 `--force` 才会沿用离线安装器的备份和回滚机制替换。`--dry-run` 和 `--list` 不联网、不写入文件。
+### 软件工程与协作
 
-安装仅复制文件，不执行下载技能的脚本，不安装依赖、配置密钥、调用模型或上传资料。下一条 Codex 消息可显式调用对应 `$skill-name`；文件安装与功能运行验证分别报告。
+| Skill | 用途 |
+|---|---|
+| [codebase-design](skills/codebase-design/SKILL.md) | 设计模块边界与接口 |
+| [domain-modeling](skills/domain-modeling/SKILL.md) | 梳理项目术语、领域模型与架构决策 |
+| [diagnosing-bugs](skills/diagnosing-bugs/SKILL.md) | 用证据定位故障和性能回退 |
+| [tdd](skills/tdd/SKILL.md) | 通过测试先行实现功能与修复问题 |
+| [code-review](skills/code-review/SKILL.md) | 按代码规范与需求审查变更 |
+| [receiving-code-review](skills/receiving-code-review/SKILL.md) | 核实审查意见并落实修改 |
+| [verification-before-completion](skills/verification-before-completion/SKILL.md) | 在宣布完成前检查验证结果 |
+| [handoff](skills/handoff/SKILL.md) | 为下一位 agent 整理任务交接文档 |
+| [writing-for-agents](skills/writing-for-agents/SKILL.md) | 编写技能、协作规则和项目说明 |
+| [setup-matt-pocock-skills](skills/setup-matt-pocock-skills/SKILL.md) | 配置工程技能使用的议题和文档约定 |
+| [find-skills](skills/find-skills/SKILL.md) | 搜索和评估可安装的技能 |
 
-- `ai-research-writing-skill`：Python 助手使用标准库；完整论文编译另需 LaTeX 引擎、BibTeX/Biber，通常还使用 `latexmk`。模板按需下载。**固定版本存在已知风险：** `verify_citations.py` 将 OpenAlex API key 放进 URL 并保存到 `citation_lock.json`；错误信息也可能包含 URL。脚本保留上游原文，启用带密钥分支前应先修复。见[对应源码](https://github.com/jin-s13/ai-research-writing-skill/blob/e8b5de964737350757b5b17d8a658a22943c9595/scripts/verify_citations.py#L120)。
-- `citation-management`：需 Python 3.9+ 和 `requests`；Google Scholar 路径另需 `scholarly`。学术查询会联网；可选 NCBI/OpenAlex 凭证和 Zotero 联动需另行配置。
-- `peer-review`：附带脚本需 Python 3.11+，仅使用标准库处理本地文件；这不意味着外围托管助手会话也在本地运行。
+### 科研与论文
 
-## 安装结果与失败恢复
+| Skill | 用途 |
+|---|---|
+| [research](skills/research/SKILL.md) | 依据可信的一手来源调查问题并记录证据 |
+| [experimental-design](skills/experimental-design/SKILL.md) | 规划实验对照、随机化、区组和重复测量 |
+| [statistical-power](skills/statistical-power/SKILL.md) | 规划样本量、可检测差异和统计功效 |
+| [scientific-visualization](skills/scientific-visualization/SKILL.md) | 绘制科研图表，检查误差表达、配色与导出 |
+| [scientific-writing](skills/scientific-writing/SKILL.md) | 撰写和修订科研文本，核查论述与证据的一致性 |
+| [ai-research-writing-skill](https://github.com/jin-s13/ai-research-writing-skill)（下载） | 从项目材料组织 AI/ML 论文，支持写作、修订和投稿准备 |
+| [citation-management](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/citation-management)（下载） | 检索文献、核实引用信息并生成 BibTeX |
+| [peer-review](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/peer-review)（下载） | 检查研究方法、证据与可复现性，起草审稿意见 |
 
-- `[OK]`：逐文件 SHA-256 和可执行权限校验通过，已安装。
-- `[SKIP]`：目标已有完全相同的内容和可执行权限。
-- `[EXTERNAL]`：已显示官方安装入口，仍需在 Codex 中操作；不计为已安装。
-- `[FAIL] 技能ID: 原因`：该项失败，其他技能继续；随后打印该项官方/公开上游命令、来源链接和本地单项重试命令。
-- 默认不覆盖不同的文件或软链接；`--force` 会先把旧目录/软链接移动到目标父目录的 `.codex-skills-backups/`，再发布新副本。发布失败时尝试恢复旧版本，回滚失败会明确报告旧副本位置。
-- 退出码：`0` 本次文件安装、预览或指引展示完成（外部插件仍需手动安装），`1` 至少一个技能失败，`2` 参数、清单、Python 或目标目录等初始化错误。
+### 机器人与遥操作
 
-随时查询某项的恢复方式：
+| Skill | 用途 |
+|---|---|
+| [dex-robotics-engineering](skills/dex-robotics-engineering/SKILL.md) | 沿感知、标定、重定向、IK、控制与执行定位故障层 |
+| [dex-ik-design-debug](skills/dex-ik-design-debug/SKILL.md) | 分析正运动学、雅可比、约束求解与解连续性 |
+| [dex-retargeting-debug](skills/dex-retargeting-debug/SKILL.md) | 诊断运动重定向、坐标约定、形态差异与标定 |
+| [impedance-gain-tuning](skills/impedance-gain-tuning/SKILL.md) | 诊断 PD/PID 和阻抗控制响应，调整增益 |
+| [teleop-hil-review](skills/teleop-hil-review/SKILL.md) | 在指定审查角色下核查遥操作 HIL 与安全证据 |
+| [herdr](skills/herdr/SKILL.md) | 在 Herdr 环境中控制终端、工作区和 agents |
+| [herdr-requirements-grill](skills/herdr-requirements-grill/SKILL.md) | 为 Herdr Planner 澄清关键需求与验收条件 |
+
+### 设计与展示
+
+| Skill | 用途 |
+|---|---|
+| [brand](skills/brand/SKILL.md) | 定义品牌语气与视觉识别，检查品牌一致性 |
+| [design-system](skills/design-system/SKILL.md) | 建立设计令牌、组件规范与视觉系统 |
+| [ui-styling](skills/ui-styling/SKILL.md) | 用 Tailwind、shadcn 等实现界面样式 |
+| [ui-ux-pro-max](skills/ui-ux-pro-max/SKILL.md) | 检索 UI/UX 风格、配色、字体与实现指南 |
+| [slides](skills/slides/SKILL.md) | 用 HTML 和 Chart.js 制作演示文稿 |
+
+### 系统技能与插件
+
+系统技能通常由 Codex 提供。仓库另保留了 [imagegen](bundled/system/imagegen/SKILL.md)、[openai-docs](bundled/system/openai-docs/SKILL.md)、[skill-creator](bundled/system/skill-creator/SKILL.md) 和 [skill-installer](bundled/system/skill-installer/SKILL.md) 的副本，使用 `bash install.sh --all` 可一并安装；建议先指定隔离目录，避免与应用自带版本重复。
+
+Word、PDF、表格、PowerPoint、Sites、交互可视化、Exa 搜索及各类文档模板通过 Codex 插件入口安装。完整列表和安装方式见 [外部技能安装指引](external-skills.md)。
+
+## 使用提示
+
+### 更新与安装冲突
+
+重新运行安装命令会跳过内容相同的技能。遇到不同版本时默认保留原目录；确认替换后加 `--force`，旧副本会保存到安装目录旁的 `.codex-skills-backups/`。
+
+```bash
+bash install.sh --skill scientific-writing --force
+```
+
+安装失败时先查看终端中的具体原因。仓库文件不完整可重新下载仓库；目标目录不可写可用 `--dest` 换一个目录。仓库内技能及外部插件的恢复指引可按名称查询：
 
 ```bash
 bash install.sh --recovery experimental-design
-bash install.sh --recovery herdr-requirements-grill
 bash install.sh --recovery plugin-presentations
 ```
 
-例如 `experimental-design` 的公开上游安装命令：
+外部插件显示安装指引后，仍需在 Codex 中完成安装。
 
-```bash
-npx skills add K-Dense-AI/scientific-agent-skills --skill experimental-design --agent codex --global
-```
+### 运行环境
 
-上游安装命令仅供手动执行，脚本不会自动联网安装。上游版本可能与仓库收录版本不同；需要使用仓库中的版本时，可通过 `--skill` 单项安装。仓库文件损坏时，请重新下载完整仓库；目标权限不足时，选择有写权限的 `--dest`。
+文件安装成功不代表相关功能已经运行验证。具体依赖以各技能说明为准：论文编译需要 LaTeX 工具链，文献检索可能需要 `requests`、`scholarly` 和网络连接，部分审稿脚本需要 Python 3.11+；Herdr、机器人和插件技能需要相应工具与环境。
 
-自定义技能没有独立公开安装命令时，脚本提供本仓库的单项重试方式。外部插件提供 `codex plugin add 插件ID@目录`，需要目标 Codex 提供对应插件目录和账号权限；目录不可用时，请通过桌面应用的插件入口查看。系统能力没有独立安装命令时，会明确给出应用安装或更新入口。
+当前下载的写作技能有一项已知问题：OpenAlex API key 可能随查询 URL 写入引用记录或错误信息。使用带密钥的查询前应先修复，详见[检查记录](provenance/research-downloads-2026-10-27.json)。
 
-## 包含哪些 skills
+### 机器人技能的配套安装
 
-表格中的名称也是 `--skill` / `--recovery` 接受的 ID。源码条目链接到 `SKILL.md`；外部条目链接到官方安装指引。用途是简述，实际条件以对应技能或插件说明为准。
-
-### 普通 skills：默认安装已启用项
-
-| Skill ID | 用途 | 默认安装 |
-|---|---|---|
-| [brand](skills/brand/SKILL.md) | 品牌语气、视觉识别和品牌一致性 | 是 |
-| [code-review](skills/code-review/SKILL.md) | 按代码规范与需求分别审查变更 | 是 |
-| [codebase-design](skills/codebase-design/SKILL.md) | 模块边界、接口与深模块设计 | 是 |
-| [design-system](skills/design-system/SKILL.md) | 设计令牌、组件规范与一致的视觉系统 | 是 |
-| [dex-ik-design-debug](skills/dex-ik-design-debug/SKILL.md) | 关节模型的 FK/雅可比、约束求解、可达性与解连续性 | 是 |
-| [dex-retargeting-debug](skills/dex-retargeting-debug/SKILL.md) | 跨关节模型的运动重定向、坐标契约、形态差异与标定 | 是 |
-| [dex-robotics-engineering](skills/dex-robotics-engineering/SKILL.md) | 沿感知、标定、重定向、IK、控制与执行定位故障层 | 是 |
-| [diagnosing-bugs](skills/diagnosing-bugs/SKILL.md) | 通过证据与假设迭代定位故障和性能回退 | 是 |
-| [domain-modeling](skills/domain-modeling/SKILL.md) | 梳理项目术语、领域模型与架构决策 | 是 |
-| [experimental-design](skills/experimental-design/SKILL.md) | 实验对照、随机化、区组、重复测量和多因素设计 | 是 |
-| [find-skills](skills/find-skills/SKILL.md) | 搜索、评估和发现可安装的 skills | 是 |
-| [handoff](skills/handoff/SKILL.md) | 将当前任务整理成供下一位 agent 使用的交接文档 | 是 |
-| [herdr](skills/herdr/SKILL.md) | 控制 Herdr 的终端、工作区和 agents；需要 Herdr 环境 | 是 |
-| [herdr-requirements-grill](skills/herdr-requirements-grill/SKILL.md) | 在 Herdr Planner 角色下澄清高影响需求缺口 | 是 |
-| [impedance-gain-tuning](skills/impedance-gain-tuning/SKILL.md) | 在控制环与反馈语义明确后诊断 PD/PID 和阻抗响应 | 是 |
-| [receiving-code-review](skills/receiving-code-review/SKILL.md) | 核实代码审查意见后再采取修改 | 是 |
-| [research](skills/research/SKILL.md) | 依据可信一手来源调查问题并记录证据 | 是 |
-| [scientific-visualization](skills/scientific-visualization/SKILL.md) | 科研数据绘图、误差表达、配色与导出检查 | 是 |
-| [scientific-writing](skills/scientific-writing/SKILL.md) | 科研结果、论文段落、图注与证据一致性检查 | 是 |
-| [setup-matt-pocock-skills](skills/setup-matt-pocock-skills/SKILL.md) | 配置工程 skills 所用的议题和文档约定 | 是 |
-| [slides](skills/slides/SKILL.md) | 用 HTML 和 Chart.js 制作演示文稿 | 是 |
-| [statistical-power](skills/statistical-power/SKILL.md) | 样本量、可检测差异和统计功效规划 | 是 |
-| [tdd](skills/tdd/SKILL.md) | 按测试先行的方式实现功能与修复问题 | 是 |
-| [teleop-hil-review](skills/teleop-hil-review/SKILL.md) | 在指定审查角色下核查遥操作 HIL 与安全证据 | 是 |
-| [ui-styling](skills/ui-styling/SKILL.md) | 用 Tailwind/shadcn 等实现界面样式 | 是 |
-| [ui-ux-pro-max](skills/ui-ux-pro-max/SKILL.md) | 检索 UI/UX 风格、配色、字体、图表与实现指南 | 是 |
-| [verification-before-completion](skills/verification-before-completion/SKILL.md) | 在宣布完成前运行相关验证并检查结果 | 是 |
-| [writing-for-agents](skills/writing-for-agents/SKILL.md) | 编写 agent 可执行的技能、规则与项目说明 | 是 |
-
-### Codex 系统技能：4 项源码与 2 项官方入口
-
-| Skill ID | 用途 |
-|---|---|
-| [system-imagegen](bundled/system/imagegen/SKILL.md) | 生成、编辑与变换栅格图像 |
-| [system-openai-docs](bundled/system/openai-docs/SKILL.md) | 核实 OpenAI、Codex 与 API 的官方资料 |
-| [system-plugin-creator](external-skills.md#system-plugin-creator) | 创建和打包 Codex 插件 |
-| [system-review-agent](external-skills.md#system-review-agent) | 以缺陷为重点进行只读代码审查 |
-| [system-skill-creator](bundled/system/skill-creator/SKILL.md) | 创建或修改 Codex skill |
-| [system-skill-installer](bundled/system/skill-installer/SKILL.md) | 从官方列表或 GitHub 安装 skills |
-
-### 插件附带技能和模板：通过 Codex 官方入口安装
-
-| Skill ID | 用途 | 所属插件 |
-|---|---|---|
-| [plugin-documents](external-skills.md#plugin-documents) | 制作和编辑 Word 文档并检查渲染 | documents |
-| [plugin-pdf](external-skills.md#plugin-pdf) | 读取、生成和检查 PDF | pdf |
-| [plugin-excel-live-control](external-skills.md#plugin-excel-live-control) | 控制已连接的 Excel 实时会话 | spreadsheets |
-| [plugin-spreadsheets](external-skills.md#plugin-spreadsheets) | 处理工作簿、公式、数据表和图表 | spreadsheets |
-| [plugin-presentations](external-skills.md#plugin-presentations) | 制作、编辑和验证 PowerPoint/Google Slides 演示稿 | presentations |
-| [plugin-template-creator](external-skills.md#plugin-template-creator) | 从参考成品建立可复用的个人模板 | template-creator |
-| [plugin-sites-building](external-skills.md#plugin-sites-building) | 使用 Sites 创建网站和内部工具 | sites |
-| [plugin-sites-hosting](external-skills.md#plugin-sites-hosting) | 使用 Sites 发布和管理网站托管 | sites |
-| [plugin-computer-history](external-skills.md#plugin-computer-history) | 检索本机活动历史；依赖 Computer History 工具 | computer-history |
-| [plugin-visualize](external-skills.md#plugin-visualize) | 在对话中制作交互可视化与解释工具 | visualize |
-| [plugin-exa-search](external-skills.md#plugin-exa-search) | 使用 Exa 进行多轮网络检索与资料搜集 | Exa Search |
-| [plugin-plugin-management](external-skills.md#plugin-plugin-management) | 发现插件并管理连接、依赖和权限 | plugin-management |
-| [plugin-artifact-template-analytics-dashboard](external-skills.md#plugin-artifact-template-analytics-dashboard) | 获客、留存、营收等指标仪表盘表格模板 | openai-templates |
-| [plugin-artifact-template-business-review](external-skills.md#plugin-artifact-template-business-review) | 业务复盘与决策汇报 PPT 模板 | openai-templates |
-| [plugin-artifact-template-design-report](external-skills.md#plugin-artifact-template-design-report) | 设计报告 Word 模板 | openai-templates |
-| [plugin-artifact-template-experiment-analysis](external-skills.md#plugin-artifact-template-experiment-analysis) | 假设、方法、结果及局限性的实验分析报告模板 | openai-templates |
-| [plugin-artifact-template-financial-budget](external-skills.md#plugin-artifact-template-financial-budget) | 预算、情景预测和现金规划表格模板 | openai-templates |
-| [plugin-artifact-template-investment-committee-memo](external-skills.md#plugin-artifact-template-investment-committee-memo) | 投资委员会备忘录模板 | openai-templates |
-| [plugin-artifact-template-legal-memorandum](external-skills.md#plugin-artifact-template-legal-memorandum) | 法律问题分析备忘录模板 | openai-templates |
-| [plugin-artifact-template-market-trends-report](external-skills.md#plugin-artifact-template-market-trends-report) | 市场与行业趋势 PPT 模板 | openai-templates |
-| [plugin-artifact-template-minimal-letterhead](external-skills.md#plugin-artifact-template-minimal-letterhead) | 简洁信头与商务信函模板 | openai-templates |
-| [plugin-artifact-template-operating-calendar](external-skills.md#plugin-artifact-template-operating-calendar) | 年度与月度运营日历表格模板 | openai-templates |
-| [plugin-artifact-template-operating-review](external-skills.md#plugin-artifact-template-operating-review) | 周度运营复盘 PPT 模板 | openai-templates |
-| [plugin-artifact-template-project-kickoff](external-skills.md#plugin-artifact-template-project-kickoff) | 项目启动和职责对齐 PPT 模板 | openai-templates |
-| [plugin-artifact-template-project-tracker](external-skills.md#plugin-artifact-template-project-tracker) | 任务、负责人、日期与甘特图跟踪表格模板 | openai-templates |
-| [plugin-artifact-template-sales-pipeline](external-skills.md#plugin-artifact-template-sales-pipeline) | 销售机会与预测表格模板 | openai-templates |
-| [plugin-artifact-template-simple-dark-mode](external-skills.md#plugin-artifact-template-simple-dark-mode) | 简洁深色 PPT 模板 | openai-templates |
-| [plugin-artifact-template-simple-light-mode](external-skills.md#plugin-artifact-template-simple-light-mode) | 简洁浅色 PPT 模板 | openai-templates |
-| [plugin-artifact-template-strategy-memorandum](external-skills.md#plugin-artifact-template-strategy-memorandum) | 战略选择与建议备忘录模板 | openai-templates |
-| [plugin-artifact-template-system-design](external-skills.md#plugin-artifact-template-system-design) | 架构、组件、数据流与取舍的系统设计文档模板 | openai-templates |
-| [plugin-artifact-template-team-alignment](external-skills.md#plugin-artifact-template-team-alignment) | 团队目标、优先级与行动计划 PPT 模板 | openai-templates |
-| [plugin-artifact-template-three-statement-forecast](external-skills.md#plugin-artifact-template-three-statement-forecast) | 三大财务报表联动预测模板 | openai-templates |
-| [plugin-deep-research](external-skills.md#plugin-deep-research) | 进行深入研究并交付有来源的研究成果 | deep-research-work |
-
-## Robotics、IK 与 retargeting
-
-四项机器人技能保留原调用名，按实际模型声明维度、单位、坐标、控制环和执行契约，适用于不同设备与关节模型。故障层不明确时使用 `dex-robotics-engineering`；已明确时直接使用对应领域技能。
-
-领域技能引用 `dex-robotics-engineering` 中的共享文档，选择安装时请将四项装到同一 skills 目录下：
+机器人领域技能引用 `dex-robotics-engineering` 中的共享文档，建议一起安装到同一目录：
 
 ```bash
 bash install.sh \
@@ -205,55 +140,19 @@ bash install.sh \
   --skill impedance-gain-tuning
 ```
 
-[行为评估流程](skills/dex-robotics-engineering/tests/forward-evaluation.md)提供虚构场景和独立评分规则。本轮维护的实际回答、评分与验证边界见[方案历史](docs/approach-history.md)；离线分析、回放、仿真和实物测量分别报告。
+故障层不明确时使用 `dex-robotics-engineering`；已经明确时直接使用对应领域技能。
 
-## 目录结构与依赖
+## 维护与许可
 
-```text
-skills/                  默认安装的普通技能
-bundled/system/          4 项携带开源许可证的系统技能
-external-skills.md       插件、模板及其他系统技能的官方安装入口
-manifest.json            来源、启用状态、单项恢复命令、SHA-256 与执行位
-provenance/              上游许可证和逐项来源依据
-THIRD_PARTY_NOTICES.md   许可归属与第三方声明
-install.sh               安装入口
-scripts/install.py       安装、校验、备份与逐项错误处理
-readme.md                本说明
-AGENTS.md                维护者的通用协作指令
-prompts/task-templates.md 可复用的精简任务提示词
-```
+- [AGENTS.md](AGENTS.md)：仓库协作约定；[任务模板](prompts/task-templates.md)：常用任务的提示词。
+- [安装清单](manifest.json)与[下载清单](provenance/research-skills-lock.json)：技能来源和安装所需的文件记录。更新技能时需同步维护。
+- [方案历史](docs/approach-history.md)与[来源记录](provenance/)：维护决策、变更依据和验证结果。
+- [MIT 许可证](LICENSE)与[第三方声明](THIRD_PARTY_NOTICES.md)：仓库自有内容和第三方技能分别遵循各自许可证。
 
-- 源码条目包含 `SKILL.md`、许可证，以及该技能使用的脚本、参考资料或 UI 元数据。外部条目仅包含名称、简述和官方入口。
-- 安装器只安装技能文件。科研技能需要各自声明的 Python 依赖；Herdr 和机器人技能需要相应项目或环境；系统技能需要兼容的 Codex 版本和工具；插件通过 Codex 安装后使用。
-- 账号授权、插件连接、Python 环境和运行时由使用者配置。安装器不修改 Codex 的 `config.toml`。
-- 技能中的项目路径、工具名称和运行条件，应按实际工作环境核对。
-
-添加或更新技能文件时，需同步更新 `manifest.json` 中的技能信息、文件校验值和可执行权限记录，否则安装器会报告内容不匹配。
-
-## 协作指令与任务提示词
-
-[AGENTS.md](AGENTS.md) 保存维护者的独立判断、任务完成、Git 身份、论文审读和临时文件处理约定；[任务模板](prompts/task-templates.md)覆盖开发、只读审查、机器人、Herdr Planner 和论文审读。可按需参考或合并到自己的协作指令中；其中 Git 身份属于本仓库维护者。
-
-安装器仍只安装技能文件，不会覆盖使用者的全局 AGENTS.md 或配置。技能示例中的脚本路径应以实际安装目录解析，适用于默认目录和自定义 `--dest`。
-
-2026-09-14 的指令优化更新了 27 项现有技能，保留 28 项默认安装、4 项可选系统技能及 35 项外部入口。详细指令改为按场景加载，原脚本、数据、许可与调用策略保持不变；逐项版本记录见 [provenance/instruction-updates.json](provenance/instruction-updates.json)。
-
-2026-10-12 的更新仅涉及四项机器人技能及其打包说明，逐项来源和校验记录见 [provenance/robotics-updates-2026-10-12.json](provenance/robotics-updates-2026-10-12.json)。
-
-## 来源与许可
-
-仓库维护者编写的安装器、文档及自定义技能采用根目录的 [MIT 许可证](LICENSE)。第三方技能保留各自的 MIT、Apache-2.0 等许可证，每个可安装目录携带相应许可文件；根目录许可证不替代第三方条款。
-
-逐项归属见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 和 `provenance/redistribution.json`，公开上游许可证的来源与校验值见 `provenance/license-index.json`。外部条目不包含技能指令、代码、模板或其他插件资源，也不授予对这些材料的复制权。
-
-## 验证安装器
+修改安装器后运行：
 
 ```bash
 python3 -B -m unittest discover -s tests -v
 ```
 
-测试在临时目录执行，覆盖完整安装、内容与权限、重复安装、失败继续、备份与回滚、含空格的路径、目录边界，以及外部入口查询和混合选择。测试不会执行技能代码或网络恢复命令；它验证的是安装器，不证明每个技能的专业建议或外部工具已可用。
-
-科研下载器另有 14 项离线测试，使用合成文件和模拟网络；测试资料会标记 `REMOVABLE.txt` 并保留，待明确允许后清理，可用 `CODEX_SKILLS_TEST_ARTIFACTS` 指定存放目录。2026-10-27 的真实隔离下载、文件校验及 HTTPS 回退验证见 [provenance/research-downloads-2026-10-27.json](provenance/research-downloads-2026-10-27.json)。
-
-安装机制参考：[OpenAI skills 文档](https://learn.chatgpt.com/docs/build-skills)、[OpenAI 插件文档](https://learn.chatgpt.com/docs/plugins)、[Skills CLI](https://github.com/vercel-labs/skills)。
+测试覆盖文件安装、冲突处理、备份与恢复，不执行技能代码。下载器测试使用模拟网络，产生的测试资料带有 `REMOVABLE.txt` 标记，保留待确认后清理。
