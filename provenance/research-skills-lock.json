@@ -1,0 +1,482 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-27",
+  "description": "Pinned research skill downloads; only listed files are published. This lock contains no third-party skill payloads.",
+  "skills": [
+    {
+      "id": "ai-research-writing-skill",
+      "repo": "jin-s13/ai-research-writing-skill",
+      "ref": "e8b5de964737350757b5b17d8a658a22943c9595",
+      "path": ".",
+      "method": "download",
+      "files": {
+        "LICENSE": {
+          "sha256": "9ddc35a5206d8d3bb84da5abac355c051dbaa01371bf6d2756c94adc99c38633",
+          "executable": false
+        },
+        "SKILL.md": {
+          "sha256": "cb14e84819ea92aef3d26b4fcada11e03730020b83771af5af04740ce03477bd",
+          "executable": false
+        },
+        "references/README.md": {
+          "sha256": "bbaf0a3bc18eab24e9ae22ad3eb6e657a16085d2f7a308186b7418f9c41053bd",
+          "executable": false
+        },
+        "references/abstract-introduction.md": {
+          "sha256": "ceedfe8b9e47bbc4adab5b3dad411fe13e84acdf6c557b621a1abf45a95ecf8d",
+          "executable": false
+        },
+        "references/artifacts.md": {
+          "sha256": "fe808505f9fdb7d7636ffbb1338ca3f9887593059c39525c3ad9064b50c21a89",
+          "executable": false
+        },
+        "references/citation-checklist.md": {
+          "sha256": "546cfe0237e2ecb46789491576732cfc1c978534822c9075135c68fc5de2efd3",
+          "executable": false
+        },
+        "references/citation-lock.schema.json": {
+          "sha256": "b45ef0bc28f1554ce68cb9d80cf86288593ffb380c726f3a08a2b16c7b43d972",
+          "executable": false
+        },
+        "references/citation-requests.schema.json": {
+          "sha256": "25bde93b2880bfe1a6502de5450d2a46c9f7149f4f2e39daec975d7d895d9ef4",
+          "executable": false
+        },
+        "references/citation-workflow.md": {
+          "sha256": "08cf581ddb9b41578cc0aa8fc84984eadfec9afa9d7b9a81c899d0bcf4252fd1",
+          "executable": false
+        },
+        "references/example-bank.md": {
+          "sha256": "e1d855c70b1d3b3278c61d00a3e682a6b653562b6811b46e3b60862dd5f030a6",
+          "executable": false
+        },
+        "references/examples/abstract/challenge-insight-contribution.md": {
+          "sha256": "b89fda1ec52dc9dfa14fb050f382300f7f1d550d9cd421ddc9dc6834815846c5",
+          "executable": false
+        },
+        "references/examples/abstract/multiple-contributions.md": {
+          "sha256": "58303ec4e8b1eea5b2a030f15e03cc81aa181f89945ad42292581ad735d7998b",
+          "executable": false
+        },
+        "references/examples/index.md": {
+          "sha256": "23add5a80dcfcd3f798c59ae3e1ed5f1b94bbfab529db66043810b8fbb56c646",
+          "executable": false
+        },
+        "references/examples/introduction/anti-pattern-abstract-only.md": {
+          "sha256": "33ab449b0eadc7cc968c0ff4cddcc4538811d2abc2a0497ebca15c629da80cd2",
+          "executable": false
+        },
+        "references/examples/introduction/existing-task-challenge.md": {
+          "sha256": "c0af9e2d8fcef0f045c80aa8d7a64f846d4f36cefd545ccd9f0a1e7d27440899",
+          "executable": false
+        },
+        "references/examples/introduction/novel-task-decomposition.md": {
+          "sha256": "f94c3a11efc2be7e8aea6068bc739cd1f34d4bc693cdf548100bafb5ee47c62a",
+          "executable": false
+        },
+        "references/examples/introduction/open-with-challenge.md": {
+          "sha256": "eefc706f3bf056b4a6c0e57251474724295b88e8bf7343ea22ec5ac850a1fafb",
+          "executable": false
+        },
+        "references/examples/introduction/pipeline-new-module.md": {
+          "sha256": "3f3822cf9d95425ff8a6cceaf2ffa67e322860c97f80045d7664ad1f229d3c6e",
+          "executable": false
+        },
+        "references/examples/introduction/pipeline-observation-driven.md": {
+          "sha256": "210150fbd30430ad7bb13ac92042527cb5adde92c184bd70c110e1e34c23e515",
+          "executable": false
+        },
+        "references/examples/introduction/pipeline-one-contribution.md": {
+          "sha256": "82a7eab6d7e6e7a4d4cea5ffe7f4942c62b04ef46630bc75f8c02aa0b87013c8",
+          "executable": false
+        },
+        "references/examples/introduction/pipeline-two-contributions.md": {
+          "sha256": "7c41abad9b55b0187f4ed552d489408e098c084f430298b3b1bfd53ab836393c",
+          "executable": false
+        },
+        "references/examples/introduction/traditional-insight-backed.md": {
+          "sha256": "f547f157d65dd3293fc033fabbf89a1db0900f9e6e378c691670779c22716fba",
+          "executable": false
+        },
+        "references/examples/method/instant-ngp-annotated.md": {
+          "sha256": "0521e9a74250e6eb6f72c86021d1259dc462943eec22a870b85c14abd96dc09a",
+          "executable": false
+        },
+        "references/examples/method/module-triad-example.md": {
+          "sha256": "5f76bd373a725edcd2fe6f80a937c55a1959dc00a41511251146e478a8d3aa04",
+          "executable": false
+        },
+        "references/examples/method/neural-body-annotated.md": {
+          "sha256": "f671d284186011497291fcec22dadd1dabe835f60fb97dc607cfa0246d08b6be",
+          "executable": false
+        },
+        "references/examples/method/overview-template.md": {
+          "sha256": "3328ea5b1100e8068bfd94455486a5934d55a888bf0095df727eef9ec7eadf93",
+          "executable": false
+        },
+        "references/examples/related-work/close-work-positioning.md": {
+          "sha256": "a68e2370314ca5ecd928096102438fb6baf54ed871154f4f7ecafc8739bacd90",
+          "executable": false
+        },
+        "references/examples/related-work/line-of-work-paragraph.md": {
+          "sha256": "979fc7c5626f885a17c0b4396ae9384a2b773160fefbfa13f5299761b2202bae",
+          "executable": false
+        },
+        "references/figure-pattern-atlas.md": {
+          "sha256": "70903ae38dbeb6a3a84cf1d09955893992cfef2950974e59e5664d3d474f32ab",
+          "executable": false
+        },
+        "references/figure-spec.md": {
+          "sha256": "dbd5b0e20d41b357d34bdc8fe51dbfd1468ba6ab508c848a336eca4335b2b110",
+          "executable": false
+        },
+        "references/figure-workflow.md": {
+          "sha256": "0799686e42f23bb0276a98cc5eb00fa13a46d0e329e881ec10d6466e072c2a8e",
+          "executable": false
+        },
+        "references/literature-review.md": {
+          "sha256": "90d4b7ad49d354b30ba443331abd676b655ee426b5975c8cd405eb9fe6c71f99",
+          "executable": false
+        },
+        "references/numeric-evidence.md": {
+          "sha256": "312044a5e7387530ac846affbc71c8d0bc1e1d129894a9cd70f36cf5958955a5",
+          "executable": false
+        },
+        "references/numeric-evidence.schema.json": {
+          "sha256": "558f637e5a59ed142c2afda9f827b46eef5d9ff62bb6634cf20f4031a4147c40",
+          "executable": false
+        },
+        "references/paper-state.schema.json": {
+          "sha256": "e25a35c1f7090406d7913767acc4657f514fa6e48a07a45b8598be0305dd748e",
+          "executable": false
+        },
+        "references/paper-story.md": {
+          "sha256": "257d8d9b6b13d04114aebc4150b10ed047ff7f570783f7a0d30d0fc76793c35e",
+          "executable": false
+        },
+        "references/research-handoff.md": {
+          "sha256": "cb885a0377866da5304368515d36938d00b0daee4603db9417fce8998e0199e6",
+          "executable": false
+        },
+        "references/research-handoff.schema.json": {
+          "sha256": "0d5ed7cd003dbeb02a965099ab7571cafb6ecf20365920e6f13592584204156c",
+          "executable": false
+        },
+        "references/reviewer-guidelines.md": {
+          "sha256": "0c3a43c7873914f1d24cae6740a8c4b249b35a3a170520eaab859a3baf9489f6",
+          "executable": false
+        },
+        "references/reviewer-self-review.md": {
+          "sha256": "769f7c20962f50c39096883f0668dc245e91d9b873585164df6a26402c964284",
+          "executable": false
+        },
+        "references/section-writing.md": {
+          "sha256": "b369f020ddd7dc11cc03caa7d44a024c13609c29d8b3ca7310429b808831ff6e",
+          "executable": false
+        },
+        "references/style-presets.md": {
+          "sha256": "33ef6353590433869b93ba2cd1be4a09f07bb6de699de87fd7fa2e9b56a09e38",
+          "executable": false
+        },
+        "references/submission-packaging.md": {
+          "sha256": "c3efe2bb8461758b6d0bf980289f46bc9b89d8511ba1b489177c800ffa7623a4",
+          "executable": false
+        },
+        "references/task-management.md": {
+          "sha256": "6e6f06bb3d5a784c9b0b91b6463db4cd4c837d08c443abf37d83888c8aee217e",
+          "executable": false
+        },
+        "references/venue-profiles.md": {
+          "sha256": "ddcd1f90c297c9c8386f8d84f4c755aae2d370141956e426b03500fe71a52f8a",
+          "executable": false
+        },
+        "references/venue-templates.md": {
+          "sha256": "28cc9e100d2f6eec0ab3d0876f93db05699c6c6819014d18f821ae59ccc95a90",
+          "executable": false
+        },
+        "references/workflow.md": {
+          "sha256": "9ab853dbbd09691fab3a0313bdae57e462d0f8dd64008a8d276d15114f4d7e55",
+          "executable": false
+        },
+        "scripts/README.md": {
+          "sha256": "1f08aca5dc73720d703e058fb939d6f9e5a71ce3d7e037b11ce8dc126e5fa6bb",
+          "executable": false
+        },
+        "scripts/camera_ready_check.py": {
+          "sha256": "65b05ee36f0451a50a04bbb57d52013a31eb4fc59cbc6bd5a553707998d4e9d0",
+          "executable": false
+        },
+        "scripts/check_citation_lock.py": {
+          "sha256": "e4564416aa57e7d71e0a81695ac3564b7bf6592719aa74251cfa01d4e9a0ef3f",
+          "executable": false
+        },
+        "scripts/check_citations.py": {
+          "sha256": "47ac9ad57799e4ee7a11cdf325b0188db2bdbe78ac9af2e68685b239929ef752",
+          "executable": false
+        },
+        "scripts/check_numeric_evidence.py": {
+          "sha256": "3e1461b5ac80e3ac346382a0a9841e6f0d1fb1521d43722a06b0d6c992ab1c2f",
+          "executable": false
+        },
+        "scripts/check_research_handoff.py": {
+          "sha256": "1988907d2b51aca692adab80b3a00375133c0151be06f10782057e11d3665004",
+          "executable": false
+        },
+        "scripts/check_todos.py": {
+          "sha256": "9438a1f38a37785a0ef424d3cdff1aa937222757920b75cf9b4e713124bc3084",
+          "executable": false
+        },
+        "scripts/citation_lock.py": {
+          "sha256": "088f72d792045cf0a151f0e7c6763f68454e04fa81155468c285251cfd47da1c",
+          "executable": false
+        },
+        "scripts/extract_claims.py": {
+          "sha256": "b71786da469519efef06e408c2ac182ae90a5849f0fb52491f9b8e953425a01d",
+          "executable": false
+        },
+        "scripts/fetch_template.py": {
+          "sha256": "57257b1189530d72d5cddaf5ff49f2d2c35b73db3020756fe58a0062e776aded",
+          "executable": false
+        },
+        "scripts/make_latex_table.py": {
+          "sha256": "def7a8f735e39896d9d24c3c9db3dfb6b7d3860065d461d22368c7f70013b0f4",
+          "executable": false
+        },
+        "scripts/paper_contract.py": {
+          "sha256": "cb4926ba1f12bec987f811eda5a21ca8c036a7af38ac413aaa99a09258615ccf",
+          "executable": false
+        },
+        "scripts/parse_build_log.py": {
+          "sha256": "1c834e1216312532ad2db538afbee7fdb19a5fdf02e2f06faa0fb7f72a3765d4",
+          "executable": false
+        },
+        "scripts/record_build.py": {
+          "sha256": "5a415b608a0a9a7bf7885f702cef1c87616c2272a999022dffef35c3a62b0d27",
+          "executable": false
+        },
+        "scripts/research_quality_gate.py": {
+          "sha256": "79f93ee6730c200aec762cde8993945bec47561461637c82ec7793702a6e338b",
+          "executable": false
+        },
+        "scripts/verify_citations.py": {
+          "sha256": "944d0e0ebca7dba808a0515d5ae034b5620e3b45f4a500db0bb8509f252c063b",
+          "executable": false
+        },
+        "templates/README.md": {
+          "sha256": "34bbfac0f6aed238cbaca464614856a16ede733c62cece0f2c649bc66b9ffefd",
+          "executable": false
+        },
+        "templates/SOURCES.md": {
+          "sha256": "5de4232dc750a9cf048cb550d5f12d924cc42434934bfc91e5469062ad8f3ac9",
+          "executable": false
+        },
+        "templates/manifest.json": {
+          "sha256": "439f09556b379127a0f5fcf09cda28369dd61f3499a2439e163d588f9a7b1946",
+          "executable": false
+        }
+      }
+    },
+    {
+      "id": "citation-management",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "ref": "5f2bc0341354fd5590aef76a533ada1e1e5b4e62",
+      "path": "skills/citation-management",
+      "method": "git",
+      "files": {
+        "SKILL.md": {
+          "sha256": "dc79fe1e8438dcf598040615d5323360c6a7ed0b868fc3ffc82512c871a1e3ff",
+          "executable": false
+        },
+        "assets/bibtex_template.bib": {
+          "sha256": "08e21647fa68cad1aa1658264798c7d24775ba89bfbd2723ea6bfe4b562e2be1",
+          "executable": false
+        },
+        "assets/citation_checklist.md": {
+          "sha256": "ce7317f2983f8b7fd02949aad726ebd6188319c7e57c929fffe689d5ae18ce36",
+          "executable": false
+        },
+        "references/api_contracts.md": {
+          "sha256": "3e82a14f77133a215831d2627b65c93199589782f6907fc42af3c75f2ab3c5a8",
+          "executable": false
+        },
+        "references/best_practices.md": {
+          "sha256": "df90d19c8f639590a6a430a889160b478dce61f4a5c0a5a36df5ab1be749b6b1",
+          "executable": false
+        },
+        "references/bibtex_formatting.md": {
+          "sha256": "6337a8d2b87de96bf0f72c076feb0fc5d61ed9c342d9c8f19b3633efbfec6fed",
+          "executable": false
+        },
+        "references/citation_validation.md": {
+          "sha256": "f235f82e02db282f0abdd23fd8d2973d870d427d355979e869f736259ba95774",
+          "executable": false
+        },
+        "references/core_workflow.md": {
+          "sha256": "19e8b52c43f5822163c79904236016616dc4515d21a01d29073d968c9251af8d",
+          "executable": false
+        },
+        "references/example_workflows.md": {
+          "sha256": "01c0a15e08e8115e10a07623f63565d119812fd2bb68c669eac413db2f9cd482",
+          "executable": false
+        },
+        "references/google_scholar_search.md": {
+          "sha256": "5b705ec8d6276ef83b819b737ed10bd991815ccb413de27e046b7bfdf4da8399",
+          "executable": false
+        },
+        "references/metadata_extraction.md": {
+          "sha256": "68c27886aff0d4efbf3a6f7e0a318dedd706d4cfd0f55dd859466de36ed78d46",
+          "executable": false
+        },
+        "references/pubmed_search.md": {
+          "sha256": "fab82cda700a0dfc6dccc9465c9cc60b9df68cb58d0bec9abe7b2d8748a49cd1",
+          "executable": false
+        },
+        "references/script_reference.md": {
+          "sha256": "bd23683cb3a7edb932fc5a13bb9215969a834a778a8765eea82553bf1b8b3417",
+          "executable": false
+        },
+        "references/search_strategies.md": {
+          "sha256": "776c0dd1cbaf0432004ae80273640ff324b570401c569413c674829436385c85",
+          "executable": false
+        },
+        "scripts/_common.py": {
+          "sha256": "87540160163671b972c2fccb4d0a42db3cca2603c664d26d5da3ca5dbc7dfdd2",
+          "executable": false
+        },
+        "scripts/doi_to_bibtex.py": {
+          "sha256": "1b7d1ab2e8bf9bcf5a7d49bf45496e0f8b7d8e0d0cda8efd8fce4e527082dc4b",
+          "executable": false
+        },
+        "scripts/extract_metadata.py": {
+          "sha256": "bebc7835b5e659cdeee0087980e881635894330bac5eda4ce01f490fd41df781",
+          "executable": true
+        },
+        "scripts/format_bibtex.py": {
+          "sha256": "cc74fdc4d5819df8db3999e59f96469cebfb353ecf406a49a5a0fc60896707cb",
+          "executable": true
+        },
+        "scripts/search_google_scholar.py": {
+          "sha256": "05cfd67aea6475029d017f1b4ff68e7ba727e1fa9b52f1e614c80287940b4985",
+          "executable": true
+        },
+        "scripts/search_openalex.py": {
+          "sha256": "538b2f086625fd1e9a2cb2fe8bd46ee852d888f17d2d1e889b8f50592594f693",
+          "executable": false
+        },
+        "scripts/search_pubmed.py": {
+          "sha256": "4543b74bf773747bae47a2bbb18acf2a4a050071119d88d1711db6049d157116",
+          "executable": true
+        },
+        "scripts/validate_citations.py": {
+          "sha256": "a08e8e0774287e9aca2bd87c3a66cd3dfc751018eafb6cdee37987e3f416d2b5",
+          "executable": true
+        }
+      }
+    },
+    {
+      "id": "peer-review",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "ref": "5f2bc0341354fd5590aef76a533ada1e1e5b4e62",
+      "path": "skills/peer-review",
+      "method": "git",
+      "files": {
+        "SKILL.md": {
+          "sha256": "a042ccdc76d3399431b9a6c4cd4f98968eab964b1c14baeea4d9e73de82c7d19",
+          "executable": false
+        },
+        "assets/citation_references_template.csv": {
+          "sha256": "e00b259742a0716661d8adba1e81fc7ca722cea32c3cfe5a5e29509844ed742b",
+          "executable": false
+        },
+        "assets/claim_evidence_matrix_template.csv": {
+          "sha256": "06e1215c998a978bdbbe30008040536902abe138e0f790b243ecaee1f21b7da7",
+          "executable": false
+        },
+        "assets/reporting_checklist_template.csv": {
+          "sha256": "02709793bc1702fadc760e7089398eb28351b22885a08cbea6c85f135e931ee1",
+          "executable": false
+        },
+        "assets/reporting_guidelines.json": {
+          "sha256": "cf95b9a4e1f54016c800e8b3ff02191e7bc60593e30c043231d47d91259250ac",
+          "executable": false
+        },
+        "assets/review_intake_template.json": {
+          "sha256": "14d7e00cdc710b8235c80faa71f4c5712c1db1a0a2d734fd4fa9807bbc960438",
+          "executable": false
+        },
+        "assets/review_scaffold_template.md": {
+          "sha256": "4e320c9a6238ac7ea2494a4c486e93d1eaf2c5239aab80fcd8eea70a6e359102",
+          "executable": false
+        },
+        "assets/source_ledger.csv": {
+          "sha256": "9226c94f1066b8c8f9a2a65d6aea08a3471ec36e19f835908573690282a8e737",
+          "executable": false
+        },
+        "assets/statistical_reproducibility_template.json": {
+          "sha256": "071bfc0b1e1edb9d09c539b5c6e291e43e8d719cbe50cfdeac1044fe8f0b69a3",
+          "executable": false
+        },
+        "assets/study_profile_template.json": {
+          "sha256": "bc0c19b9ad478c78c4b5111bcd913faca8046e0833815b1bd579a046f737df40",
+          "executable": false
+        },
+        "references/common_issues.md": {
+          "sha256": "6a0979d6d64e07f769db8ee9ab82ad3190aebaca4294838f338f5c4b51b596f6",
+          "executable": false
+        },
+        "references/ethical_review_practice.md": {
+          "sha256": "d61f27a471f9b42160ae303cb13df2b034085e037b5647cbc0bbf2de8435b1d7",
+          "executable": false
+        },
+        "references/reporting_standards.md": {
+          "sha256": "19ececda52568269987be1dff81900471433353dee8bb8a28a06f3691cb051c2",
+          "executable": false
+        },
+        "references/security_validation.md": {
+          "sha256": "3d24c7aa7d7b1d1a7df410307d95993b63dff79bf01c400a1c154df19fcf737d",
+          "executable": false
+        },
+        "references/statistical_reproducibility.md": {
+          "sha256": "aab5c13d19525fc4626a4153a90ba63231324d609e16bbf569d874c974731bd6",
+          "executable": false
+        },
+        "references/tool_reference.md": {
+          "sha256": "d765fa7a03712049174b2c288718a602c623fd2233b6fa451bbd6854eb0c46c1",
+          "executable": false
+        },
+        "scripts/_common.py": {
+          "sha256": "78e751bd8024d4df69a6a7ab82497424d58da06d751f4cb97ba4fc75eb9044db",
+          "executable": false
+        },
+        "scripts/audit_citations.py": {
+          "sha256": "9521d624dce092b93f36e3c4c7dd9cab151b24d2e623d0b299adbef239100e47",
+          "executable": false
+        },
+        "scripts/audit_statistics_reproducibility.py": {
+          "sha256": "8daf60d78a2758665b5c676d1d68e52c57c5c1988249fdbbaba62d31a49c495b",
+          "executable": false
+        },
+        "scripts/generate_review_scaffold.py": {
+          "sha256": "3c2d6dc36e8e5fdd0313422d30da8c31a7ca808618818db376e348fe8d38fd2c",
+          "executable": false
+        },
+        "scripts/lint_review.py": {
+          "sha256": "623878c26ede3d74f2ddf0e0a15acbade40d10009c66ab334550b814b2361e75",
+          "executable": false
+        },
+        "scripts/select_reporting_guidelines.py": {
+          "sha256": "9ccbbdeca6df01f2f4e1c86b98db0e9ab0a43685c6726e1abfdb9bbaa2b92ae3",
+          "executable": false
+        },
+        "scripts/validate_claim_evidence.py": {
+          "sha256": "93490b289f288ed686a8eb300bf40693e7caf148b5022b180077f0db22acbe2b",
+          "executable": false
+        },
+        "scripts/validate_review_intake.py": {
+          "sha256": "0ad9038d96a7867fa8268b70aff4f69ec1e2472b6399bbc04feb5c6fd842d5fa",
+          "executable": false
+        }
+      }
+    }
+  ]
+}

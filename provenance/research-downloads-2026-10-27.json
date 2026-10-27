@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-27",
+  "base_commit": "9af9c7cc8bb41ae565001e4a4645732510d157fd",
+  "scope": "Add an explicit online downloader for exactly three pinned research skills; preserve the offline installer and its existing inventory.",
+  "lock_file": "provenance/research-skills-lock.json",
+  "lock_sha256": "75aa77215506c3f95af9dbce79ef591d1f6c39a1803aea39da5126468aa44008",
+  "implementation_sha256": {
+    "download-research-skills.sh": "0470e84f564732e4b5d90c76b1ffd0621b25e2592868867bce66a40ef716422f",
+    "scripts/download_research_skills.py": "3e07f22b3bc630cf899daa8c9351cb3ca4ce71cbfd3e2b14c771f9284ee72013",
+    "tests/test_download_research_skills.py": "f93f7fee33a79c40ccfcadb570fe9aed8c139ea00eadbebee3ad3a55cfcde4f4"
+  },
+  "validation": [
+    {
+      "command": "python3 -B -m unittest discover -s tests -p test_install.py -v",
+      "result": "PASS",
+      "tests": 34,
+      "scope": "Existing offline installer regression; skill code is not executed."
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -p test_download_research_skills.py -v",
+      "result": "PASS",
+      "tests": 14,
+      "scope": "Synthetic sources and mocked network; selection, fixed commits, grouped Codex arguments, content filtering, receipts, repeat/legacy skip, conflict/backup, dry-run, source integrity, wrong names, network failures, destination boundaries, and fixed-file HTTPS fallback."
+    },
+    {
+      "command": "bash -n download-research-skills.sh",
+      "result": "PASS"
+    },
+    {
+      "command": "bash download-research-skills.sh --dry-run",
+      "result": "PASS",
+      "identical_existing_skills": 3,
+      "network_used": false,
+      "installed_skills_modified": false
+    },
+    {
+      "command": "bash download-research-skills.sh --dest <isolated-skills>",
+      "result": "PASS",
+      "command_path_note": "Absolute isolated destination normalized for publication.",
+      "upstream_files": 112,
+      "receipts": 3,
+      "checks": "Exact inventory, per-file SHA-256, executable bits, SKILL.md names, pinned commit receipts.",
+      "transport": "Actual current Codex skill-installer; archive for root skill, sparse Git for both K-Dense subdirectories."
+    },
+    {
+      "operation": "Direct HTTPS fallback download and preparation using the same fixed lock",
+      "result": "PASS",
+      "upstream_files": 46,
+      "skills": [
+        "citation-management",
+        "peer-review"
+      ],
+      "checks": "Real raw.githubusercontent.com GETs at the pinned commit; every downloaded file and prepared tree verified."
+    },
+    {
+      "operation": "Compare current installed payloads to the original locked fingerprints",
+      "result": "PASS",
+      "unchanged_upstream_files": 112
+    },
+    {
+      "operation": "Local documentation link check",
+      "result": "PASS"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ai-research-writing-skill",
+      "repo": "jin-s13/ai-research-writing-skill",
+      "commit": "e8b5de964737350757b5b17d8a658a22943c9595",
+      "path": ".",
+      "selected_files": 66
+    },
+    {
+      "id": "citation-management",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "commit": "5f2bc0341354fd5590aef76a533ada1e1e5b4e62",
+      "path": "skills/citation-management",
+      "selected_files": 22
+    },
+    {
+      "id": "peer-review",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "commit": "5f2bc0341354fd5590aef76a533ada1e1e5b4e62",
+      "path": "skills/peer-review",
+      "selected_files": 24
+    }
+  ],
+  "known_upstream_issue": {
+    "skill": "ai-research-writing-skill",
+    "file": "scripts/verify_citations.py",
+    "details": "OpenAlex API key appears in a URL saved to citation_lock.json and potentially provider error output. Preserved upstream source; warn before enabling the keyed branch.",
+    "executed": false
+  },
+  "boundaries": [
+    "No downloaded skill script was imported or executed.",
+    "No runtime Python dependencies or API keys were installed/configured.",
+    "No paper, experiment, image-generation, review, or literature-search workflow ran.",
+    "HTTPS fallback was verified with live fixed-commit file downloads; the old-commit Git failure condition was simulated in offline tests.",
+    "Per-skill publication uses existing backup/rollback; the three-skill batch is not a transaction if a later filesystem publish fails.",
+    "Synthetic fixture and isolated live output directories were marked REMOVABLE and retained for explicit cleanup approval."
+  ]
+}

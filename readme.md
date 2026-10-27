@@ -2,7 +2,7 @@
 
 面向 Codex 的技能合集，涵盖软件工程、机器人遥操作、科研实验、数据可视化、文档制作与界面设计。
 
-收录 32 项可复制安装的技能源码，并为 35 项外部技能保留官方安装入口。安装器支持批量或单项安装、文件完整性校验、冲突备份和失败恢复；来源、许可证与恢复方式记录在 `manifest.json` 中。
+收录 32 项可复制安装的技能源码，并为 35 项外部技能保留官方安装入口；另提供 3 项科研技能的固定版本下载脚本。离线安装器支持批量或单项安装、文件完整性校验、冲突备份和失败恢复；来源、许可证与恢复方式记录在 `manifest.json` 中。
 
 ## 快速安装
 
@@ -42,6 +42,41 @@ bash install.sh --all --dest /path/to/isolated-skills
 `--all` 仅安装仓库内的技能源码，包括 `bundled/system/` 中的 4 项系统技能。它们需要兼容的 Codex 工具；与应用已提供的同名技能同时安装时可能出现重复，建议先使用隔离目录。
 
 插件、模板及另外 2 项系统技能通过 Codex 官方入口安装，本仓库不复制其源码或资源。查看 [外部技能安装指引](external-skills.md)，或执行 `bash install.sh --recovery plugin-presentations`。对于外部条目，`--skill` 也只显示手动安装指引，不会联网或安装插件。
+
+## 下载三个科研 skills
+
+这三项以下载脚本提供，不包含在 `install.sh` 的默认安装、`--all` 或清单中，也不将其源码打包进本仓库。显式运行下面的入口才会联网：
+
+```bash
+# 查看固定来源，或离线预览当前目录状态
+bash download-research-skills.sh --list
+bash download-research-skills.sh --dry-run
+
+# 下载并安装全部三项；也可重复 --skill 只选择其中几项
+bash download-research-skills.sh
+bash download-research-skills.sh --skill citation-management
+
+# 在隔离目录安装；不影响当前 Codex 已安装的技能
+bash download-research-skills.sh --dest /path/to/isolated-skills
+```
+
+| Skill | 源目录 | 固定 Git commit |
+|---|---|---|
+| [ai-research-writing-skill](https://github.com/jin-s13/ai-research-writing-skill) | 仓库根目录 | `e8b5de964737350757b5b17d8a658a22943c9595` |
+| [citation-management](https://github.com/K-Dense-AI/scientific-agent-skills/tree/5f2bc0341354fd5590aef76a533ada1e1e5b4e62/skills/citation-management) | `skills/citation-management` | `5f2bc0341354fd5590aef76a533ada1e1e5b4e62` |
+| [peer-review](https://github.com/K-Dense-AI/scientific-agent-skills/tree/5f2bc0341354fd5590aef76a533ada1e1e5b4e62/skills/peer-review) | `skills/peer-review` | `5f2bc0341354fd5590aef76a533ada1e1e5b4e62` |
+
+脚本优先调用 `${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer`，缺少时使用本仓库的同名系统技能快照。下载需要 HTTPS；K-Dense 优先使用 Git sparse-checkout。缺少 Git 或内置 Git 模式无法取得旧 commit 时，按同一 commit、同一锁定文件清单逐文件 HTTPS 下载并校验，不改用默认分支。默认安装到 `${CODEX_HOME:-$HOME/.codex}/skills`，支持 `--dest`。
+
+下载到暂存目录后，按 [下载锁定清单](provenance/research-skills-lock.json) 校验选定的 112 个文件及技能名称；整批校验通过才开始发布。写作技能只复制 `SKILL.md`、`LICENSE`、`references/`、`scripts/` 和 `templates/`；K-Dense 只复制指定的两个技能目录。每项安装附带 `.installation-provenance.json`，记录实际 commit、文件哈希和未运行验证的状态。
+
+已有内容和权限一致时显示 `[IDENTICAL]` 并跳过，包括此前由 Codex 安装且来源记录匹配的副本；遇到不同内容、额外文件或软链接会停止并保留原目录。明确使用 `--force` 才会沿用离线安装器的备份和回滚机制替换。`--dry-run` 和 `--list` 不联网、不写入文件。
+
+安装仅复制文件，不执行下载技能的脚本，不安装依赖、配置密钥、调用模型或上传资料。下一条 Codex 消息可显式调用对应 `$skill-name`；文件安装与功能运行验证分别报告。
+
+- `ai-research-writing-skill`：Python 助手使用标准库；完整论文编译另需 LaTeX 引擎、BibTeX/Biber，通常还使用 `latexmk`。模板按需下载。**固定版本存在已知风险：** `verify_citations.py` 将 OpenAlex API key 放进 URL 并保存到 `citation_lock.json`；错误信息也可能包含 URL。脚本保留上游原文，启用带密钥分支前应先修复。见[对应源码](https://github.com/jin-s13/ai-research-writing-skill/blob/e8b5de964737350757b5b17d8a658a22943c9595/scripts/verify_citations.py#L120)。
+- `citation-management`：需 Python 3.9+ 和 `requests`；Google Scholar 路径另需 `scholarly`。学术查询会联网；可选 NCBI/OpenAlex 凭证和 Zotero 联动需另行配置。
+- `peer-review`：附带脚本需 Python 3.11+，仅使用标准库处理本地文件；这不意味着外围托管助手会话也在本地运行。
 
 ## 安装结果与失败恢复
 
@@ -218,5 +253,7 @@ python3 -B -m unittest discover -s tests -v
 ```
 
 测试在临时目录执行，覆盖完整安装、内容与权限、重复安装、失败继续、备份与回滚、含空格的路径、目录边界，以及外部入口查询和混合选择。测试不会执行技能代码或网络恢复命令；它验证的是安装器，不证明每个技能的专业建议或外部工具已可用。
+
+科研下载器另有 14 项离线测试，使用合成文件和模拟网络；测试资料会标记 `REMOVABLE.txt` 并保留，待明确允许后清理，可用 `CODEX_SKILLS_TEST_ARTIFACTS` 指定存放目录。2026-10-27 的真实隔离下载、文件校验及 HTTPS 回退验证见 [provenance/research-downloads-2026-10-27.json](provenance/research-downloads-2026-10-27.json)。
 
 安装机制参考：[OpenAI skills 文档](https://learn.chatgpt.com/docs/build-skills)、[OpenAI 插件文档](https://learn.chatgpt.com/docs/plugins)、[Skills CLI](https://github.com/vercel-labs/skills)。
